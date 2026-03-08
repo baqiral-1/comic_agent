@@ -6,6 +6,17 @@
 - generated panel images (`panels/*.png`)
 - run logs (`run.log`)
 
+## Summary
+
+`comic-agent` takes a text story and runs it through a sequence of specialized agents that:
+
+- infer scenes and beats from narrative text
+- extract characters and style direction
+- generate comic panel prompts and images
+- attach panel speech-bubble metadata
+- validate continuity and rule compliance
+- export run outputs (`manifest.json`, panel images, and `panels.pdf`)
+
 [Live Gallery (GitHub Pages)](https://baqiral-1.github.io/comic_agent/)
 
 ## Requirements
@@ -73,13 +84,20 @@ out/
 
 ## Agent Pipeline
 
-1. `IngestAgent`: Reads storyline text.
-2. `SceneAgent`: Splits text into scene beats.
-3. `CharacterAgent`: Extracts key characters.
-4. `StyleAgent`: Builds global visual style guidance.
-5. `PanelAgent`: Produces panel specs and image files.
-6. `ContinuityAgent`: Checks cross-panel consistency.
-7. `ValidatorAgent`: Enforces rules; manager retries one deterministic revision pass if needed.
+1. `IngestAgent`: Loads the input story file and normalizes whitespace.
+   Produces a clean `StoryDocument` used by all downstream agents.
+2. `SceneAgent`: Infers scene boundaries and beat-level actions from narrative text.
+   Uses an LLM for scene segmentation with a deterministic fallback path.
+3. `CharacterAgent`: Identifies primary story participants and basic profile traits.
+   Provides character metadata used for panel planning and bubble speaker defaults.
+4. `StyleAgent`: Derives a global comic style profile (tone, palette, camera language).
+   Keeps visual direction consistent across all generated panels.
+5. `PanelAgent`: Converts scenes/beats into `PanelSpec` entries and generates image files.
+   Also creates speech-bubble metadata and writes panel PNG outputs.
+6. `ContinuityAgent`: Applies lightweight continuity checks between adjacent panels.
+   Flags potential scene-transition inconsistencies for validation.
+7. `ValidatorAgent`: Enforces structural and content rules on generated panel specs.
+   If validation fails, the manager applies one revision pass and revalidates.
 
 ## Development
 
