@@ -12,7 +12,24 @@
     />
     <style>
       body { background: #f8f9fa; }
-      .panel-img { width: 100%; height: 260px; object-fit: cover; background: #e9ecef; }
+      .carousel-image-wrap {
+        background: #e9ecef;
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+      .carousel-image {
+        width: 100%;
+        max-height: 72vh;
+        object-fit: contain;
+        background: #e9ecef;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(1) grayscale(1) brightness(0);
+      }
+      .storyline-text {
+        white-space: pre-wrap;
+      }
     </style>
   </head>
   <body>
@@ -20,21 +37,100 @@
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
         <div>
           <h1 class="h3 mb-1">comic-agent Output Gallery</h1>
-          <p class="text-secondary mb-0">Run: <code>with_scene_fixes_3</code></p>
-        </div>
-        <div class="d-flex gap-2">
-          <a class="btn btn-primary" href="./images/with_scene_fixes_3/panels.pdf">Download PDF</a>
-          <a class="btn btn-outline-secondary" href="./images/with_scene_fixes_3/manifest.json">Manifest JSON</a>
         </div>
       </div>
 
-      <div class="alert alert-light border mb-4">
-        Source path: <code>/tmp/comic_agent_mn/with_scene_fixes_3</code>
+      <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center gap-2">
+            <h2 class="h5 mb-0">Storyline</h2>
+            <button
+              class="btn btn-sm btn-outline-dark"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#storylineCollapse"
+              aria-expanded="false"
+              aria-controls="storylineCollapse"
+            >
+              Click To View Full Story
+            </button>
+          </div>
+          <div class="storyline-text small text-body-secondary mt-3">
+Nasruddin was often sought out by the people of his town for advice. One day, one of his neighbors came to Nasruddin and lamented, "I'm really having trouble having my family live together in our small house. It's myself, my wife, my three kids, and my mother-in-law-all sharing the same little cottage. Nasruddin, you are a wise man. What do you think I should do?"
+
+"Hmmm," thought Nasruddin for a minute. Then he asked, "Do you have any chickens in your yard?"
+
+The man was a bit surprised by the question, but answered, "I have ten."
+          </div>
+          <div class="collapse mt-3" id="storylineCollapse">
+            <div class="storyline-text small text-body-secondary">
+"Put them in the house," said Nasruddin.
+
+"But Mullah," the man exclaimed. "Our house is already cramped as it is!"
+
+"You asked me for my advice. This is my advice. Just try it," replied Nasruddin.
+
+The man, desperate to find a solution to his woes, followed Nasruddin's advice. A couple of days later, he visited Nasruddin again.
+
+"Mullah," he said in a pained voice, "things are even worse now. With the chickens in the house, we are even more pressed for space."
+
+"Do you have any donkeys?" Nasruddin asked.
+
+The neighbor was surprised again at this question. "I have one," he replied.
+
+"Well then, take that donkey of yours and bring it in the house," Nasruddin advised.
+
+The man's eyes widened and he bemoaned and objected. But after a while, Nasruddin convinced him to try his way.
+
+A couple of days later, the man, now looking disheveled and more distressed than ever, came back to Nasruddin.
+
+"Now my home is even more crowded! Between my family, the chickens, and that donkey of mine, there is barely any room to move. With all the noise and the smell of the animals, we can hardly sleep!" cried the neighbor.
+
+"I see," Nasruddin said after a minute of thought. "Well then, do you have any other animals in your yard?"
+
+"Yes," the man replied slowly, "we have a goat."
+
+"Great," said the Mullah. "Take the goat in your house too."
+
+The man blew up at Nasruddin in frustration. He fumed and fussed and seemed anything but eager to follow Nasruddin's advice. But once again, Nasruddin persuaded the man to try his idea one last time.
+
+The very next day, the man, now fuming and angry, came up to Nasruddin and exclaimed, "My family is really upset now. Everyone is at my throat complaining about the lack of space. Your plan is a terrible one and is making us nothing but miserable. If you can't come up with an alternative idea, I'm going to let them come here themselves and have their way with you!"
+
+"Perfect," Nasruddin replied, "it is now time to take all of the animals back outside."
+
+With a big sigh of relief, the man followed Nasruddin's final advice.
+
+The next day, as Nasruddin was going on his daily walks, he ran into the neighbor.
+
+"So, how are things now?" Nasruddin asked.
+
+The neighbor was beaming. "Mullah, your plan has worked like a charm! With all the animals out, my house is so spacious that we can't believe we complained about the cottage before. We're all living so happily now!"
+
+Nasruddin smiled.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="row g-3" id="panel-grid"></div>
+      <div id="panelCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+        <div class="carousel-indicators" id="panel-indicators"></div>
+        <div class="carousel-inner" id="panel-slides"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#panelCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#panelCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script>
       const panelFiles = [
         "panel-001.png",
@@ -51,25 +147,38 @@
         "panel-012.png",
       ];
 
-      const panelGrid = document.getElementById("panel-grid");
-      for (const file of panelFiles) {
+      const indicators = document.getElementById("panel-indicators");
+      const slides = document.getElementById("panel-slides");
+      panelFiles.forEach((file, index) => {
         const num = file.replace("panel-", "").replace(".png", "");
         const path = `./images/with_scene_fixes_3/${file}`;
-        const card = document.createElement("div");
-        card.className = "col-12 col-sm-6 col-lg-4";
-        card.innerHTML = `
-          <div class="card shadow-sm h-100">
-            <img src="${path}" class="card-img-top panel-img" alt="Panel ${num}" loading="lazy" />
-            <div class="card-body py-2">
-              <h2 class="h6 mb-0">Panel ${num}</h2>
-            </div>
-            <div class="card-footer bg-white">
-              <a href="${path}" class="btn btn-sm btn-outline-primary">Open Image</a>
-            </div>
+        const indicator = document.createElement("button");
+        indicator.type = "button";
+        indicator.setAttribute("data-bs-target", "#panelCarousel");
+        indicator.setAttribute("data-bs-slide-to", String(index));
+        indicator.setAttribute("aria-label", `Slide ${index + 1}`);
+        if (index === 0) {
+          indicator.className = "active";
+          indicator.setAttribute("aria-current", "true");
+        }
+        indicators.appendChild(indicator);
+
+        const slide = document.createElement("div");
+        slide.className = `carousel-item${index === 0 ? " active" : ""}`;
+        slide.innerHTML = `
+          <div class="carousel-image-wrap">
+            <img src="${path}" class="d-block carousel-image" alt="Panel ${num}" loading="lazy" />
+          </div>
+          <div class="mt-2 d-flex justify-content-between align-items-center">
+            <h2 class="h6 mb-0">Panel ${num}</h2>
+            <a href="${path}" class="btn btn-sm btn-outline-primary">Open Image</a>
+          </div>
+          <div class="text-secondary small mt-1">
+            ${index + 1} / ${panelFiles.length}
           </div>
         `;
-        panelGrid.appendChild(card);
-      }
+        slides.appendChild(slide);
+      });
     </script>
   </body>
 </html>
