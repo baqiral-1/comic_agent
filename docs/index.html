@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>comic-agent | with_scene_fixes_10</title>
+    <title>comic-agent | Story Gallery</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,6 +30,9 @@
       .storyline-text {
         white-space: pre-wrap;
       }
+      .selector-wrap {
+        min-width: 260px;
+      }
     </style>
   </head>
   <body>
@@ -38,7 +41,11 @@
         <div>
           <h1 class="h3 mb-1">comic-agent Output Gallery</h1>
         </div>
-        <div>
+        <div class="d-flex flex-column flex-sm-row gap-2 align-items-stretch align-items-sm-center">
+          <div class="selector-wrap">
+            <label for="storySelect" class="form-label small text-secondary mb-1">Select Story</label>
+            <select id="storySelect" class="form-select form-select-sm"></select>
+          </div>
           <a
             class="btn btn-sm btn-dark"
             href="https://github.com/baqiral-1/comic_agent"
@@ -65,16 +72,44 @@
               Click To View Full Story
             </button>
           </div>
-          <div class="storyline-text small text-body-secondary mt-3">
-Nasruddin was often sought out by the people of his town for advice. One day, one of his neighbors came to Nasruddin and lamented, "I'm really having trouble having my family live together in our small house. It's myself, my wife, my three kids, and my mother-in-law-all sharing the same little cottage. Nasruddin, you are a wise man. What do you think I should do?"
+          <div id="storyPreview" class="storyline-text small text-body-secondary mt-3"></div>
+          <div class="collapse mt-3" id="storylineCollapse">
+            <div id="storyFull" class="storyline-text small text-body-secondary"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="panelCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+        <div class="carousel-indicators" id="panel-indicators"></div>
+        <div class="carousel-inner" id="panel-slides"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#panelCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#panelCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const stories = {
+        nasruddin: {
+          label: "Nasruddin",
+          imageBase: "./images/with_scene_fixes_10/panels",
+          panelFiles: ["panel-001.png", "panel-002.png", "panel-003.png", "panel-004.png"],
+          preview: `Nasruddin was often sought out by the people of his town for advice. One day, one of his neighbors came to Nasruddin and lamented, "I'm really having trouble having my family live together in our small house. It's myself, my wife, my three kids, and my mother-in-law-all sharing the same little cottage. Nasruddin, you are a wise man. What do you think I should do?"
 
 "Hmmm," thought Nasruddin for a minute. Then he asked, "Do you have any chickens in your yard?"
 
-The man was a bit surprised by the question, but answered, "I have ten."
-          </div>
-          <div class="collapse mt-3" id="storylineCollapse">
-            <div class="storyline-text small text-body-secondary">
-"Put them in the house," said Nasruddin.
+The man was a bit surprised by the question, but answered, "I have ten."`,
+          full: `"Put them in the house," said Nasruddin.
 
 "But Mullah," the man exclaimed. "Our house is already cramped as it is!"
 
@@ -116,71 +151,84 @@ The next day, as Nasruddin was going on his daily walks, he ran into the neighbo
 
 The neighbor was beaming. "Mullah, your plan has worked like a charm! With all the animals out, my house is so spacious that we can't believe we complained about the cottage before. We're all living so happily now!"
 
-Nasruddin smiled.
-            </div>
-          </div>
-        </div>
-      </div>
+Nasruddin smiled.`
+        },
+        tortoise: {
+          label: "The Tortoise and the Hare",
+          imageBase: "./images/tortoise/panels",
+          panelFiles: ["panel-001.png", "panel-002.png", "panel-003.png", "panel-004.png"],
+          preview: `Once upon a time, there was a hare who loved to boast of his speed in front of the other animals.
+All the animals were surprised that the tortoise took up the challenge. He was known to be a very slow animal. However, a day was fixed for the great race and all the animals looked forward to it.`,
+          full: `On the day of the race, no animal went to the market. No one went hunting, all the animals gathered together, excited to watch the race between the tortoise and the hare. Both animals were ready, each of them felt confident and everyone wondered why the tortoise was so confident since they felt he was no match for the hare.
+The elephant started them off when he blew his big whistle and the sound rang across the entire jungle. Every ear was alert, every eye fixed on the two competitors. Who will win the greatest animal race in history?
+The hare darted almost out of sight at once, but soon stopped. In order to show that the tortoise was no match for him and should not have accepted his challenge in the first instance, he lay down to have a nap.
+Slowly but surely, the tortoise plodded on. He had a goal, he had a focus and he never looked back. When the hare awoke from his sleep, he saw the tortoise near the finish line. He jumped up and tried to catch up with him but it was too late. The deed had been done.
+To the amazement of all the animals, the tortoise had crossed the finish line. It was unbelievable. The hare was humbled. He had no choice but to congratulate the tortoise and accept him as the winner. All the animals learnt a very important lesson from the tortoise.`
+        }
+      };
 
-      <div id="panelCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
-        <div class="carousel-indicators" id="panel-indicators"></div>
-        <div class="carousel-inner" id="panel-slides"></div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#panelCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#panelCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      const panelFiles = [
-        "panel-001.png",
-        "panel-002.png",
-        "panel-003.png",
-        "panel-004.png",
-      ];
-
+      const selector = document.getElementById("storySelect");
+      const storyPreview = document.getElementById("storyPreview");
+      const storyFull = document.getElementById("storyFull");
       const indicators = document.getElementById("panel-indicators");
       const slides = document.getElementById("panel-slides");
-      panelFiles.forEach((file, index) => {
-        const num = file.replace("panel-", "").replace(".png", "");
-        const path = `./images/with_scene_fixes_10/panels/${file}`;
-        const indicator = document.createElement("button");
-        indicator.type = "button";
-        indicator.setAttribute("data-bs-target", "#panelCarousel");
-        indicator.setAttribute("data-bs-slide-to", String(index));
-        indicator.setAttribute("aria-label", `Slide ${index + 1}`);
-        if (index === 0) {
-          indicator.className = "active";
-          indicator.setAttribute("aria-current", "true");
-        }
-        indicators.appendChild(indicator);
 
-        const slide = document.createElement("div");
-        slide.className = `carousel-item${index === 0 ? " active" : ""}`;
-        slide.innerHTML = `
-          <div class="carousel-image-wrap">
-            <img src="${path}" class="d-block carousel-image" alt="Panel ${num}" loading="lazy" />
-          </div>
-          <div class="mt-2 d-flex justify-content-between align-items-center">
-            <h2 class="h6 mb-0">Panel ${num}</h2>
-            <a href="${path}" class="btn btn-sm btn-outline-primary">Open Image</a>
-          </div>
-          <div class="text-secondary small mt-1">
-            ${index + 1} / ${panelFiles.length}
-          </div>
-        `;
-        slides.appendChild(slide);
-      });
+      function buildSelector() {
+        Object.entries(stories).forEach(([key, value]) => {
+          const option = document.createElement("option");
+          option.value = key;
+          option.textContent = value.label;
+          selector.appendChild(option);
+        });
+      }
+
+      function renderStory(key) {
+        const story = stories[key];
+        if (!story) return;
+
+        storyPreview.textContent = story.preview;
+        storyFull.textContent = story.full;
+
+        indicators.innerHTML = "";
+        slides.innerHTML = "";
+
+        story.panelFiles.forEach((file, index) => {
+          const num = file.replace("panel-", "").replace(".png", "");
+          const path = `${story.imageBase}/${file}`;
+
+          const indicator = document.createElement("button");
+          indicator.type = "button";
+          indicator.setAttribute("data-bs-target", "#panelCarousel");
+          indicator.setAttribute("data-bs-slide-to", String(index));
+          indicator.setAttribute("aria-label", `Slide ${index + 1}`);
+          if (index === 0) {
+            indicator.className = "active";
+            indicator.setAttribute("aria-current", "true");
+          }
+          indicators.appendChild(indicator);
+
+          const slide = document.createElement("div");
+          slide.className = `carousel-item${index === 0 ? " active" : ""}`;
+          slide.innerHTML = `
+            <div class="carousel-image-wrap">
+              <img src="${path}" class="d-block carousel-image" alt="Panel ${num}" loading="lazy" />
+            </div>
+            <div class="mt-2 d-flex justify-content-between align-items-center">
+              <h2 class="h6 mb-0">Panel ${num}</h2>
+              <a href="${path}" class="btn btn-sm btn-outline-primary">Open Image</a>
+            </div>
+            <div class="text-secondary small mt-1">
+              ${index + 1} / ${story.panelFiles.length}
+            </div>
+          `;
+          slides.appendChild(slide);
+        });
+      }
+
+      buildSelector();
+      selector.value = "nasruddin";
+      renderStory(selector.value);
+      selector.addEventListener("change", () => renderStory(selector.value));
     </script>
   </body>
 </html>
