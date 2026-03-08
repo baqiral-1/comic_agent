@@ -3,7 +3,7 @@
 `comic-agent` is a Python multi-agent pipeline that converts a plain text storyline into:
 
 - structured panel metadata (`manifest.json`)
-- generated panel images (`panels/*.png`)
+- generated panel images (`panels/panel-*.png`, one image per panel)
 - run logs (`run.log`)
 
 ## Summary
@@ -12,8 +12,8 @@
 
 - infer scenes and beats from narrative text
 - extract characters and style direction
-- generate comic panel prompts and images
-- attach panel speech-bubble metadata
+- generate comic panel prompts/images (4 subpanels per panel image)
+- attach panel speech-bubble or silent background-context metadata
 - validate continuity and rule compliance
 - export run outputs (`manifest.json`, panel images, and `panels.pdf`)
 
@@ -56,6 +56,7 @@ comic-agent run \
   --output /path/to/output_dir \
   [--max-panels 12] \
   [--seed 123] \
+  [--skip-image-generation] \
   [--verbose]
 ```
 
@@ -64,6 +65,8 @@ You can also run via module:
 ```bash
 python -m comic_agent.cli run --input story.txt --output ./out --verbose
 ```
+
+`--skip-image-generation` generates planning/manifest outputs only (no panel PNGs or PDF).
 
 ## Output Structure
 
@@ -80,7 +83,11 @@ out/
     ...
 ```
 
-`manifest.json` includes scenes, characters, panel specs, bubble metadata, continuity results, and validation status.
+If `--skip-image-generation` is used, output includes only `manifest.json` and `run.log`.
+
+`manifest.json` includes scenes, characters, nested panel specs (4 subpanels per panel),
+bubble metadata, optional `background_context_prompt` for silent subpanels, continuity
+results, and validation status.
 
 ## Agent Pipeline
 
@@ -92,8 +99,10 @@ out/
    Provides character metadata used for panel planning and bubble speaker defaults.
 4. `StyleAgent`: Derives a global comic style profile (tone, palette, camera language).
    Keeps visual direction consistent across all generated panels.
-5. `PanelAgent`: Converts scenes/beats into `PanelSpec` entries and generates image files.
-   Also creates speech-bubble metadata and writes panel PNG outputs.
+5. `PanelAgent`: Converts scenes/beats into nested `PanelSpec` entries (4 subpanels each)
+   and generates one composite panel image per `panel_id`.
+   Also creates speech-bubble metadata and optional `background_context_prompt` for
+   no-dialogue subpanels.
 6. `ContinuityAgent`: Applies lightweight continuity checks between adjacent panels.
    Flags potential scene-transition inconsistencies for validation.
 7. `ValidatorAgent`: Enforces structural and content rules on generated panel specs.
