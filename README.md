@@ -6,6 +6,8 @@
 - generated panel images (`panels/*.png`)
 - run logs (`run.log`)
 
+[Live Gallery (GitHub Pages)](https://baqiral-1.github.io/comic_agent/)
+
 ## Requirements
 
 - Python `3.11+`
