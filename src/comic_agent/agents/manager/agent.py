@@ -49,10 +49,21 @@ class ManagerAgent:
             style=style,
             output_panels_dir=panels_dir,
             max_panels=config.max_panels,
+            skip_image_generation=config.skip_image_generation,
         )
-        panel_specs = [artifact.spec for artifact in artifacts]
-        panel_image_paths = [artifact.image_path for artifact in artifacts]
-        panel_pdf_path = write_panels_pdf(panel_image_paths, config.output_dir / "panels.pdf")
+        panel_specs: list[PanelSpec] = []
+        seen_panel_ids: set[str] = set()
+        for artifact in artifacts:
+            if artifact.spec.panel_id in seen_panel_ids:
+                continue
+            seen_panel_ids.add(artifact.spec.panel_id)
+            panel_specs.append(artifact.spec)
+        if config.skip_image_generation:
+            panel_image_paths: list[str] = []
+            panel_pdf_path = None
+        else:
+            panel_image_paths = [artifact.image_path for artifact in artifacts]
+            panel_pdf_path = write_panels_pdf(panel_image_paths, config.output_dir / "panels.pdf")
 
         continuity_issues = self.continuity_agent.run(panel_specs)
         validation = self.validator_agent.run(panel_specs, continuity_issues)
@@ -93,5 +104,6 @@ class ManagerAgent:
             if issue.code == "BUBBLE_TEXT_TOO_LONG" and issue.panel_id is not None:
                 for panel in panel_specs:
                     if panel.panel_id == issue.panel_id:
-                        for bubble in panel.bubbles:
-                            bubble.text = bubble.text[:120]
+                        for subpanel in panel.subpanels:
+                            for bubble in subpanel.bubbles:
+                                bubble.text = bubble.text[:120]

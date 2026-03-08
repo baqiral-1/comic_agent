@@ -26,6 +26,11 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser.add_argument("--output", required=True, help="Output directory")
     run_parser.add_argument("--max-panels", type=int, default=12, help="Maximum panel count")
     run_parser.add_argument("--seed", type=int, default=None, help="Optional random seed")
+    run_parser.add_argument(
+        "--skip-image-generation",
+        action="store_true",
+        help="Skip panel image generation and produce specs/manifest only",
+    )
     run_parser.add_argument("--verbose", action="store_true", help="Enable debug logging")
     return parser
 
@@ -41,6 +46,7 @@ def run_command(args: argparse.Namespace) -> int:
         output_dir=output_dir,
         max_panels=int(args.max_panels),
         seed=args.seed,
+        skip_image_generation=bool(args.skip_image_generation),
         verbose=bool(args.verbose),
     )
 

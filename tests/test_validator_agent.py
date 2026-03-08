@@ -1,7 +1,7 @@
 """Validator agent tests."""
 
 from comic_agent.agents.validator_agent.agent import ValidatorAgent
-from comic_agent.core.models import BubbleSpec, PanelSpec
+from comic_agent.core.models import BubbleSpec, PanelSpec, SubPanelSpec
 
 
 def test_validator_flags_bubble_violations() -> None:
@@ -10,13 +10,19 @@ def test_validator_flags_bubble_violations() -> None:
     panel = PanelSpec(
         panel_id="panel-001",
         scene_id="scene-1",
-        description="desc",
-        prompt="prompt",
-        bubbles=[
-            BubbleSpec(
-                speaker="Alice",
-                text="x" * 250,
-                position="invalid",
+        subpanels=[
+            SubPanelSpec(
+                sub_panel_id="panel-001-sub-01",
+                description="desc",
+                prompt="prompt",
+                characters_involved=["Alice"],
+                bubbles=[
+                    BubbleSpec(
+                        speaker="Alice",
+                        text="x" * 250,
+                        position="invalid",
+                    )
+                ],
             )
         ],
     )

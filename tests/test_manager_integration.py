@@ -76,9 +76,36 @@ def test_manager_consumes_llm_style_scene_output(tmp_path: Path, monkeypatch) ->
 
     assert manifest.validation.passed is True
     assert len(manifest.scenes) == 2
-    assert len(manifest.panel_specs) == 4
+    assert len(manifest.panel_specs) == 2
     assert manifest.panel_specs[0].scene_id == "scene-1"
-    assert "Neighbor explains" in manifest.panel_specs[0].description
+    assert len(manifest.panel_specs[0].subpanels) == 4
+    assert "Neighbor explains" in manifest.panel_specs[0].subpanels[0].description
     assert Path(manifest.panel_images[0]).exists()
     assert manifest.panel_pdf == str(output_dir / "panels.pdf")
     assert Path(manifest.panel_pdf).exists()
+
+
+def test_manager_can_skip_image_generation(tmp_path: Path, monkeypatch) -> None:  # noqa: ANN001
+    """Manager run can skip image generation while still producing panel specs."""
+
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+
+    story_path = tmp_path / "story.txt"
+    story_path.write_text("Lina finds a map. She meets Omar.", encoding="utf-8")
+
+    output_dir = tmp_path / "out"
+    config = RunConfig(
+        input_path=story_path,
+        output_dir=output_dir,
+        max_panels=4,
+        skip_image_generation=True,
+        verbose=False,
+    )
+
+    manifest = ManagerAgent().run(config)
+
+    assert manifest.validation.passed is True
+    assert len(manifest.panel_specs) >= 1
+    assert manifest.panel_images == []
+    assert manifest.panel_pdf is None
+    assert not (output_dir / "panels.pdf").exists()

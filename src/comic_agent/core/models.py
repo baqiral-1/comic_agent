@@ -46,21 +46,31 @@ class BubbleSpec:
 
 
 @dataclass(slots=True)
-class PanelSpec:
-    """Generated panel intent and bubble composition."""
+class SubPanelSpec:
+    """Generated sub-panel intent and bubble composition."""
 
-    panel_id: str
-    scene_id: str
+    sub_panel_id: str
     description: str
     prompt: str
+    characters_involved: list[str]
     bubbles: list[BubbleSpec]
 
 
 @dataclass(slots=True)
+class PanelSpec:
+    """Generated panel containing a fixed set of sub-panels."""
+
+    panel_id: str
+    scene_id: str
+    subpanels: list[SubPanelSpec]
+
+
+@dataclass(slots=True)
 class PanelArtifact:
-    """Materialized panel file and corresponding spec."""
+    """Materialized sub-panel image file and corresponding parent panel spec."""
 
     spec: PanelSpec
+    sub_panel_id: str
     image_path: str
 
 
@@ -111,4 +121,5 @@ class RunConfig:
     output_dir: Path
     max_panels: int = 12
     seed: int | None = None
+    skip_image_generation: bool = False
     verbose: bool = False

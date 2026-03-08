@@ -15,7 +15,7 @@ class ContinuityAgent:
         for previous, current in zip(panel_specs, panel_specs[1:], strict=False):
             if previous.scene_id == current.scene_id:
                 continue
-            if "No beats found" in current.description:
+            if any("No beats found" in subpanel.description for subpanel in current.subpanels):
                 issues.append(
                     ValidationIssue(
                         code="CONTINUITY_EMPTY_SCENE",

@@ -49,12 +49,18 @@ def test_panel_agent_uses_all_character_fields_in_prompt_and_speaker(  # noqa: A
     )
 
     assert len(artifacts) == 1
+    assert artifacts[0].image_path.endswith("panel-001.png")
     spec = artifacts[0].spec
-    assert spec.bubbles[0].speaker == "Hero"
-    assert "Character context:" in spec.prompt
-    assert "Sidekick (supporting): Loyal friend observing events carefully." in spec.prompt
-    assert "Visual traits: green scarf, round glasses." in spec.prompt
-    assert "Speech style: measured." in spec.prompt
-    assert "Hero (main): Determined lead confronting the antagonist in public." in spec.prompt
-    assert "Visual traits: red coat, confident stance." in spec.prompt
-    assert "Speech style: assertive." in spec.prompt
+    assert len(spec.subpanels) == 4
+    first_subpanel = spec.subpanels[0]
+    assert first_subpanel.bubbles[0].speaker == "Hero"
+    assert first_subpanel.characters_involved == ["Hero"]
+    assert "Character context:" in first_subpanel.prompt
+    assert "Dialogue context:" in first_subpanel.prompt
+    assert "Hero: Beat event happens" in first_subpanel.prompt
+    assert "Sidekick (supporting): Loyal friend observing events carefully." in first_subpanel.prompt
+    assert "Visual traits: green scarf, round glasses." in first_subpanel.prompt
+    assert "Speech style: measured." in first_subpanel.prompt
+    assert "Hero (main): Determined lead confronting the antagonist in public." in first_subpanel.prompt
+    assert "Visual traits: red coat, confident stance." in first_subpanel.prompt
+    assert "Speech style: assertive." in first_subpanel.prompt

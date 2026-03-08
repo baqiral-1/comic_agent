@@ -29,30 +29,31 @@ class ValidatorAgent:
             )
 
         for panel in panel_specs:
-            if len(panel.bubbles) > MAX_BUBBLES_PER_PANEL:
-                issues.append(
-                    ValidationIssue(
-                        code="TOO_MANY_BUBBLES",
-                        message=f"Panel exceeds {MAX_BUBBLES_PER_PANEL} bubbles.",
-                        panel_id=panel.panel_id,
-                    )
-                )
-            for bubble in panel.bubbles:
-                if len(bubble.text) > MAX_BUBBLE_TEXT_LENGTH:
+            for subpanel in panel.subpanels:
+                if len(subpanel.bubbles) > MAX_BUBBLES_PER_PANEL:
                     issues.append(
                         ValidationIssue(
-                            code="BUBBLE_TEXT_TOO_LONG",
-                            message=f"Bubble text exceeds {MAX_BUBBLE_TEXT_LENGTH} characters.",
+                            code="TOO_MANY_BUBBLES",
+                            message=f"Subpanel exceeds {MAX_BUBBLES_PER_PANEL} bubbles.",
                             panel_id=panel.panel_id,
                         )
                     )
-                if bubble.position not in ALLOWED_BUBBLE_POSITIONS:
-                    issues.append(
-                        ValidationIssue(
-                            code="INVALID_BUBBLE_POSITION",
-                            message=f"Bubble position '{bubble.position}' is not allowed.",
-                            panel_id=panel.panel_id,
+                for bubble in subpanel.bubbles:
+                    if len(bubble.text) > MAX_BUBBLE_TEXT_LENGTH:
+                        issues.append(
+                            ValidationIssue(
+                                code="BUBBLE_TEXT_TOO_LONG",
+                                message=f"Bubble text exceeds {MAX_BUBBLE_TEXT_LENGTH} characters.",
+                                panel_id=panel.panel_id,
+                            )
                         )
-                    )
+                    if bubble.position not in ALLOWED_BUBBLE_POSITIONS:
+                        issues.append(
+                            ValidationIssue(
+                                code="INVALID_BUBBLE_POSITION",
+                                message=f"Bubble position '{bubble.position}' is not allowed.",
+                                panel_id=panel.panel_id,
+                            )
+                        )
 
         return ValidationResult(passed=not issues, issues=issues)
