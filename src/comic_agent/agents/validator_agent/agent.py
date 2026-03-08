@@ -30,6 +30,14 @@ class ValidatorAgent:
 
         for panel in panel_specs:
             for subpanel in panel.subpanels:
+                if not subpanel.bubbles and not (subpanel.background_context_prompt or "").strip():
+                    issues.append(
+                        ValidationIssue(
+                            code="SUBPANEL_MISSING_SPEECH_OR_CONTEXT",
+                            message="Subpanel must include bubbles or background context prompt.",
+                            panel_id=panel.panel_id,
+                        )
+                    )
                 if len(subpanel.bubbles) > MAX_BUBBLES_PER_PANEL:
                     issues.append(
                         ValidationIssue(

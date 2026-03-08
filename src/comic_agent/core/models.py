@@ -54,6 +54,7 @@ class SubPanelSpec:
     prompt: str
     characters_involved: list[str]
     bubbles: list[BubbleSpec]
+    background_context_prompt: str | None = None
 
 
 @dataclass(slots=True)

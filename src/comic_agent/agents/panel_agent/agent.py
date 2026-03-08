@@ -44,6 +44,7 @@ Output schema (strict JSON only):
           "description": "...",
           "prompt": "...",
           "characters_involved": ["Character Name"],
+          "background_context_prompt": "Optional context-only visual guidance for silent subpanels.",
           "bubbles": [
             {
               "speaker": "...",
@@ -62,7 +63,8 @@ Rules:
 - Preserve chronological order of events.
 - `description` must be concise and visually depictable.
 - `prompt` should be image-generation ready and include composition/camera cues.
-- Bubble text should be short and readable.
+- Bubble text should be short and readable when bubbles exist.
+- Every subpanel must include either `bubbles` or `background_context_prompt` (or both).
 - No markdown, no commentary, no extra keys outside schema.
 """
 
@@ -267,6 +269,15 @@ class PanelAgent:
             lead_speaker=lead_speaker,
             fallback_text=description,
         )
+        background_context_prompt = self._normalize_background_context(
+            raw_background_context=raw_subpanel.get("background_context_prompt")
+        )
+        if not bubbles and not background_context_prompt:
+            background_context_prompt = self._default_background_context(
+                scene_summary=scene.summary,
+                description=description,
+            )
+
         characters_involved = self._normalize_characters_involved(
             raw_characters=raw_subpanel.get("characters_involved"),
             characters=characters,
@@ -284,9 +295,14 @@ class PanelAgent:
                 character_context=character_context,
                 beat=description,
                 dialogue_context=dialogue_context,
+                background_context_prompt=background_context_prompt,
             )
         else:
-            prompt = self._append_dialogue_context(prompt.strip(), dialogue_context)
+            prompt = self._ensure_prompt_context(
+                prompt=prompt.strip(),
+                dialogue_context=dialogue_context,
+                background_context_prompt=background_context_prompt,
+            )
 
         return SubPanelSpec(
             sub_panel_id=sub_panel_id,
@@ -294,6 +310,7 @@ class PanelAgent:
             prompt=prompt,
             characters_involved=characters_involved,
             bubbles=bubbles,
+            background_context_prompt=background_context_prompt,
         )
 
     def _normalize_bubbles(
@@ -328,16 +345,7 @@ class PanelAgent:
                     )
                 )
 
-        if bubbles:
-            return bubbles
-
-        return [
-            BubbleSpec(
-                speaker=lead_speaker,
-                text=fallback_text[:120],
-                position="top-right",
-            )
-        ]
+        return bubbles
 
     def _fallback_panels(
         self,
@@ -387,13 +395,22 @@ class PanelAgent:
         """Build one deterministic subpanel."""
 
         beat = self._fallback_beat(scene=scene, sub_idx=sub_idx)
-        bubbles = [
-            BubbleSpec(
-                speaker=lead_speaker,
-                text=beat[:120],
-                position="bottom-left" if sub_idx % 2 == 0 else "top-right",
+        # Alternate spoken/context-only subpanels for clearer pacing in fallback output.
+        if sub_idx % 2 == 0:
+            bubbles: list[BubbleSpec] = []
+            background_context_prompt = self._default_background_context(
+                scene_summary=scene.summary,
+                description=beat,
             )
-        ]
+        else:
+            bubbles = [
+                BubbleSpec(
+                    speaker=lead_speaker,
+                    text=beat[:120],
+                    position="top-right",
+                )
+            ]
+            background_context_prompt = None
         characters_involved = self._normalize_characters_involved(
             raw_characters=None,
             characters=characters,
@@ -408,6 +425,7 @@ class PanelAgent:
             character_context=character_context,
             beat=beat,
             dialogue_context=dialogue_context,
+            background_context_prompt=background_context_prompt,
         )
         return SubPanelSpec(
             sub_panel_id=f"{panel_id}-sub-{sub_idx:02d}",
@@ -415,6 +433,7 @@ class PanelAgent:
             prompt=prompt,
             characters_involved=characters_involved,
             bubbles=bubbles,
+            background_context_prompt=background_context_prompt,
         )
 
     def _fallback_beat(self, scene: Scene, sub_idx: int) -> str:
@@ -431,30 +450,60 @@ class PanelAgent:
         character_context: str,
         beat: str,
         dialogue_context: str,
+        background_context_prompt: str | None,
     ) -> str:
         """Build image prompt text from style + narrative context."""
 
-        return (
+        prompt = (
             f"{style.tone} comic panel, {style.palette}, {style.camera_language}. "
             f"Scene context: {scene_summary}. "
             f"Character context: {character_context}. "
-            f"Beat: {beat}. "
-            f"Dialogue context: {dialogue_context}."
+            f"Beat: {beat}."
         )
+        if dialogue_context:
+            prompt = f"{prompt} Dialogue context: {dialogue_context}."
+        if background_context_prompt:
+            prompt = f"{prompt} Background context: {background_context_prompt}."
+        if not dialogue_context:
+            prompt = f"{prompt} Do not render speech bubbles in this subpanel."
+        return prompt
 
-    def _append_dialogue_context(self, prompt: str, dialogue_context: str) -> str:
-        """Append dialogue context to prompt unless already present."""
+    def _ensure_prompt_context(
+        self,
+        prompt: str,
+        dialogue_context: str,
+        background_context_prompt: str | None,
+    ) -> str:
+        """Append missing dialogue/background context sections for model guidance."""
 
-        if "Dialogue context:" in prompt:
-            return prompt
-        return f"{prompt} Dialogue context: {dialogue_context}."
+        updated = prompt
+        if dialogue_context and "Dialogue context:" not in updated:
+            updated = f"{updated} Dialogue context: {dialogue_context}."
+        if background_context_prompt and "Background context:" not in updated:
+            updated = f"{updated} Background context: {background_context_prompt}."
+        if not dialogue_context and "Do not render speech bubbles in this subpanel." not in updated:
+            updated = f"{updated} Do not render speech bubbles in this subpanel."
+        return updated
 
     def _dialogue_context(self, bubbles: list[BubbleSpec]) -> str:
         """Serialize bubble list into concise dialogue context for prompting."""
 
         if not bubbles:
-            return "No dialogue."
+            return ""
         return " | ".join(f"{bubble.speaker}: {bubble.text}" for bubble in bubbles)
+
+    def _normalize_background_context(self, raw_background_context: object) -> str | None:
+        """Normalize optional silent-subpanel context string."""
+
+        if not isinstance(raw_background_context, str):
+            return None
+        clean = raw_background_context.strip()
+        return clean if clean else None
+
+    def _default_background_context(self, scene_summary: str, description: str) -> str:
+        """Create default context guidance for silent subpanels."""
+
+        return f"{description}. Show environmental cues from: {scene_summary}."
 
     def _normalize_characters_involved(
         self,
@@ -580,11 +629,17 @@ class PanelAgent:
         for idx, subpanel in enumerate(panel.subpanels, start=1):
             characters = ", ".join(subpanel.characters_involved) if subpanel.characters_involved else "None"
             dialogue = self._dialogue_context(subpanel.bubbles)
+            background_context = subpanel.background_context_prompt or ""
+            dialogue_or_context = (
+                f"Dialogue: {dialogue}. "
+                if dialogue
+                else f"No speech bubble. Background context: {background_context}. "
+            )
             subpanel_sections.append(
                 (
                     f"Subpanel {idx}: Description: {subpanel.description}. "
                     f"Characters involved: {characters}. "
-                    f"Dialogue: {dialogue}. "
+                    f"{dialogue_or_context}"
                     f"Visual prompt: {subpanel.prompt}"
                 )
             )

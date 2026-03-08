@@ -64,3 +64,8 @@ def test_panel_agent_uses_all_character_fields_in_prompt_and_speaker(  # noqa: A
     assert "Hero (main): Determined lead confronting the antagonist in public." in first_subpanel.prompt
     assert "Visual traits: red coat, confident stance." in first_subpanel.prompt
     assert "Speech style: assertive." in first_subpanel.prompt
+
+    second_subpanel = spec.subpanels[1]
+    assert second_subpanel.bubbles == []
+    assert second_subpanel.background_context_prompt
+    assert "Do not render speech bubbles in this subpanel." in second_subpanel.prompt

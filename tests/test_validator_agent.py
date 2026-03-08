@@ -33,3 +33,25 @@ def test_validator_flags_bubble_violations() -> None:
     codes = {issue.code for issue in result.issues}
     assert "BUBBLE_TEXT_TOO_LONG" in codes
     assert "INVALID_BUBBLE_POSITION" in codes
+
+
+def test_validator_flags_subpanel_without_speech_or_context() -> None:
+    """Validator should fail subpanels that provide neither bubbles nor context."""
+
+    panel = PanelSpec(
+        panel_id="panel-001",
+        scene_id="scene-1",
+        subpanels=[
+            SubPanelSpec(
+                sub_panel_id="panel-001-sub-01",
+                description="silent subpanel without context",
+                prompt="prompt",
+                characters_involved=["Alice"],
+                bubbles=[],
+            )
+        ],
+    )
+
+    result = ValidatorAgent().run([panel], continuity_issues=[])
+    codes = {issue.code for issue in result.issues}
+    assert "SUBPANEL_MISSING_SPEECH_OR_CONTEXT" in codes
