@@ -36,7 +36,8 @@ class PanelAgent:
         planned: list[tuple[PanelSpec, Path]] = []
         panel_index = 1
 
-        lead_speaker = characters[0].name if characters else "Narrator"
+        lead_speaker = self._select_lead_speaker(characters)
+        character_context = self._character_context(characters)
         for scene in scenes:
             for beat in scene.beats:
                 if panel_index > max_panels:
@@ -45,7 +46,9 @@ class PanelAgent:
                 panel_id = f"panel-{panel_index:03d}"
                 prompt = (
                     f"{style.tone} comic panel, {style.palette}, {style.camera_language}. "
-                    f"Scene context: {scene.summary}. Beat: {beat}."
+                    f"Scene context: {scene.summary}. "
+                    f"Character context: {character_context}. "
+                    f"Beat: {beat}."
                 )
                 bubbles = [
                     BubbleSpec(
@@ -67,6 +70,33 @@ class PanelAgent:
                 panel_index += 1
 
         return self._render_artifacts(planned)
+
+    def _select_lead_speaker(self, characters: list[CharacterProfile]) -> str:
+        """Pick a default bubble speaker, prioritizing main-role characters."""
+
+        for character in characters:
+            if character.role == "main":
+                return character.name
+        if characters:
+            return characters[0].name
+        return "Narrator"
+
+    def _character_context(self, characters: list[CharacterProfile]) -> str:
+        """Build concise context string from all character profile fields."""
+
+        if not characters:
+            return "No characters provided."
+
+        parts: list[str] = []
+        for character in characters:
+            traits = ", ".join(character.visual_traits)
+            parts.append(
+                (
+                    f"{character.name} ({character.role}): {character.description} "
+                    f"Visual traits: {traits}. Speech style: {character.speech_style}."
+                )
+            )
+        return " ".join(parts)
 
     def _render_artifacts(self, planned: list[tuple[PanelSpec, Path]]) -> list[PanelArtifact]:
         """Render panel images and preserve artifact ordering."""

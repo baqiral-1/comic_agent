@@ -31,6 +31,7 @@ class CharacterProfile:
 
     name: str
     role: str
+    description: str
     visual_traits: list[str]
     speech_style: str
 
