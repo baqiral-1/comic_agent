@@ -1,11 +1,13 @@
 """Scene agent tests."""
 
-from comic_agent.agents.scene_agent.agent import SceneAgent
+from comic_agent.agents.scene_agent.agent import SCENE_CLASSIFICATION_PROMPT_SAMPLE, SceneAgent
 from comic_agent.core.models import StoryDocument
 
 
-def test_scene_agent_splits_sentences_into_scenes() -> None:
-    """Scene agent should chunk sentences into scene groups."""
+def test_scene_agent_uses_fallback_chunking_without_api_key(monkeypatch) -> None:  # noqa: ANN001
+    """Scene agent should fall back to deterministic chunking without API key."""
+
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
 
     story = StoryDocument(
         source_path="story.txt",
@@ -19,3 +21,12 @@ def test_scene_agent_splits_sentences_into_scenes() -> None:
     assert len(scenes[0].beats) == 3
     assert scenes[1].scene_id == "scene-2"
     assert len(scenes[1].beats) == 1
+
+
+def test_scene_prompt_sample_mentions_scene_boundaries() -> None:
+    """Prompt sample should explicitly describe scene boundary criteria."""
+
+    prompt = SCENE_CLASSIFICATION_PROMPT_SAMPLE.lower()
+    assert "scene boundary" in prompt
+    assert "location" in prompt
+    assert "time" in prompt

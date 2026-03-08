@@ -91,6 +91,7 @@ class RunManifest:
     characters: list[CharacterProfile]
     panel_specs: list[PanelSpec]
     panel_images: list[str]
+    panel_pdf: str | None
     continuity_issues: list[ValidationIssue]
     validation: ValidationResult
     revisions_attempted: int

@@ -26,8 +26,10 @@ class InvalidPanelAgent:
         return [PanelArtifact(spec=spec, image_path=str(panel_path))]
 
 
-def test_manager_raises_when_validation_still_fails(tmp_path: Path) -> None:
+def test_manager_raises_when_validation_still_fails(tmp_path: Path, monkeypatch) -> None:  # noqa: ANN001
     """Manager should raise after one revision if issues remain."""
+
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
 
     story_path = tmp_path / "story.txt"
     story_path.write_text("A goes to town.", encoding="utf-8")

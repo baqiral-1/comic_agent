@@ -60,6 +60,7 @@ Example output directory:
 out/
   manifest.json
   run.log
+  panels.pdf
   panels/
     panel-001.png
     panel-002.png

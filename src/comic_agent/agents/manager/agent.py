@@ -12,7 +12,7 @@ from comic_agent.agents.scene_agent.agent import SceneAgent
 from comic_agent.agents.style_agent.agent import StyleAgent
 from comic_agent.agents.validator_agent.agent import ValidatorAgent
 from comic_agent.core.errors import ValidationFailedError
-from comic_agent.core.io_utils import new_run_id
+from comic_agent.core.io_utils import new_run_id, write_panels_pdf
 from comic_agent.core.models import PanelSpec, RunConfig, RunManifest, ValidationResult
 from comic_agent.core.rules import DEFAULT_MANIFEST_VERSION
 
@@ -51,6 +51,8 @@ class ManagerAgent:
             max_panels=config.max_panels,
         )
         panel_specs = [artifact.spec for artifact in artifacts]
+        panel_image_paths = [artifact.image_path for artifact in artifacts]
+        panel_pdf_path = write_panels_pdf(panel_image_paths, config.output_dir / "panels.pdf")
 
         continuity_issues = self.continuity_agent.run(panel_specs)
         validation = self.validator_agent.run(panel_specs, continuity_issues)
@@ -70,7 +72,8 @@ class ManagerAgent:
             scenes=scenes,
             characters=characters,
             panel_specs=panel_specs,
-            panel_images=[artifact.image_path for artifact in artifacts],
+            panel_images=panel_image_paths,
+            panel_pdf=str(panel_pdf_path) if panel_pdf_path is not None else None,
             continuity_issues=continuity_issues,
             validation=validation,
             revisions_attempted=revisions_attempted,

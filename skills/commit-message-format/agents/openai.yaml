@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Message Format"
+  short_description: "Use one-line summary plus bullets for commit messages."
+  default_prompt: "Rewrite or generate commit messages as a single-line summary followed by concise bullet points."
