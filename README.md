@@ -54,7 +54,7 @@ comic-agent run --input story.txt --output ./out --verbose
 comic-agent run \
   --input /path/to/story.txt \
   --output /path/to/output_dir \
-  [--max-panels 12] \
+  [--max-panels N] \
   [--seed 123] \
   [--skip-image-generation] \
   [--verbose]
@@ -67,6 +67,7 @@ python -m comic_agent.cli run --input story.txt --output ./out --verbose
 ```
 
 `--skip-image-generation` generates planning/manifest outputs only (no panel PNGs or PDF).
+If `--max-panels` is omitted, scene/panel count is inferred automatically.
 
 ## Output Structure
 

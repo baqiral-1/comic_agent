@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
+import math
 import os
 
 from comic_agent.core.models import Scene, StoryDocument
@@ -41,20 +42,28 @@ Output rules:
 class SceneAgent:
     """Transforms raw storyline text into scene beats."""
 
-    def run(self, story: StoryDocument) -> list[Scene]:
+    def run(self, story: StoryDocument, target_panel_count: int | None = None) -> list[Scene]:
         """Infer compact scenes with an LLM, then fallback deterministically."""
 
         normalized_text = story.normalized_text.strip()
         if not normalized_text:
             return [Scene(scene_id="scene-1", summary="Empty story", beats=["No beats found"])]
 
-        inferred = self._infer_scenes_with_llm(normalized_text)
+        inferred = self._infer_scenes_with_llm(
+            normalized_text=normalized_text,
+            target_panel_count=target_panel_count,
+        )
         if inferred:
             return inferred
 
-        return self._fallback_sentence_chunks(normalized_text)
+        return self._fallback_sentence_chunks(
+            normalized_text=normalized_text,
+            target_panel_count=target_panel_count,
+        )
 
-    def _infer_scenes_with_llm(self, normalized_text: str) -> list[Scene] | None:
+    def _infer_scenes_with_llm(
+        self, normalized_text: str, target_panel_count: int | None
+    ) -> list[Scene] | None:
         """Use an LLM to infer scene boundaries and beats."""
 
         api_key = os.getenv("OPENAI_API_KEY")
@@ -72,9 +81,9 @@ class SceneAgent:
                     {"role": "system", "content": SCENE_CLASSIFICATION_PROMPT_SAMPLE},
                     {
                         "role": "user",
-                        "content": (
-                            "Infer scenes from this story and return JSON only.\n\n"
-                            f"STORY:\n{normalized_text}"
+                        "content": self._scene_user_prompt(
+                            normalized_text=normalized_text,
+                            target_panel_count=target_panel_count,
                         ),
                     },
                 ],
@@ -106,19 +115,44 @@ class SceneAgent:
                     )
                 )
 
+            if target_panel_count and target_panel_count > 0:
+                scenes = scenes[:target_panel_count]
             return scenes or None
         except Exception as exc:  # pragma: no cover - network/API dependent
             LOGGER.warning("Scene LLM inference failed; using deterministic fallback: %s", exc)
             return None
 
-    def _fallback_sentence_chunks(self, normalized_text: str) -> list[Scene]:
+    def _scene_user_prompt(self, normalized_text: str, target_panel_count: int | None) -> str:
+        """Build scene-inference user prompt, optionally constraining panel count."""
+
+        if target_panel_count and target_panel_count > 0:
+            return (
+                "Infer scenes from this story and return JSON only.\n\n"
+                f"TARGET_PANEL_COUNT: {target_panel_count}\n"
+                "Aim to produce approximately this many scenes, because each scene "
+                "maps to one panel. Keep scene quality over strict counting.\n\n"
+                f"STORY:\n{normalized_text}"
+            )
+        return (
+            "Infer scenes from this story and return JSON only.\n\n"
+            "No target panel count was supplied. Infer an appropriate number of scenes "
+            "for coherent comic pacing.\n\n"
+            f"STORY:\n{normalized_text}"
+        )
+
+    def _fallback_sentence_chunks(
+        self, normalized_text: str, target_panel_count: int | None
+    ) -> list[Scene]:
         """Fallback chunker when LLM inference is unavailable."""
 
         sentences = [s.strip() for s in normalized_text.replace("\n", " ").split(".") if s.strip()]
         if not sentences:
             return [Scene(scene_id="scene-1", summary="Empty story", beats=["No beats found"])]
 
-        scene_size = 3
+        if target_panel_count and target_panel_count > 0:
+            scene_size = max(1, math.ceil(len(sentences) / target_panel_count))
+        else:
+            scene_size = 3
         scenes: list[Scene] = []
         for idx in range(0, len(sentences), scene_size):
             chunk = sentences[idx : idx + scene_size]

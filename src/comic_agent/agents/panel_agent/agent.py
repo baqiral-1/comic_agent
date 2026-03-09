@@ -29,6 +29,7 @@ PANEL_INFERENCE_PROMPT_SAMPLE = """You are a comic storyboard planner.
 
 Task:
 - Infer comic panels from the story scenes and character profiles.
+- Generate exactly one panel per input scene, preserving scene order.
 - Each panel MUST contain exactly 4 subpanels that progress the story.
 - Keep all output grounded in provided story context.
 
@@ -59,6 +60,9 @@ Output schema (strict JSON only):
 }
 
 Rules:
+- Number of panels MUST equal number of input scenes provided.
+- `panel_id` must be sequential: panel-001, panel-002, ...
+- `scene_id` for each panel must match its corresponding input scene.
 - Exactly 4 subpanels per panel.
 - Preserve chronological order of events.
 - `description` must be concise and visually depictable.
@@ -81,23 +85,24 @@ class PanelAgent:
         characters: list[CharacterProfile],
         style: StyleGuide,
         output_panels_dir: Path,
-        max_panels: int,
+        max_panels: int | None,
         skip_image_generation: bool = False,
     ) -> list[PanelArtifact]:
         """Generate panel specs (with subpanels) and render panel images."""
 
+        resolved_max_panels = self._resolve_max_panels(scenes=scenes, max_panels=max_panels)
         panel_specs = self._infer_panels_with_llm(
             scenes=scenes,
             characters=characters,
             style=style,
-            max_panels=max_panels,
+            max_panels=resolved_max_panels,
         )
         if not panel_specs:
             panel_specs = self._fallback_panels(
                 scenes=scenes,
                 characters=characters,
                 style=style,
-                max_panels=max_panels,
+                max_panels=resolved_max_panels,
             )
 
         planned: list[tuple[PanelSpec, Path, str]] = []
@@ -148,6 +153,8 @@ class PanelAgent:
                         "role": "user",
                         "content": (
                             "Generate storyboard panels as strict JSON only.\n\n"
+                            f"EXPECTED_PANEL_COUNT: {max_panels}\n"
+                            "Generate one panel for each scene below in the same order.\n\n"
                             f"STYLE:\n- Tone: {style.tone}\n"
                             f"- Palette: {style.palette}\n"
                             f"- Camera language: {style.camera_language}\n\n"
@@ -556,6 +563,13 @@ class PanelAgent:
                 lines.append(f"  - {beat}")
         return "\n".join(lines)
 
+    def _resolve_max_panels(self, scenes: list[Scene], max_panels: int | None) -> int:
+        """Resolve optional panel cap into an effective positive limit."""
+
+        if max_panels is None:
+            return len(scenes)
+        return max(0, max_panels)
+
     def _select_lead_speaker(self, characters: list[CharacterProfile]) -> str:
         """Pick a default bubble speaker, prioritizing main-role characters."""
 
@@ -622,6 +636,26 @@ class PanelAgent:
                 )
         return artifacts
 
+    def retry_failed_panel_images(
+        self,
+        panel_specs: list[PanelSpec],
+        output_panels_dir: Path,
+        failed_panel_ids: set[str],
+    ) -> None:
+        """Regenerate only failed panel image files, overwriting placeholders."""
+
+        if not failed_panel_ids:
+            return
+
+        panel_lookup = {panel.panel_id: panel for panel in panel_specs}
+        for panel_id in sorted(failed_panel_ids):
+            panel = panel_lookup.get(panel_id)
+            if panel is None:
+                continue
+            output_path = output_panels_dir / f"{panel_id}.png"
+            prompt = self._panel_composite_prompt(panel=panel)
+            self._generate_image(prompt=prompt, output_path=output_path, force=True)
+
     def _panel_composite_prompt(self, panel: PanelSpec) -> str:
         """Build one combined prompt that renders all four subpanels in a single image."""
 
@@ -660,9 +694,11 @@ class PanelAgent:
             LOGGER.warning("Invalid COMIC_AGENT_IMAGE_WORKERS=%s; using 1", configured)
             return 1
 
-    def _generate_image(self, prompt: str, output_path: Path) -> None:
+    def _generate_image(self, prompt: str, output_path: Path, force: bool = False) -> None:
         """Generate image from prompt; offline fallback writes placeholder PNG."""
 
+        if force and output_path.exists():
+            output_path.unlink()
         if output_path.exists() and output_path.stat().st_size > 0:
             LOGGER.debug("Reusing existing panel image at %s", output_path)
             return

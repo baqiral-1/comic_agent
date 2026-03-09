@@ -24,7 +24,12 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser = subparsers.add_parser("run", help="Run the comic generation pipeline")
     run_parser.add_argument("--input", required=True, help="Path to storyline text file")
     run_parser.add_argument("--output", required=True, help="Output directory")
-    run_parser.add_argument("--max-panels", type=int, default=12, help="Maximum panel count")
+    run_parser.add_argument(
+        "--max-panels",
+        type=int,
+        default=None,
+        help="Target number of panels to generate (if omitted, inferred automatically)",
+    )
     run_parser.add_argument("--seed", type=int, default=None, help="Optional random seed")
     run_parser.add_argument(
         "--skip-image-generation",
@@ -44,7 +49,7 @@ def run_command(args: argparse.Namespace) -> int:
     config = RunConfig(
         input_path=Path(args.input),
         output_dir=output_dir,
-        max_panels=int(args.max_panels),
+        max_panels=int(args.max_panels) if args.max_panels is not None else None,
         seed=args.seed,
         skip_image_generation=bool(args.skip_image_generation),
         verbose=bool(args.verbose),

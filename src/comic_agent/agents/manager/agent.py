@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import logging
+import os
+from pathlib import Path
 
 from comic_agent.agents.character_agent.agent import CharacterAgent
 from comic_agent.agents.continuity_agent.agent import ContinuityAgent
@@ -14,7 +16,7 @@ from comic_agent.agents.validator_agent.agent import ValidatorAgent
 from comic_agent.core.errors import ValidationFailedError
 from comic_agent.core.io_utils import new_run_id, write_panels_pdf
 from comic_agent.core.models import PanelSpec, RunConfig, RunManifest, ValidationResult
-from comic_agent.core.rules import DEFAULT_MANIFEST_VERSION
+from comic_agent.core.rules import DEFAULT_MANIFEST_VERSION, MAX_IMAGE_RETRY_COUNT
 
 LOGGER = logging.getLogger(__name__)
 
@@ -38,7 +40,7 @@ class ManagerAgent:
         run_id = new_run_id()
 
         story = self.ingest_agent.run(config.input_path)
-        scenes = self.scene_agent.run(story)
+        scenes = self.scene_agent.run(story, target_panel_count=config.max_panels)
         characters = self.character_agent.run(story)
         style = self.style_agent.run(scenes)
 
@@ -62,19 +64,37 @@ class ManagerAgent:
             panel_image_paths: list[str] = []
             panel_pdf_path = None
         else:
-            panel_image_paths = [artifact.image_path for artifact in artifacts]
+            panel_image_paths = [
+                str(panels_dir / f"{panel_spec.panel_id}.png") for panel_spec in panel_specs
+            ]
             panel_pdf_path = write_panels_pdf(panel_image_paths, config.output_dir / "panels.pdf")
 
         continuity_issues = self.continuity_agent.run(panel_specs)
-        validation = self.validator_agent.run(panel_specs, continuity_issues)
+        validation, panel_image_paths, panel_pdf_path = self._validate_with_image_retries(
+            panel_specs=panel_specs,
+            continuity_issues=continuity_issues,
+            panel_image_paths=panel_image_paths,
+            panel_pdf_path=panel_pdf_path,
+            panels_dir=panels_dir,
+            output_pdf_path=config.output_dir / "panels.pdf",
+            skip_image_generation=config.skip_image_generation,
+        )
 
         revisions_attempted = 0
-        if not validation.passed:
+        if not validation.passed and self._has_non_image_issues(validation):
             revisions_attempted = 1
             LOGGER.info("Validation failed; attempting one revision pass")
             self._revise_panel_specs(panel_specs, validation)
             continuity_issues = self.continuity_agent.run(panel_specs)
-            validation = self.validator_agent.run(panel_specs, continuity_issues)
+            validation, panel_image_paths, panel_pdf_path = self._validate_with_image_retries(
+                panel_specs=panel_specs,
+                continuity_issues=continuity_issues,
+                panel_image_paths=panel_image_paths,
+                panel_pdf_path=panel_pdf_path,
+                panels_dir=panels_dir,
+                output_pdf_path=config.output_dir / "panels.pdf",
+                skip_image_generation=config.skip_image_generation,
+            )
 
         manifest = RunManifest(
             manifest_version=DEFAULT_MANIFEST_VERSION,
@@ -94,6 +114,81 @@ class ManagerAgent:
             raise ValidationFailedError("Panel validation failed after one revision.")
 
         return manifest
+
+    def _validate_with_image_retries(
+        self,
+        panel_specs: list[PanelSpec],
+        continuity_issues: list,
+        panel_image_paths: list[str],
+        panel_pdf_path: Path | None,
+        panels_dir: Path,
+        output_pdf_path: Path,
+        skip_image_generation: bool,
+    ) -> tuple[ValidationResult, list[str], Path | None]:
+        """Run validation and regenerate failed panel images up to retry cap."""
+
+        validation = self.validator_agent.run(
+            panel_specs,
+            continuity_issues,
+            panel_images=(
+                panel_image_paths
+                if (not skip_image_generation and bool(os.getenv("OPENAI_API_KEY")))
+                else None
+            ),
+        )
+        image_validation_enabled = not skip_image_generation and bool(os.getenv("OPENAI_API_KEY"))
+        if not image_validation_enabled:
+            return validation, panel_image_paths, panel_pdf_path
+
+        retries = 0
+        failed_panel_ids = self._failed_image_panel_ids(validation)
+        while failed_panel_ids and retries < MAX_IMAGE_RETRY_COUNT:
+            retries += 1
+            LOGGER.info(
+                "Retrying %d failed panel image(s) (attempt %d/%d): %s",
+                len(failed_panel_ids),
+                retries,
+                MAX_IMAGE_RETRY_COUNT,
+                ", ".join(sorted(failed_panel_ids)),
+            )
+            if not hasattr(self.panel_agent, "retry_failed_panel_images"):
+                LOGGER.warning("Panel agent does not support retry_failed_panel_images; skipping retries.")
+                break
+            self.panel_agent.retry_failed_panel_images(
+                panel_specs=panel_specs,
+                output_panels_dir=panels_dir,
+                failed_panel_ids=failed_panel_ids,
+            )
+            panel_image_paths = [str(panels_dir / f"{panel.panel_id}.png") for panel in panel_specs]
+            panel_pdf_path = write_panels_pdf(panel_image_paths, output_pdf_path)
+            validation = self.validator_agent.run(
+                panel_specs,
+                continuity_issues,
+                panel_images=panel_image_paths,
+            )
+            failed_panel_ids = self._failed_image_panel_ids(validation)
+
+        return validation, panel_image_paths, panel_pdf_path
+
+    def _failed_image_panel_ids(self, validation: ValidationResult) -> set[str]:
+        """Extract failed panel IDs caused by missing/placeholder image validation."""
+
+        failed: set[str] = set()
+        for issue in validation.issues:
+            if issue.code != "PANEL_IMAGE_MISSING_OR_PLACEHOLDER":
+                continue
+            if issue.panel_id is None:
+                continue
+            failed.add(issue.panel_id)
+        return failed
+
+    def _has_non_image_issues(self, validation: ValidationResult) -> bool:
+        """Return True when validation has issues unrelated to image artifacts."""
+
+        for issue in validation.issues:
+            if issue.code != "PANEL_IMAGE_MISSING_OR_PLACEHOLDER":
+                return True
+        return False
 
     def _revise_panel_specs(
         self, panel_specs: list[PanelSpec], validation: ValidationResult

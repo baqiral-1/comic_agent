@@ -120,7 +120,7 @@ class RunConfig:
 
     input_path: Path
     output_dir: Path
-    max_panels: int = 12
+    max_panels: int | None = None
     seed: int | None = None
     skip_image_generation: bool = False
     verbose: bool = False

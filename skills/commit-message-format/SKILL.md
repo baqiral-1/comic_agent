@@ -28,6 +28,11 @@ Write bullet guidelines:
 - Mention touched subsystem/file area when useful.
 - Skip trivial implementation detail.
 
+Docs filtering rule:
+- Ignore docs-related changes when writing commit messages.
+- Do not mention docs, README, GitHub Pages, galleries, screenshots, or static assets in the summary or bullets.
+- Focus message content on functional/runtime/agent/code behavior changes only.
+
 Use this script for deterministic formatting:
 - `scripts/format_commit_message.py --summary "..." --bullet "..." --bullet "..." --issue-url "https://github.com/<owner>/<repo>/issues/<number>"`
 

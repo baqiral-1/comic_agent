@@ -30,3 +30,29 @@ def test_scene_prompt_sample_mentions_scene_boundaries() -> None:
     assert "scene boundary" in prompt
     assert "location" in prompt
     assert "time" in prompt
+
+
+def test_scene_agent_fallback_respects_target_panel_count(monkeypatch) -> None:  # noqa: ANN001
+    """Fallback chunking should align scene count with requested panel target."""
+
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+
+    story = StoryDocument(
+        source_path="story.txt",
+        raw_text="A. B. C. D. E. F.",
+        normalized_text="A. B. C. D. E. F.",
+    )
+    scenes = SceneAgent().run(story, target_panel_count=2)
+
+    assert len(scenes) == 2
+
+
+def test_scene_user_prompt_infers_when_target_not_supplied() -> None:
+    """Scene prompt should request inference when no target panel count is provided."""
+
+    prompt = SceneAgent()._scene_user_prompt(
+        normalized_text="A short story.",
+        target_panel_count=None,
+    )
+    assert "No target panel count was supplied" in prompt
+    assert "TARGET_PANEL_COUNT" not in prompt

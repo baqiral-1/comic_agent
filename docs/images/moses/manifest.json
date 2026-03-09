@@ -1,0 +1,976 @@
+{
+  "manifest_version": "1.0",
+  "run_id": "98d0d97e17df",
+  "input_file": "/tmp/comic_agent_mn/moses.txt",
+  "scenes": [
+    {
+      "scene_id": "scene-1",
+      "summary": "In ancient Egypt, Hebrew baby boys face a deadly decree from Pharaoh. Moses' mother hides him in a basket on the Nile to save him, watched from afar by his sister Miriam.",
+      "beats": [
+        "Beat 1: Jochebed placing baby Moses in a basket among the reeds of the Nile.",
+        "Beat 2: Miriam watching from a distance as Pharaoh\u2019s daughter discovers the basket.",
+        "Beat 3: Pharaoh\u2019s daughter deciding to keep baby Moses and calling for a Hebrew nurse."
+      ]
+    },
+    {
+      "scene_id": "scene-2",
+      "summary": "Moses grows up in Pharaoh\u2019s palace but feels his Hebrew identity. After witnessing an injustice against his people, he flees Egypt and starts a new life as a shepherd in Midian, marrying Zipporah.",
+      "beats": [
+        "Beat 1: Young Moses in fine clothes at Pharaoh\u2019s palace, looking thoughtful and conflicted.",
+        "Beat 2: Moses intervening as an Egyptian beats a Hebrew slave, confronting the injustice.",
+        "Beat 3: Moses living quietly as a shepherd in Midian with his wife and family."
+      ]
+    },
+    {
+      "scene_id": "scene-3",
+      "summary": "Moses encounters the burning bush on Mount Horeb; God calls him to lead the Israelites out of Egypt and reassures him with His name and promises of support.",
+      "beats": [
+        "Beat 1: Moses noticing the unburnt, flaming bush and approaching it cautiously.",
+        "Beat 2: God speaking to Moses from the bush, instructing him to remove his sandals and announcing His identity.",
+        "Beat 3: Moses listening in fear and hesitation as God commands him to go to Pharaoh, promising aid with his brother Aaron."
+      ]
+    },
+    {
+      "scene_id": "scene-4",
+      "summary": "Moses returns to Egypt and demands Pharaoh to free the Israelites. Pharaoh refuses, leading to ten devastating plagues before finally releasing the people.",
+      "beats": [
+        "Beat 1: Moses and Aaron standing before Pharaoh demanding freedom for their people.",
+        "Beat 2: Pharaoh refusing with scorn, refusing to acknowledge the Lord.",
+        "Beat 3: Scenes hinting at the plagues and Pharaoh\u2019s eventual ordering the Israelites to leave."
+      ]
+    },
+    {
+      "scene_id": "scene-5",
+      "summary": "The Israelites hastily flee Egypt with their belongings after centuries of slavery. Pharaoh regrets releasing them and pursues them with his chariots.",
+      "beats": [
+        "Beat 1: Israelites carrying bundles and children, leaving Egypt rapidly.",
+        "Beat 2: Pharaoh ordering his officers to prepare chariots and chase after them.",
+        "Beat 3: Chariots racing in the distance with dust clouds behind them."
+      ]
+    },
+    {
+      "scene_id": "scene-6",
+      "summary": "The Israelites arrive at the edge of the Red Sea, trapped between the water and Pharaoh\u2019s approaching army. Fear and panic grip the people as families prepare for the worst.",
+      "beats": [
+        "Beat 1: Families gathered at the sea\u2019s edge, children clutching parents, animals and carts packed nearby.",
+        "Beat 2: Pharaoh\u2019s chariots visible in the distance, dust rising.",
+        "Beat 3: Moses observing the fearful crowd and praying for guidance."
+      ]
+    },
+    {
+      "scene_id": "scene-7",
+      "summary": "God commands Moses to lift his staff over the sea, parting the waters and creating a dry path with towering walls of water on each side, inspiring the people to move forward in faith.",
+      "beats": [
+        "Beat 1: Moses raising his staff over the sea, a wind starting to roar.",
+        "Beat 2: Water pulling back and splitting, revealing a path of dry earth.",
+        "Beat 3: People gasping and beginning to walk cautiously into the sea passage."
+      ]
+    },
+    {
+      "scene_id": "scene-8",
+      "summary": "The Israelites cross through the sea pathway with a mix of fear and hope. Children reach toward the shimmering walls of water, and families support each other as they make their way forward.",
+      "beats": [
+        "Beat 1: People stepping carefully on the seabed; sand squishing under sandals.",
+        "Beat 2: A father holding his daughter\u2019s hand as she looks nervously at the water.",
+        "Beat 3: Children pointing to fish in the walls of water while others pray quietly."
+      ]
+    },
+    {
+      "scene_id": "scene-9",
+      "summary": "At the back, Moses and strong men guide the slower travelers. A pillar of cloud shields the Israelites from Pharaoh\u2019s army following closely behind in chariots.",
+      "beats": [
+        "Beat 1: Moses and men helping elderly and weary travelers.",
+        "Beat 2: A glowing pillar of cloud standing between the Israelites and the approaching Egyptian army.",
+        "Beat 3: Chariots pounding the seabed road, horses neighing and soldiers urging forward."
+      ]
+    },
+    {
+      "scene_id": "scene-10",
+      "summary": "Pharaoh\u2019s chariots enter the path but get stuck as wheels break and horses panic. Soldiers realize God is fighting against them and begin to retreat in fear.",
+      "beats": [
+        "Beat 1: Chariot wheels sinking into sticky earth and twisting.",
+        "Beat 2: Horses rearing and screaming as soldiers struggle.",
+        "Beat 3: Soldiers shouting warnings to retreat as the ground traps them."
+      ]
+    },
+    {
+      "scene_id": "scene-11",
+      "summary": "Moses stretches out his hand again and the wind ceases. The towering walls of water crash back down, engulfing the Egyptian soldiers, chariots, and horses. The sea returns to its natural state.",
+      "beats": [
+        "Beat 1: Moses raising his staff solemnly as wind stops suddenly.",
+        "Beat 2: Water walls collapsing with a roaring crash over the chariots.",
+        "Beat 3: The sea calm and deep again, sunlight beginning to rise."
+      ]
+    },
+    {
+      "scene_id": "scene-12",
+      "summary": "The Israelites celebrate their miraculous escape with song and dance. Miriam leads praise to the Lord. Moses speaks to Eli about trusting God when afraid, encouraging obedience and faith as they prepare to continue their journey into freedom.",
+      "beats": [
+        "Beat 1: Miriam playing tambourine and leading joyful singing and dancing.",
+        "Beat 2: Eli laughing and running to join the festive crowd.",
+        "Beat 3: Moses calming Eli and encouraging trust and obedience while gazing across the sea toward their new future."
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "Moses",
+      "role": "main",
+      "description": "Leader chosen by God to deliver Israelites from slavery and guide them to freedom.",
+      "visual_traits": [
+        "middle-aged man",
+        "staff in hand",
+        "simple robes",
+        "calm yet determined expression"
+      ],
+      "speech_style": "steady and encouraging"
+    },
+    {
+      "name": "Miriam",
+      "role": "supporting",
+      "description": "Moses\u2019 sister, a comforting and brave presence encouraging the people.",
+      "visual_traits": [
+        "young woman",
+        "standing on rock",
+        "holding tambourine",
+        "expressive face"
+      ],
+      "speech_style": "joyful and reassuring"
+    },
+    {
+      "name": "Eli",
+      "role": "supporting",
+      "description": "A little boy among the Israelites, represents the innocent and hopeful future.",
+      "visual_traits": [
+        "young child",
+        "wide eyes",
+        "clutching mother\u2019s hand",
+        "expressive emotions"
+      ],
+      "speech_style": "curious and emotional"
+    },
+    {
+      "name": "Eli\u2019s Mother",
+      "role": "supporting",
+      "description": "Protective mother, comforting and comforting Eli during the escape.",
+      "visual_traits": [
+        "woman in modest clothing",
+        "gentle eyes",
+        "protective posture"
+      ],
+      "speech_style": "soft and comforting"
+    },
+    {
+      "name": "Pharaoh",
+      "role": "supporting",
+      "description": "The Egyptian king pursuing the Israelites, stubborn and commanding.",
+      "visual_traits": [
+        "man with regal attire",
+        "chariot driver",
+        "stern and angry expression"
+      ],
+      "speech_style": "loud and authoritative"
+    },
+    {
+      "name": "Jochebed",
+      "role": "supporting",
+      "description": "Moses\u2019 mother who saved him as a baby by placing him in the Nile basket.",
+      "visual_traits": [
+        "woman with caring eyes",
+        "simple ancient Egyptian attire",
+        "nurturing appearance"
+      ],
+      "speech_style": "tender and hopeful"
+    },
+    {
+      "name": "Pharaoh\u2019s Daughter",
+      "role": "supporting",
+      "description": "Egyptian princess who discovers baby Moses and arranges his care.",
+      "visual_traits": [
+        "young noblewoman",
+        "Egyptian royal clothing",
+        "curious and kind face"
+      ],
+      "speech_style": "gentle and curious"
+    },
+    {
+      "name": "Jethro",
+      "role": "background",
+      "description": "Moses\u2019 father-in-law who welcomes him and whose daughter Moses marries.",
+      "visual_traits": [
+        "older man",
+        "robes",
+        "fatherly demeanor"
+      ],
+      "speech_style": "calm and questioning"
+    },
+    {
+      "name": "Zipporah",
+      "role": "background",
+      "description": "Moses\u2019 wife, daughter of Jethro, supportive figure in his life.",
+      "visual_traits": [
+        "young woman",
+        "simple clothes",
+        "gentle expression"
+      ],
+      "speech_style": "quiet and kind"
+    },
+    {
+      "name": "Aaron",
+      "role": "background",
+      "description": "Moses\u2019 brother who helps him speak to Pharaoh as commanded by God.",
+      "visual_traits": [
+        "middle-aged man",
+        "simple robes",
+        "supportive demeanor"
+      ],
+      "speech_style": "clear and supportive"
+    },
+    {
+      "name": "A Young Girl",
+      "role": "background",
+      "description": "A girl near the front who questions how to cross the sea.",
+      "visual_traits": [
+        "child",
+        "curious eyes",
+        "simple clothing"
+      ],
+      "speech_style": "naive and questioning"
+    },
+    {
+      "name": "A Father",
+      "role": "background",
+      "description": "Father holding his scared daughter\u2019s hand crossing the sea path.",
+      "visual_traits": [
+        "middle-aged man",
+        "worried expression",
+        "simple robes"
+      ],
+      "speech_style": "reassuring and brave"
+    },
+    {
+      "name": "An Old Woman",
+      "role": "background",
+      "description": "Elderly Israelite fearful about dying in the wilderness.",
+      "visual_traits": [
+        "old woman",
+        "wrinkled face",
+        "worn clothes"
+      ],
+      "speech_style": "despairing and mournful"
+    },
+    {
+      "name": "A Man",
+      "role": "background",
+      "description": "Israelite shouting about the seeming hopelessness of their situation.",
+      "visual_traits": [
+        "adult man",
+        "worried face",
+        "rough clothing"
+      ],
+      "speech_style": "angry and fearful"
+    },
+    {
+      "name": "Pharaoh\u2019s Captain",
+      "role": "background",
+      "description": "Officer hesitant about entering the sea path, fearful of God\u2019s power.",
+      "visual_traits": [
+        "man in military attire",
+        "concerned expression"
+      ],
+      "speech_style": "hesitant and fearful"
+    }
+  ],
+  "panel_specs": [
+    {
+      "panel_id": "panel-001",
+      "scene_id": "scene-1",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-001-sub-01",
+          "description": "Jochebed gently placing baby Moses in a woven basket nestled among tall Nile reeds.",
+          "prompt": "Medium shot of a woman in simple robes lowering a baby wrapped in cloth into a round basket amidst green reeds at Nile's edge, warm golden ambient light highlighting the scene, high contrast ink style with subtle warm highlights, calm emotion on her face. Dialogue context: Jochebed: Stay safe, my son..",
+          "characters_involved": [
+            "Jochebed",
+            "Moses"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Jochebed",
+              "text": "Stay safe, my son.",
+              "position": "bottom-right"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-001-sub-02",
+          "description": "Miriam watching anxiously from behind a cluster of reeds, peering towards the river.",
+          "prompt": "Medium close-up of a young woman partly hidden by tall reeds, eyes wide and focused, holding a quiet hopeful expression, warm highlights on her face, inked shadows emphasizing depth. Background context: Subtle rippling water and soft sunlight filtering through reeds.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Miriam"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Subtle rippling water and soft sunlight filtering through reeds."
+        },
+        {
+          "sub_panel_id": "panel-001-sub-03",
+          "description": "Pharaoh\u2019s daughter discovering the basket floating on the Nile and looking into it with curiosity.",
+          "prompt": "Dynamic medium shot of a young Egyptian princess in ornate royal attire leaning over the riverbank, holding the basket's edge, curious expression, vibrant warm highlights contrasting black ink shadows. Dialogue context: Pharaoh\u2019s Daughter: A Hebrew baby? How precious!.",
+          "characters_involved": [
+            "Pharaoh\u2019s Daughter",
+            "Pharaoh"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Pharaoh\u2019s Daughter",
+              "text": "A Hebrew baby? How precious!",
+              "position": "top-left"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-001-sub-04",
+          "description": "Pharaoh\u2019s daughter deciding to keep Moses, gesturing to call for a Hebrew nurse to care for the baby.",
+          "prompt": "Medium shot of the princess standing upright by the Nile with gentle resolve, hand raised calling a servant, soft warm light surrounding her face, contrasted ink lines defining motion. Dialogue context: Pharaoh\u2019s Daughter: Fetch a Hebrew nurse at once!.",
+          "characters_involved": [
+            "Pharaoh\u2019s Daughter",
+            "Moses",
+            "Pharaoh"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Pharaoh\u2019s Daughter",
+              "text": "Fetch a Hebrew nurse at once!",
+              "position": "bottom-left"
+            }
+          ],
+          "background_context_prompt": null
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-002",
+      "scene_id": "scene-2",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-002-sub-01",
+          "description": "Young Moses wearing fine palace robes looking out a high window with a thoughtful, torn expression.",
+          "prompt": "Medium close-up of a young man in royal Egyptian clothes at a palace window, evening glow illuminating his contemplative face, high contrast ink strokes black and warm highlights emphasizing internal conflict. Background context: Young Moses wearing fine palace robes looking out a high window with a thoughtful, torn expression.. Show environmental cues from: Moses grows up in Pharaoh\u2019s palace but feels his Hebrew identity. After witnessing an injustice against his people, he flees Egypt and starts a new life as a shepherd in Midian, marrying Zipporah... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Young Moses wearing fine palace robes looking out a high window with a thoughtful, torn expression.. Show environmental cues from: Moses grows up in Pharaoh\u2019s palace but feels his Hebrew identity. After witnessing an injustice against his people, he flees Egypt and starts a new life as a shepherd in Midian, marrying Zipporah.."
+        },
+        {
+          "sub_panel_id": "panel-002-sub-02",
+          "description": "Moses confronting an Egyptian taskmaster cruelly beating a Hebrew slave; Moses\u2019 face shows anger and determination.",
+          "prompt": "Dynamic medium shot of Moses stepping between a harsh Egyptian overseer and a cowering Hebrew slave, tense posture, sharp ink lines depicting confrontation, warm reddish highlights hinting tension. Dialogue context: Moses: Stop this injustice now!.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Moses",
+              "text": "Stop this injustice now!",
+              "position": "top-right"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-002-sub-03",
+          "description": "Moses living simply as a shepherd in Midian, tending sheep with Zipporah close by, peaceful and humble.",
+          "prompt": "Medium wide shot of a man in simple shepherd robes with staff among sheep, a woman (Zipporah) nearby smiling softly, warm sunset light over hills, high contrast ink with golden highlights for a serene pastoral vibe. Background context: Moses living simply as a shepherd in Midian, tending sheep with Zipporah close by, peaceful and humble.. Show environmental cues from: Moses grows up in Pharaoh\u2019s palace but feels his Hebrew identity. After witnessing an injustice against his people, he flees Egypt and starts a new life as a shepherd in Midian, marrying Zipporah... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses",
+            "Zipporah"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Moses living simply as a shepherd in Midian, tending sheep with Zipporah close by, peaceful and humble.. Show environmental cues from: Moses grows up in Pharaoh\u2019s palace but feels his Hebrew identity. After witnessing an injustice against his people, he flees Egypt and starts a new life as a shepherd in Midian, marrying Zipporah.."
+        },
+        {
+          "sub_panel_id": "panel-002-sub-04",
+          "description": "Moses and Zipporah together, sharing a quiet moment emphasizing their family bond and new life.",
+          "prompt": "Medium close-up of Moses and Zipporah sitting close side by side, gentle smiles, warm light highlighting faces and simple clothing in high contrast ink style. Background context: Moses and Zipporah together, sharing a quiet moment emphasizing their family bond and new life.. Show environmental cues from: Moses grows up in Pharaoh\u2019s palace but feels his Hebrew identity. After witnessing an injustice against his people, he flees Egypt and starts a new life as a shepherd in Midian, marrying Zipporah... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses",
+            "Zipporah"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Moses and Zipporah together, sharing a quiet moment emphasizing their family bond and new life.. Show environmental cues from: Moses grows up in Pharaoh\u2019s palace but feels his Hebrew identity. After witnessing an injustice against his people, he flees Egypt and starts a new life as a shepherd in Midian, marrying Zipporah.."
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-003",
+      "scene_id": "scene-3",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-003-sub-01",
+          "description": "Moses approaching a bush on Mount Horeb that is aflame yet not consumed, face cautious and awed.",
+          "prompt": "Medium shot showing Moses stepping carefully toward a vividly burning bush that emits bright flames without damage, rugged mountain background in warm contrast tones, expressive close framing emphasizing wonder. Background context: Moses approaching a bush on Mount Horeb that is aflame yet not consumed, face cautious and awed.. Show environmental cues from: Moses encounters the burning bush on Mount Horeb; God calls him to lead the Israelites out of Egypt and reassures him with His name and promises of support... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Moses approaching a bush on Mount Horeb that is aflame yet not consumed, face cautious and awed.. Show environmental cues from: Moses encounters the burning bush on Mount Horeb; God calls him to lead the Israelites out of Egypt and reassures him with His name and promises of support.."
+        },
+        {
+          "sub_panel_id": "panel-003-sub-02",
+          "description": "God\u2019s voice emanating from the bush, commanding Moses to remove sandals and revealing His sacred name.",
+          "prompt": "Close-up on the burning bush glowing intensely, divine light suggesting God's presence, Moses obeying by removing sandals, scriptural aura with warm highlights contrasting deep black shadows. Dialogue context: God: Remove your sandals; you stand on holy ground. | God: I am who I am..",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [
+            {
+              "speaker": "God",
+              "text": "Remove your sandals; you stand on holy ground.",
+              "position": "top-right"
+            },
+            {
+              "speaker": "God",
+              "text": "I am who I am.",
+              "position": "top-right"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-003-sub-03",
+          "description": "Moses listens with fear and hesitation as God commands him to go to Pharaoh and promises support through his brother Aaron.",
+          "prompt": "Medium close-up of Moses looking apprehensive yet resolved, fiery bush glowing behind, warm shadows and highlights creating drama and spiritual gravity. Dialogue context: God: Go to Pharaoh; I will help through your brother Aaron..",
+          "characters_involved": [
+            "Moses",
+            "Pharaoh",
+            "Aaron"
+          ],
+          "bubbles": [
+            {
+              "speaker": "God",
+              "text": "Go to Pharaoh; I will help through your brother Aaron.",
+              "position": "bottom-right"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-003-sub-04",
+          "description": "Moses holding his staff, face mixed with fear and determination, preparing to obey God\u2019s command.",
+          "prompt": "Close-up on Moses gripping staff tightly, eyes reflecting inner struggle, warm highlights outline face, heavy ink shadows enhance emotional depth. Background context: Subtle fiery glow from the bush illuminating Moses' face.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Subtle fiery glow from the bush illuminating Moses' face."
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-004",
+      "scene_id": "scene-4",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-004-sub-01",
+          "description": "Moses and Aaron boldly standing before Pharaoh, demanding the freedom of the Israelites.",
+          "prompt": "Medium shot capturing Moses with staff and Aaron beside him, both standing firmly in a grand throne room before a seated Pharaoh, high contrast shadows and warm spotlight on Moses and Aaron. Dialogue context: Moses: Let my people go!.",
+          "characters_involved": [
+            "Moses",
+            "Aaron",
+            "Pharaoh",
+            "Eli"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Moses",
+              "text": "Let my people go!",
+              "position": "top-left"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-004-sub-02",
+          "description": "Pharaoh scornfully rejecting their demand, refusing to acknowledge the Lord.",
+          "prompt": "Medium close-up of Pharaoh with stern and angry expression, ruler\u2019s regal attire glowing faintly in warm highlights, harsh ink shadows emphasizing his defiance. Dialogue context: Pharaoh: Who is the Lord? I will not free them!.",
+          "characters_involved": [
+            "Pharaoh"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Pharaoh",
+              "text": "Who is the Lord? I will not free them!",
+              "position": "bottom-right"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-004-sub-03",
+          "description": "Visual montage hinting at the plagues ravaging Egypt, with images of frogs, darkness, and hail.",
+          "prompt": "Collage style composition with symbolic high-contrast ink depictions: frogs leaping, dark skies, hail falling with warm highlights piercing darkness, conveying calamity. Background context: Dynamic layout merging plague elements without characters speaking.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Dynamic layout merging plague elements without characters speaking."
+        },
+        {
+          "sub_panel_id": "panel-004-sub-04",
+          "description": "Pharaoh solemnly ordering the Israelites to leave Egypt, reluctantly conceding.",
+          "prompt": "Medium shot showing Pharaoh raising a hand in reluctant command, Moses and Aaron watching intently, regal hall with deep shadows and fiery warm accents. Dialogue context: Pharaoh: Go! Leave my land..",
+          "characters_involved": [
+            "Pharaoh",
+            "Moses",
+            "Aaron",
+            "Eli"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Pharaoh",
+              "text": "Go! Leave my land.",
+              "position": "bottom-left"
+            }
+          ],
+          "background_context_prompt": null
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-005",
+      "scene_id": "scene-5",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-005-sub-01",
+          "description": "Israelite families hastily carrying bundles and children, moving quickly out of Egypt.",
+          "prompt": "Medium wide shot of a crowded chaotic crowd of people with simple clothing, carrying bundles, some children being carried, warm light casting long shadows, high contrast colors showing urgency. Background context: Israelite families hastily carrying bundles and children, moving quickly out of Egypt.. Show environmental cues from: The Israelites hastily flee Egypt with their belongings after centuries of slavery. Pharaoh regrets releasing them and pursues them with his chariots... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Eli"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Israelite families hastily carrying bundles and children, moving quickly out of Egypt.. Show environmental cues from: The Israelites hastily flee Egypt with their belongings after centuries of slavery. Pharaoh regrets releasing them and pursues them with his chariots.."
+        },
+        {
+          "sub_panel_id": "panel-005-sub-02",
+          "description": "Pharaoh angrily commanding officers to prepare chariots and pursue the fleeing Israelites.",
+          "prompt": "Medium close-up of Pharaoh with furious expression, in grand hall, pointing forcefully with royal scepter, warm red highlights enhancing anger. Dialogue context: Pharaoh: Chase them down! Bring them back!.",
+          "characters_involved": [
+            "Pharaoh",
+            "Eli"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Pharaoh",
+              "text": "Chase them down! Bring them back!",
+              "position": "top-right"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-005-sub-03",
+          "description": "Egyptian chariots racing rapidly across desert terrain kicking up dust clouds in pursuit.",
+          "prompt": "Dynamic wide shot with multiple chariots driven by soldiers, dust billowing behind them, warm palette's golden tones contrasting deep black lines for speed and chaos. Background context: Sweeping desert landscape emphasizing motion.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Sweeping desert landscape emphasizing motion."
+        },
+        {
+          "sub_panel_id": "panel-005-sub-04",
+          "description": "Close-up of chariot wheels spinning fast, dust flying, soldiers focused and shouting commands.",
+          "prompt": "Close-up on speeding chariot wheels throwing dust, intense faces of soldiers urging on horses, high contrast ink outlines with warm color highlights accentuating urgency. Background context: Close-up of chariot wheels spinning fast, dust flying, soldiers focused and shouting commands.. Show environmental cues from: The Israelites hastily flee Egypt with their belongings after centuries of slavery. Pharaoh regrets releasing them and pursues them with his chariots... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Close-up of chariot wheels spinning fast, dust flying, soldiers focused and shouting commands.. Show environmental cues from: The Israelites hastily flee Egypt with their belongings after centuries of slavery. Pharaoh regrets releasing them and pursues them with his chariots.."
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-006",
+      "scene_id": "scene-6",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-006-sub-01",
+          "description": "Families gathered at the edge of the Red Sea, children clutching parents, animals and carts packed, anxious expressions.",
+          "prompt": "Medium wide shot showing tightly-packed group of Israelite families, animals tethered, children holding hands, eyes wide with fear and uncertainty, warm light contrasting with dark looming sea. Background context: Families gathered at the edge of the Red Sea, children clutching parents, animals and carts packed, anxious expressions.. Show environmental cues from: The Israelites arrive at the edge of the Red Sea, trapped between the water and Pharaoh\u2019s approaching army. Fear and panic grip the people as families prepare for the worst... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Families gathered at the edge of the Red Sea, children clutching parents, animals and carts packed, anxious expressions.. Show environmental cues from: The Israelites arrive at the edge of the Red Sea, trapped between the water and Pharaoh\u2019s approaching army. Fear and panic grip the people as families prepare for the worst.."
+        },
+        {
+          "sub_panel_id": "panel-006-sub-02",
+          "description": "Pharaoh\u2019s chariots visible on distant shoreline, dust rising thickly as they approach.",
+          "prompt": "Long shot with Egyptian chariots in silhouette against dusty horizon, dust clouds glowing warmly from evening sun, tense atmosphere with deep shadows. Background context: Expansive dusty desert terrain with looming figures.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Eli",
+            "Pharaoh"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Expansive dusty desert terrain with looming figures."
+        },
+        {
+          "sub_panel_id": "panel-006-sub-03",
+          "description": "Moses standing solemnly on a small rise, observing the terrified crowd and praying silently for guidance.",
+          "prompt": "Medium close-up of Moses looking down on crowd from a rock, eyes closed in silent prayer, staff in hand, warm highlights outlining his resolute face amid dark inked shadows. Background context: Moses standing solemnly on a small rise, observing the terrified crowd and praying silently for guidance.. Show environmental cues from: The Israelites arrive at the edge of the Red Sea, trapped between the water and Pharaoh\u2019s approaching army. Fear and panic grip the people as families prepare for the worst... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Moses standing solemnly on a small rise, observing the terrified crowd and praying silently for guidance.. Show environmental cues from: The Israelites arrive at the edge of the Red Sea, trapped between the water and Pharaoh\u2019s approaching army. Fear and panic grip the people as families prepare for the worst.."
+        },
+        {
+          "sub_panel_id": "panel-006-sub-04",
+          "description": "Close-up of a young girl holding a small bundle, eyes wide and trembling slightly, grasping mother\u2019s hand firmly.",
+          "prompt": "Close-up on child\u2019s worried face, expressive wide eyes and trembling lips, mother\u2019s hand protective and firm in warm light, stark black and warm ink highlights. Background context: Close-up of a young girl holding a small bundle, eyes wide and trembling slightly, grasping mother\u2019s hand firmly.. Show environmental cues from: The Israelites arrive at the edge of the Red Sea, trapped between the water and Pharaoh\u2019s approaching army. Fear and panic grip the people as families prepare for the worst... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "A Young Girl",
+            "Eli\u2019s Mother"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Close-up of a young girl holding a small bundle, eyes wide and trembling slightly, grasping mother\u2019s hand firmly.. Show environmental cues from: The Israelites arrive at the edge of the Red Sea, trapped between the water and Pharaoh\u2019s approaching army. Fear and panic grip the people as families prepare for the worst.."
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-007",
+      "scene_id": "scene-7",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-007-sub-01",
+          "description": "Moses raising his staff high over the Red Sea as fierce wind begins to roar around him.",
+          "prompt": "Medium shot with Moses standing tall on shore, arm stretched upward with staff, robes billowing in strong winds, facial expression focused and commanding, swirling ink strokes and warm orange highlights. Background context: Moses raising his staff high over the Red Sea as fierce wind begins to roar around him.. Show environmental cues from: God commands Moses to lift his staff over the sea, parting the waters and creating a dry path with towering walls of water on each side, inspiring the people to move forward in faith... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Moses raising his staff high over the Red Sea as fierce wind begins to roar around him.. Show environmental cues from: God commands Moses to lift his staff over the sea, parting the waters and creating a dry path with towering walls of water on each side, inspiring the people to move forward in faith.."
+        },
+        {
+          "sub_panel_id": "panel-007-sub-02",
+          "description": "A dramatic parting of the sea as towering walls of water pull back, revealing a dry path for the people.",
+          "prompt": "Wide shot showcasing walls of water curved upwards on both sides, a dry cracked seabed glowing warmly between, dynamic composition with high contrast ink shadows highlighting depth and motion. Background context: Stormy sky with lightning flashes adding drama to the parted sea scene.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Stormy sky with lightning flashes adding drama to the parted sea scene."
+        },
+        {
+          "sub_panel_id": "panel-007-sub-03",
+          "description": "The Israelites gasping in awe, stepping cautiously towards the new path in silence.",
+          "prompt": "Medium close-up of several people\u2019s amazed and fearful faces looking at the waters, some reaching out, soft warm light illuminating expressions contrasting deep shadows. Background context: The Israelites gasping in awe, stepping cautiously towards the new path in silence.. Show environmental cues from: God commands Moses to lift his staff over the sea, parting the waters and creating a dry path with towering walls of water on each side, inspiring the people to move forward in faith... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Eli"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "The Israelites gasping in awe, stepping cautiously towards the new path in silence.. Show environmental cues from: God commands Moses to lift his staff over the sea, parting the waters and creating a dry path with towering walls of water on each side, inspiring the people to move forward in faith.."
+        },
+        {
+          "sub_panel_id": "panel-007-sub-04",
+          "description": "Miriam joyfully raising her tambourine, encouraging the people forward in faith.",
+          "prompt": "Medium shot of young woman standing on a rock with tambourine raised, smiling confidently, spotlight warm glow against dark background ink contrast, inspiring mood. Dialogue context: Miriam: Come, have faith! Move forward!.",
+          "characters_involved": [
+            "Miriam"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Miriam",
+              "text": "Come, have faith! Move forward!",
+              "position": "top-right"
+            }
+          ],
+          "background_context_prompt": null
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-008",
+      "scene_id": "scene-8",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-008-sub-01",
+          "description": "Israelites stepping carefully on the seabed, sand squishing under their sandals.",
+          "prompt": "Close-up on feet walking through shallow water and sand, wet sand texture visible, feet in simple sandals, warm highlights catch water reflections and dark ink shadows define shapes. Background context: Israelites stepping carefully on the seabed, sand squishing under their sandals.. Show environmental cues from: The Israelites cross through the sea pathway with a mix of fear and hope. Children reach toward the shimmering walls of water, and families support each other as they make their way forward... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Eli"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Israelites stepping carefully on the seabed, sand squishing under their sandals.. Show environmental cues from: The Israelites cross through the sea pathway with a mix of fear and hope. Children reach toward the shimmering walls of water, and families support each other as they make their way forward.."
+        },
+        {
+          "sub_panel_id": "panel-008-sub-02",
+          "description": "A worried father holding his daughter\u2019s hand as she looks nervously at the towering walls of water.",
+          "prompt": "Medium close-up of a man gripping his daughter\u2019s hand tightly, the child gazing upward at water walls with wide eyes, soft warm light on their faces, high contrast inked lines showing tension. Background context: A worried father holding his daughter\u2019s hand as she looks nervously at the towering walls of water.. Show environmental cues from: The Israelites cross through the sea pathway with a mix of fear and hope. Children reach toward the shimmering walls of water, and families support each other as they make their way forward... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "A Father"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "A worried father holding his daughter\u2019s hand as she looks nervously at the towering walls of water.. Show environmental cues from: The Israelites cross through the sea pathway with a mix of fear and hope. Children reach toward the shimmering walls of water, and families support each other as they make their way forward.."
+        },
+        {
+          "sub_panel_id": "panel-008-sub-03",
+          "description": "Children pointing excitedly to fish visible within the transparent walls of water while others pray quietly nearby.",
+          "prompt": "Medium shot showing children with expressions of wonder pointing at fish swimming in water walls, nearby adults kneeling in quiet prayer, warm glowing highlights with rich dark inked outlines. Background context: Children pointing excitedly to fish visible within the transparent walls of water while others pray quietly nearby.. Show environmental cues from: The Israelites cross through the sea pathway with a mix of fear and hope. Children reach toward the shimmering walls of water, and families support each other as they make their way forward... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Children pointing excitedly to fish visible within the transparent walls of water while others pray quietly nearby.. Show environmental cues from: The Israelites cross through the sea pathway with a mix of fear and hope. Children reach toward the shimmering walls of water, and families support each other as they make their way forward.."
+        },
+        {
+          "sub_panel_id": "panel-008-sub-04",
+          "description": "Moses watching over the people from the side, calm and steady amidst the mix of fear and hope.",
+          "prompt": "Medium close-up of Moses with serious attentive face, slightly turned toward the crossing crowd, warm rim lighting emphasizing determination, high contrast black shadows. Background context: Moses watching over the people from the side, calm and steady amidst the mix of fear and hope.. Show environmental cues from: The Israelites cross through the sea pathway with a mix of fear and hope. Children reach toward the shimmering walls of water, and families support each other as they make their way forward... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Moses watching over the people from the side, calm and steady amidst the mix of fear and hope.. Show environmental cues from: The Israelites cross through the sea pathway with a mix of fear and hope. Children reach toward the shimmering walls of water, and families support each other as they make their way forward.."
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-009",
+      "scene_id": "scene-9",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-009-sub-01",
+          "description": "Moses and strong men assisting elderly and weary travelers struggling to keep pace through the sea path.",
+          "prompt": "Medium wide shot showing men supporting old woman and tired travelers, expressions showing concern and strength, warm golden highlights on figures in heavy black ink surroundings. Background context: Moses and strong men assisting elderly and weary travelers struggling to keep pace through the sea path.. Show environmental cues from: At the back, Moses and strong men guide the slower travelers. A pillar of cloud shields the Israelites from Pharaoh\u2019s army following closely behind in chariots... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses",
+            "An Old Woman"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Moses and strong men assisting elderly and weary travelers struggling to keep pace through the sea path.. Show environmental cues from: At the back, Moses and strong men guide the slower travelers. A pillar of cloud shields the Israelites from Pharaoh\u2019s army following closely behind in chariots.."
+        },
+        {
+          "sub_panel_id": "panel-009-sub-02",
+          "description": "A glowing, tall pillar of cloud standing firm as a shield between Israelites and the approaching Egyptian army.",
+          "prompt": "Dramatic vertical shot emphasizing towering white cloud pillar radiating warm light contrasting dark inked army figures behind, dividing the scene powerfully. Background context: Dusty battlefield with tension-filled sky.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Eli"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Dusty battlefield with tension-filled sky."
+        },
+        {
+          "sub_panel_id": "panel-009-sub-03",
+          "description": "Egyptian chariots thundering along the seabed road, horses neighing and soldiers shouting commands.",
+          "prompt": "Dynamic close-up on rearing horses and armored soldiers, wheels kicking up wet sand and splashing water, faces tense and urgent, warm sheen on metal contrasting dense black shadows. Background context: Egyptian chariots thundering along the seabed road, horses neighing and soldiers shouting commands.. Show environmental cues from: At the back, Moses and strong men guide the slower travelers. A pillar of cloud shields the Israelites from Pharaoh\u2019s army following closely behind in chariots... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Egyptian chariots thundering along the seabed road, horses neighing and soldiers shouting commands.. Show environmental cues from: At the back, Moses and strong men guide the slower travelers. A pillar of cloud shields the Israelites from Pharaoh\u2019s army following closely behind in chariots.."
+        },
+        {
+          "sub_panel_id": "panel-009-sub-04",
+          "description": "Pharaoh\u2019s captain looks hesitant and fearful, doubts rising as the scene unfolds.",
+          "prompt": "Close-up on armored officer\u2019s uneasy face, sweat and worry visible, shadowed with warm highlights framing expression of fear and doubt. Dialogue context: Pharaoh\u2019s Captain: This power... it\u2019s beyond us..",
+          "characters_involved": [
+            "Pharaoh\u2019s Captain",
+            "Pharaoh"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Pharaoh\u2019s Captain",
+              "text": "This power... it\u2019s beyond us.",
+              "position": "bottom-right"
+            }
+          ],
+          "background_context_prompt": null
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-010",
+      "scene_id": "scene-10",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-010-sub-01",
+          "description": "Chariot wheels sink into the sticky seabed soil and begin to twist, trapping the chariots.",
+          "prompt": "Close-up on wheels distorted and stuck in mud-like wet earth, realistic texture in rich ink with vivid warm highlights reflecting struggle and danger. Background context: Chariot wheels sink into the sticky seabed soil and begin to twist, trapping the chariots.. Show environmental cues from: Pharaoh\u2019s chariots enter the path but get stuck as wheels break and horses panic. Soldiers realize God is fighting against them and begin to retreat in fear... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Chariot wheels sink into the sticky seabed soil and begin to twist, trapping the chariots.. Show environmental cues from: Pharaoh\u2019s chariots enter the path but get stuck as wheels break and horses panic. Soldiers realize God is fighting against them and begin to retreat in fear.."
+        },
+        {
+          "sub_panel_id": "panel-010-sub-02",
+          "description": "Panicked horses rearing and screaming, soldiers desperately trying to control them, chaos visible.",
+          "prompt": "Dynamic medium shot with horses pulling back, wide eyes, open mouths, soldiers gripping reins frantically, warm ambient tones with sharp ink brush strokes capturing tension. Background context: Panicked horses rearing and screaming, soldiers desperately trying to control them, chaos visible.. Show environmental cues from: Pharaoh\u2019s chariots enter the path but get stuck as wheels break and horses panic. Soldiers realize God is fighting against them and begin to retreat in fear... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Panicked horses rearing and screaming, soldiers desperately trying to control them, chaos visible.. Show environmental cues from: Pharaoh\u2019s chariots enter the path but get stuck as wheels break and horses panic. Soldiers realize God is fighting against them and begin to retreat in fear.."
+        },
+        {
+          "sub_panel_id": "panel-010-sub-03",
+          "description": "Soldiers shouting warnings to retreat as the ground traps them and fear spreads.",
+          "prompt": "Medium close-up of shouting soldiers with panic-filled faces, gesturing backward urgently, warm flame-like highlights contrasting deep black shadows. Dialogue context: Soldier: Retreat! The Lord fights for them!.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Soldier",
+              "text": "Retreat! The Lord fights for them!",
+              "position": "top-left"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-010-sub-04",
+          "description": "Pharaoh\u2019s captain reluctantly signaling retreat, eyes wide with rising fear.",
+          "prompt": "Close-up on fearful captain\u2019s face, mouth open mid-command, shadow play emphasizing desperation and doubt with warm highlights accenting tension. Background context: Pharaoh\u2019s captain reluctantly signaling retreat, eyes wide with rising fear.. Show environmental cues from: Pharaoh\u2019s chariots enter the path but get stuck as wheels break and horses panic. Soldiers realize God is fighting against them and begin to retreat in fear... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Pharaoh\u2019s Captain",
+            "Pharaoh"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Pharaoh\u2019s captain reluctantly signaling retreat, eyes wide with rising fear.. Show environmental cues from: Pharaoh\u2019s chariots enter the path but get stuck as wheels break and horses panic. Soldiers realize God is fighting against them and begin to retreat in fear.."
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-011",
+      "scene_id": "scene-11",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-011-sub-01",
+          "description": "Moses solemnly raising his hand and staff again as the wild wind suddenly ceases.",
+          "prompt": "Medium close-up on Moses with arm raised, face grave and resolute, robes still with slight movement, warm light from behind with deep shadows creating a powerful silhouette. Background context: Moses solemnly raising his hand and staff again as the wild wind suddenly ceases.. Show environmental cues from: Moses stretches out his hand again and the wind ceases. The towering walls of water crash back down, engulfing the Egyptian soldiers, chariots, and horses. The sea returns to its natural state... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Moses solemnly raising his hand and staff again as the wild wind suddenly ceases.. Show environmental cues from: Moses stretches out his hand again and the wind ceases. The towering walls of water crash back down, engulfing the Egyptian soldiers, chariots, and horses. The sea returns to its natural state.."
+        },
+        {
+          "sub_panel_id": "panel-011-sub-02",
+          "description": "The towering walls of water collapse inward with a roaring crash, engulfing the Egyptian chariots and horses.",
+          "prompt": "Wide dynamic shot showing enormous water walls crashing down over the trapped chariots and soldiers, intense motion captured with layered ink and vibrant warm highlights, sense of overwhelming divine power. Background context: Churning water and sprayed mist filled with energy and chaos.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Churning water and sprayed mist filled with energy and chaos."
+        },
+        {
+          "sub_panel_id": "panel-011-sub-03",
+          "description": "The sea calms and deepens back to normal, sunlight beginning to rise illuminating the peaceful water.",
+          "prompt": "Wide peaceful shot of the calm sea at dawn, sun rays breaking over horizon, gentle warm light with clean black ink reflections, tranquil atmosphere after storm. Background context: The sea calms and deepens back to normal, sunlight beginning to rise illuminating the peaceful water.. Show environmental cues from: Moses stretches out his hand again and the wind ceases. The towering walls of water crash back down, engulfing the Egyptian soldiers, chariots, and horses. The sea returns to its natural state... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "The sea calms and deepens back to normal, sunlight beginning to rise illuminating the peaceful water.. Show environmental cues from: Moses stretches out his hand again and the wind ceases. The towering walls of water crash back down, engulfing the Egyptian soldiers, chariots, and horses. The sea returns to its natural state.."
+        },
+        {
+          "sub_panel_id": "panel-011-sub-04",
+          "description": "Close-up on Moses\u2019 face, eyes lifted in quiet gratitude and renewed strength.",
+          "prompt": "Close-up face portrait of Moses looking upward, calm and grateful expression, warm golden highlights framing face with strong black ink shadows for depth. Background context: Close-up on Moses\u2019 face, eyes lifted in quiet gratitude and renewed strength.. Show environmental cues from: Moses stretches out his hand again and the wind ceases. The towering walls of water crash back down, engulfing the Egyptian soldiers, chariots, and horses. The sea returns to its natural state... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Close-up on Moses\u2019 face, eyes lifted in quiet gratitude and renewed strength.. Show environmental cues from: Moses stretches out his hand again and the wind ceases. The towering walls of water crash back down, engulfing the Egyptian soldiers, chariots, and horses. The sea returns to its natural state.."
+        }
+      ]
+    },
+    {
+      "panel_id": "panel-012",
+      "scene_id": "scene-12",
+      "subpanels": [
+        {
+          "sub_panel_id": "panel-012-sub-01",
+          "description": "Miriam joyfully leading the Israelites in song and dance, playing her tambourine with radiant smile.",
+          "prompt": "Medium wide shot showing Miriam standing on a rock with tambourine raised, surrounded by dancing Israelites wearing simple robes, warm highlights creating lively festive atmosphere with deep black ink contrasts. Dialogue context: Miriam: Sing praises to the Lord!.",
+          "characters_involved": [
+            "Miriam",
+            "Eli"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Miriam",
+              "text": "Sing praises to the Lord!",
+              "position": "top-left"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-012-sub-02",
+          "description": "Eli laughing joyfully, running toward the festive crowd to join in celebration.",
+          "prompt": "Medium close-up on a young boy smiling broadly, arms outstretched as he runs, soft warm light catches his excited face, high contrast outlines and highlights. Background context: Eli laughing joyfully, running toward the festive crowd to join in celebration.. Show environmental cues from: The Israelites celebrate their miraculous escape with song and dance. Miriam leads praise to the Lord. Moses speaks to Eli about trusting God when afraid, encouraging obedience and faith as they prepare to continue their journey into freedom... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Eli"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Eli laughing joyfully, running toward the festive crowd to join in celebration.. Show environmental cues from: The Israelites celebrate their miraculous escape with song and dance. Miriam leads praise to the Lord. Moses speaks to Eli about trusting God when afraid, encouraging obedience and faith as they prepare to continue their journey into freedom.."
+        },
+        {
+          "sub_panel_id": "panel-012-sub-03",
+          "description": "Moses kneeling beside Eli, gently calming and encouraging him to trust God when afraid.",
+          "prompt": "Medium shot of Moses softly speaking to young boy, hand on shoulder, calm reassuring expression, warm ambient light on faces with ink shadows emphasizing intimacy. Dialogue context: Moses: Trust God, Eli. He leads us to freedom..",
+          "characters_involved": [
+            "Moses",
+            "Eli"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Moses",
+              "text": "Trust God, Eli. He leads us to freedom.",
+              "position": "bottom-left"
+            }
+          ],
+          "background_context_prompt": null
+        },
+        {
+          "sub_panel_id": "panel-012-sub-04",
+          "description": "Moses gazing toward the sea and distant horizon as the people prepare to continue their journey, hopeful and determined.",
+          "prompt": "Wide shot of Moses standing tall on a hill, looking over calm sea and crowd behind, sunrise casting warm golden light, strong ink lines framing figure and horizon symbolizing new beginnings. Background context: Moses gazing toward the sea and distant horizon as the people prepare to continue their journey, hopeful and determined.. Show environmental cues from: The Israelites celebrate their miraculous escape with song and dance. Miriam leads praise to the Lord. Moses speaks to Eli about trusting God when afraid, encouraging obedience and faith as they prepare to continue their journey into freedom... Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Moses"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Moses gazing toward the sea and distant horizon as the people prepare to continue their journey, hopeful and determined.. Show environmental cues from: The Israelites celebrate their miraculous escape with song and dance. Miriam leads praise to the Lord. Moses speaks to Eli about trusting God when afraid, encouraging obedience and faith as they prepare to continue their journey into freedom.."
+        }
+      ]
+    }
+  ],
+  "panel_images": [
+    "/tmp/comic_agent_mn/moses/panels/panel-001.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-002.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-003.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-004.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-005.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-006.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-007.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-008.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-009.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-010.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-011.png",
+    "/tmp/comic_agent_mn/moses/panels/panel-012.png"
+  ],
+  "panel_pdf": "/tmp/comic_agent_mn/moses/panels.pdf",
+  "continuity_issues": [],
+  "validation": {
+    "passed": true,
+    "issues": []
+  },
+  "revisions_attempted": 0
+}

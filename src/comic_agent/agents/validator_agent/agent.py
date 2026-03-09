@@ -2,9 +2,12 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 from comic_agent.core.models import PanelSpec, ValidationIssue, ValidationResult
 from comic_agent.core.rules import (
     ALLOWED_BUBBLE_POSITIONS,
+    PLACEHOLDER_PANEL_IMAGE_BYTES,
     MAX_BUBBLE_TEXT_LENGTH,
     MAX_BUBBLES_PER_PANEL,
     MIN_PANELS,
@@ -15,7 +18,10 @@ class ValidatorAgent:
     """Enforces panel-level composition rules."""
 
     def run(
-        self, panel_specs: list[PanelSpec], continuity_issues: list[ValidationIssue]
+        self,
+        panel_specs: list[PanelSpec],
+        continuity_issues: list[ValidationIssue],
+        panel_images: list[str] | None = None,
     ) -> ValidationResult:
         """Validate generated panel specs against rule constants."""
 
@@ -63,5 +69,34 @@ class ValidatorAgent:
                                 panel_id=panel.panel_id,
                             )
                         )
+
+        if panel_images is not None:
+            panel_image_lookup: dict[str, str] = {}
+            for image_path in panel_images:
+                panel_id = Path(image_path).stem
+                if panel_id.startswith("panel-"):
+                    panel_image_lookup[panel_id] = image_path
+
+            for panel in panel_specs:
+                image_path = panel_image_lookup.get(panel.panel_id)
+                if image_path is None:
+                    issues.append(
+                        ValidationIssue(
+                            code="PANEL_IMAGE_MISSING_OR_PLACEHOLDER",
+                            message=f"Panel image missing for {panel.panel_id}.",
+                            panel_id=panel.panel_id,
+                        )
+                    )
+                    continue
+
+                path = Path(image_path)
+                if not path.exists() or path.stat().st_size == PLACEHOLDER_PANEL_IMAGE_BYTES:
+                    issues.append(
+                        ValidationIssue(
+                            code="PANEL_IMAGE_MISSING_OR_PLACEHOLDER",
+                            message=f"Panel image missing or placeholder for {panel.panel_id}.",
+                            panel_id=panel.panel_id,
+                        )
+                    )
 
         return ValidationResult(passed=not issues, issues=issues)
