@@ -34,6 +34,8 @@ Output rules:
 - 1-3 concise beats per scene.
 - Keep each beat concrete and visually depictable.
 - Keep summaries as descriptive as possible wihtout exceeding 150 words. The summary should capture the essence of the scene and would be used to generate the panel.
+- TARGET_PANEL_COUNT (if supplied) is a soft pacing guideline, not a strict maximum.
+- Infer scenes/beats so downstream subpanel planning can produce subpanels where each has either speech dialogue or clear background context narration.
 - Preserve story order exactly.
 - No markdown, no commentary, no extra keys.
 """
@@ -115,8 +117,6 @@ class SceneAgent:
                     )
                 )
 
-            if target_panel_count and target_panel_count > 0:
-                scenes = scenes[:target_panel_count]
             return scenes or None
         except Exception as exc:  # pragma: no cover - network/API dependent
             LOGGER.warning("Scene LLM inference failed; using deterministic fallback: %s", exc)
@@ -129,8 +129,10 @@ class SceneAgent:
             return (
                 "Infer scenes from this story and return JSON only.\n\n"
                 f"TARGET_PANEL_COUNT: {target_panel_count}\n"
-                "Aim to produce approximately this many scenes, because each scene "
-                "maps to one panel. Keep scene quality over strict counting.\n\n"
+                "Treat TARGET_PANEL_COUNT as a soft pacing guideline because each scene maps to one panel. "
+                "Keep scene quality over strict counting.\n"
+                "Ensure scene summaries and beats are concrete enough that downstream subpanels can each contain "
+                "either speech dialogue or clear background context.\n\n"
                 f"STORY:\n{normalized_text}"
             )
         return (

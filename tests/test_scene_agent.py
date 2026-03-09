@@ -30,6 +30,8 @@ def test_scene_prompt_sample_mentions_scene_boundaries() -> None:
     assert "scene boundary" in prompt
     assert "location" in prompt
     assert "time" in prompt
+    assert "soft pacing guideline" in prompt
+    assert "speech dialogue or clear background context" in prompt
 
 
 def test_scene_agent_fallback_respects_target_panel_count(monkeypatch) -> None:  # noqa: ANN001
@@ -56,3 +58,15 @@ def test_scene_user_prompt_infers_when_target_not_supplied() -> None:
     )
     assert "No target panel count was supplied" in prompt
     assert "TARGET_PANEL_COUNT" not in prompt
+
+
+def test_scene_user_prompt_treats_target_as_guideline() -> None:
+    """Prompt should frame target panel count as non-strict guidance."""
+
+    prompt = SceneAgent()._scene_user_prompt(
+        normalized_text="A short story.",
+        target_panel_count=5,
+    )
+    assert "soft pacing guideline" in prompt
+    assert "Keep scene quality over strict counting" in prompt
+    assert "speech dialogue or clear background context" in prompt

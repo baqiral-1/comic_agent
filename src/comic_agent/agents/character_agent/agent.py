@@ -57,6 +57,7 @@ class CharacterAgent:
     _name_pattern = re.compile(r"\b[A-Z][a-z]{2,}\b")
     _roles = {"main", "supporting", "background"}
     _default_traits = ["distinct silhouette", "expressive face"]
+    _default_timeout_seconds = 60.0
 
     def run(self, story: StoryDocument) -> list[CharacterProfile]:
         """Infer character profiles via LLM, fallback to heuristic extraction."""
@@ -206,4 +207,27 @@ class CharacterAgent:
 
         from openai import OpenAI
 
-        return OpenAI(api_key=api_key, max_retries=0, timeout=20.0)
+        return OpenAI(
+            api_key=api_key,
+            max_retries=0,
+            timeout=self._character_timeout_seconds(),
+        )
+
+    def _character_timeout_seconds(self) -> float:
+        """Resolve character inference timeout from env with safe fallback."""
+
+        configured = os.getenv("COMIC_AGENT_CHARACTER_TIMEOUT_SECONDS")
+        if not configured:
+            return self._default_timeout_seconds
+        try:
+            parsed = float(configured)
+            if parsed <= 0:
+                raise ValueError
+            return parsed
+        except ValueError:
+            LOGGER.warning(
+                "Invalid COMIC_AGENT_CHARACTER_TIMEOUT_SECONDS=%s; using %.1f",
+                configured,
+                self._default_timeout_seconds,
+            )
+            return self._default_timeout_seconds

@@ -20,7 +20,7 @@ from comic_agent.core.models import (
     Scene,
     SubPanelSpec,
 )
-from comic_agent.core.rules import ALLOWED_BUBBLE_POSITIONS
+from comic_agent.core.rules import ALLOWED_BUBBLE_POSITIONS, MAX_BACKGROUND_CONTEXT_WORDS
 from comic_agent.core.settings import PANEL_MODEL
 
 LOGGER = logging.getLogger(__name__)
@@ -69,6 +69,8 @@ Rules:
 - `prompt` should be image-generation ready and include composition/camera cues.
 - Bubble text should be short and readable when bubbles exist.
 - Every subpanel must include either `bubbles` or `background_context_prompt` (or both).
+- `background_context_prompt` is visible narrative caption text for that subpanel:
+  horizontal text at the bottom (not a speech bubble), max 20 words.
 - No markdown, no commentary, no extra keys outside schema.
 """
 
@@ -470,7 +472,10 @@ class PanelAgent:
         if dialogue_context:
             prompt = f"{prompt} Dialogue context: {dialogue_context}."
         if background_context_prompt:
-            prompt = f"{prompt} Background context: {background_context_prompt}."
+            prompt = (
+                f"{prompt} Background context caption (bottom horizontal text, not a speech bubble): "
+                f"{background_context_prompt}."
+            )
         if not dialogue_context:
             prompt = f"{prompt} Do not render speech bubbles in this subpanel."
         return prompt
@@ -486,8 +491,11 @@ class PanelAgent:
         updated = prompt
         if dialogue_context and "Dialogue context:" not in updated:
             updated = f"{updated} Dialogue context: {dialogue_context}."
-        if background_context_prompt and "Background context:" not in updated:
-            updated = f"{updated} Background context: {background_context_prompt}."
+        if background_context_prompt and "Background context caption" not in updated:
+            updated = (
+                f"{updated} Background context caption (bottom horizontal text, not a speech bubble): "
+                f"{background_context_prompt}."
+            )
         if not dialogue_context and "Do not render speech bubbles in this subpanel." not in updated:
             updated = f"{updated} Do not render speech bubbles in this subpanel."
         return updated
@@ -505,12 +513,25 @@ class PanelAgent:
         if not isinstance(raw_background_context, str):
             return None
         clean = raw_background_context.strip()
-        return clean if clean else None
+        if not clean:
+            return None
+        return self._truncate_words(clean, MAX_BACKGROUND_CONTEXT_WORDS)
 
     def _default_background_context(self, scene_summary: str, description: str) -> str:
         """Create default context guidance for silent subpanels."""
 
-        return f"{description}. Show environmental cues from: {scene_summary}."
+        return self._truncate_words(
+            f"{description}. Show environmental cues from: {scene_summary}.",
+            MAX_BACKGROUND_CONTEXT_WORDS,
+        )
+
+    def _truncate_words(self, text: str, max_words: int) -> str:
+        """Trim text to at most `max_words` words."""
+
+        words = text.split()
+        if len(words) <= max_words:
+            return text
+        return " ".join(words[:max_words])
 
     def _normalize_characters_involved(
         self,
@@ -667,7 +688,10 @@ class PanelAgent:
             dialogue_or_context = (
                 f"Dialogue: {dialogue}. "
                 if dialogue
-                else f"No speech bubble. Background context: {background_context}. "
+                else (
+                    "No speech bubble. "
+                    f"Render bottom horizontal caption text (not a speech bubble): \"{background_context}\". "
+                )
             )
             subpanel_sections.append(
                 (
@@ -681,6 +705,7 @@ class PanelAgent:
         return (
             "Create one comic image split into exactly 4 subpanels in a clear 2x2 grid, "
             "reading left-to-right, top-to-bottom. Keep character identity and style consistent across all subpanels. "
+            "For subpanels without dialogue, show the provided background context as bottom horizontal narrative text. "
             + " ".join(subpanel_sections)
         )
 

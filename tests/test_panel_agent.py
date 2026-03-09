@@ -68,4 +68,6 @@ def test_panel_agent_uses_all_character_fields_in_prompt_and_speaker(  # noqa: A
     second_subpanel = spec.subpanels[1]
     assert second_subpanel.bubbles == []
     assert second_subpanel.background_context_prompt
+    assert len(second_subpanel.background_context_prompt.split()) <= 20
     assert "Do not render speech bubbles in this subpanel." in second_subpanel.prompt
+    assert "Background context caption (bottom horizontal text, not a speech bubble):" in second_subpanel.prompt

@@ -7,10 +7,11 @@ from pathlib import Path
 from comic_agent.core.models import PanelSpec, ValidationIssue, ValidationResult
 from comic_agent.core.rules import (
     ALLOWED_BUBBLE_POSITIONS,
-    PLACEHOLDER_PANEL_IMAGE_BYTES,
+    MAX_BACKGROUND_CONTEXT_WORDS,
     MAX_BUBBLE_TEXT_LENGTH,
     MAX_BUBBLES_PER_PANEL,
     MIN_PANELS,
+    PLACEHOLDER_PANEL_IMAGE_BYTES,
 )
 
 
@@ -41,6 +42,18 @@ class ValidatorAgent:
                         ValidationIssue(
                             code="SUBPANEL_MISSING_SPEECH_OR_CONTEXT",
                             message="Subpanel must include bubbles or background context prompt.",
+                            panel_id=panel.panel_id,
+                        )
+                    )
+                context_prompt = (subpanel.background_context_prompt or "").strip()
+                if context_prompt and len(context_prompt.split()) > MAX_BACKGROUND_CONTEXT_WORDS:
+                    issues.append(
+                        ValidationIssue(
+                            code="BACKGROUND_CONTEXT_TOO_LONG",
+                            message=(
+                                "Background context exceeds "
+                                f"{MAX_BACKGROUND_CONTEXT_WORDS} words."
+                            ),
                             panel_id=panel.panel_id,
                         )
                     )

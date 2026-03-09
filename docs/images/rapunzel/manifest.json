@@ -1,114 +1,114 @@
 {
   "manifest_version": "1.0",
-  "run_id": "753954ba4081",
+  "run_id": "41ea9a5981c0",
   "input_file": "/tmp/comic_agent_mn/rapunzel.txt",
   "scenes": [
     {
       "scene_id": "scene-1",
-      "summary": "A kind couple living near a forest heartily wish for a child and joyfully welcome their baby girl. Near their cottage, a forbidden garden with shining rapunzel leaves is guarded by an enchantress, Dame Gothel, who claims the baby as her own due to a past theft.",
+      "summary": "A kind couple living near a deep forest joyfully welcomes their baby girl, fulfilling their heartfelt wish. They cherish her innocence and promise safety, while a nearby mysterious garden with shining green rapunzel leaves hints at danger.",
       "beats": [
-        "Beat 1: The couple lovingly care for their newborn daughter.",
-        "Beat 2: The mysterious garden with glowing rapunzel leaves is shown near their home.",
-        "Beat 3: Dame Gothel confronts the father and claims the baby will belong to her."
+        "Beat 1: The couple marvels at their newborn baby with bright eyes and a tiny laugh.",
+        "Beat 2: Mother cradles the baby as father vows to keep her safe forever.",
+        "Beat 3: View of the high stone wall enclosing the mysterious garden with rapunzel leaves."
       ]
     },
     {
       "scene_id": "scene-2",
-      "summary": "Dame Gothel raises Rapunzel in a secluded tower without a door, surrounded by forest. Rapunzel's hair grows long and golden, and she is taught and cared for by Gothel but remains trapped and curious about the outside world.",
+      "summary": "The story reveals the origin of the enchantress's claim on the baby: the father stole rapunzel leaves from Dame Gothel's garden to save his wife, angering the enchantress who demands the newborn as retribution. Years later, Dame Gothel comes to take the child.",
       "beats": [
-        "Beat 1: Rapunzel grows up in a tall tower with no door, only a high window.",
-        "Beat 2: Gothel visits daily, calling Rapunzel to lower her hair to climb up.",
-        "Beat 3: Rapunzel sings beautifully, longing to experience the world beyond."
+        "Beat 1: Father climbs the garden wall at night to steal rapunzel leaves for his sick wife.",
+        "Beat 2: Dame Gothel catches him and curses that their baby will belong to her.",
+        "Beat 3: The enchantress arrives years later to claim the young girl, renaming her Rapunzel."
       ]
     },
     {
       "scene_id": "scene-3",
-      "summary": "Prince Adrian hears Rapunzel's enchanting song while riding through the forest and discovers the locked tower. He observes how Gothel climbs the tower using Rapunzel's hair and decides to contact Rapunzel himself by calling from below.",
+      "summary": "Dame Gothel raises Rapunzel in a hidden forest tower with no door, only a high window. Rapunzel grows, her golden hair long and bright. Gothel visits daily, climbing up by calling down Rapunzel's hair, giving lessons but denying freedom, fostering isolation and control.",
       "beats": [
-        "Beat 1: Prince Adrian stops his horse, captivated by Rapunzel's singing.",
-        "Beat 2: He watches Gothel climb Rapunzel's hair into the tower through the window.",
-        "Beat 3: At night, Adrian calls to Rapunzel and climbs up after she lowers her hair for him."
+        "Beat 1: Rapunzel sits in the tower, braiding her extremely long golden hair at the window.",
+        "Beat 2: Gothel calls up to Rapunzel to let down her hair and climbs the rope to bring supplies.",
+        "Beat 3: Rapunzel questions why she can't leave; Gothel warns of the cruel world and insists she is the only protector."
       ]
     },
     {
       "scene_id": "scene-4",
-      "summary": "Rapunzel and Prince Adrian meet for the first time inside the tower. They share stories about the outside world and start a secret friendship, dreaming of freedom beyond the tower walls.",
+      "summary": "Rapunzel's singing enthralls forest animals, and one evening, Prince Adrian hears her angelic voice while riding through the forest. Intrigued, he searches and discovers the tower but no door, witnessing Gothel\u2019s method of entry.",
       "beats": [
-        "Beat 1: Rapunzel gasps as Adrian enters the tower and introduces himself.",
-        "Beat 2: They talk about the cruel world and why Rapunzel has been kept inside.",
-        "Beat 3: Adrian describes the vibrant world and asks if he may return."
+        "Beat 1: Prince Adrian listens intently to Rapunzel\u2019s singing as he rides through the forest.",
+        "Beat 2: He investigates the base of the tower and notes the absence of a door.",
+        "Beat 3: He observes Dame Gothel climbing up Rapunzel\u2019s hanging hair and disappearing inside."
       ]
     },
     {
       "scene_id": "scene-5",
-      "summary": "Prince Adrian visits regularly, growing closer with Rapunzel. Together, they weave a silk rope ladder to escape the tower. Their plan fills Rapunzel with hope for freedom and a new life.",
+      "summary": "Taking a bold step, the prince calls to Rapunzel by the tower and gains her trust during his secret visits. They bond, sharing stories and dreams, and Rapunzel longs for freedom. Adrian promises to help her escape using a silk rope ladder he will bring over time.",
       "beats": [
-        "Beat 1: Adrian and Rapunzel laugh and plan songs during visits.",
-        "Beat 2: They secretly weave a silk rope ladder to climb down.",
-        "Beat 3: Rapunzel expresses her desire to be free, and Adrian promises help."
+        "Beat 1: At night, Adrian calls for Rapunzel, who lowers her hair so he can climb up.",
+        "Beat 2: They introduce themselves and share stories about the world beyond the tower.",
+        "Beat 3: They plan to weave a silk rope ladder together for her escape."
       ]
     },
     {
       "scene_id": "scene-6",
-      "summary": "Rapunzel accidentally reveals Adrian's name while Gothel is brushing her hair. Enraged, Gothel cuts Rapunzel\u2019s hair short, destroys the rope ladder, and banishes her to a distant desert cottage, severing their escape plan.",
+      "summary": "Weeks pass as Adrian secretly brings silk thread for Rapunzel to weave into a rope ladder, deepening their connection. Their hope grows until Rapunzel accidentally reveals the prince\u2019s name to Gothel during a hair brushing, triggering the enchantress\u2019s wrath.",
       "beats": [
-        "Beat 1: Rapunzel mentions Prince Adrian, causing Gothel\u2019s anger.",
-        "Beat 2: Gothel cuts off Rapunzel\u2019s long hair and destroys the ladder.",
-        "Beat 3: Gothel abandons Rapunzel in a remote cottage far from the tower."
+        "Beat 1: Rapunzel weaves the silk ladder under her bed while talking and laughing with Adrian.",
+        "Beat 2: Gothel brushes Rapunzel\u2019s hair, and Rapunzel mentions Prince Adrian\u2019s name thoughtlessly.",
+        "Beat 3: Gothel reacts furiously upon hearing the name, seizes, and destroys the rope ladder."
       ]
     },
     {
       "scene_id": "scene-7",
-      "summary": "Prince Adrian arrives at the tower, calling for Rapunzel. Instead, he confronts Gothel and is pushed off the window ledge, injuring his eyes. Despite his blindness, Adrian persists in searching for Rapunzel.",
+      "summary": "Gothel punishes Rapunzel by cutting her long golden hair short and banishing her to a distant, isolated cottage near a desert. Rapunzel resolves to remain brave despite her fear and separation from the prince and tower.",
       "beats": [
-        "Beat 1: Adrian calls for Rapunzel and climbs the ladder expecting to meet her.",
-        "Beat 2: Gothel appears instead and mocks him.",
-        "Beat 3: Adrian falls from the tower and suffers eye injuries but refuses to stop searching."
+        "Beat 1: Gothel cuts Rapunzel\u2019s hair abruptly and shouts at her.",
+        "Beat 2: She carries Rapunzel away to a lonely cottage far from the forest.",
+        "Beat 3: Rapunzel touches her short hair and whispers her determination to stay brave."
       ]
     },
     {
       "scene_id": "scene-8",
-      "summary": "In the distant cottage, Rapunzel adapts to her new life, learning self-reliance and forming friendships with local shepherd children. She continues to sing and grows courageous despite her situation.",
+      "summary": "Prince Adrian arrives at the tower, calling for Rapunzel, but discovers Gothel waiting in disguise. He retreats but falls, injuring his eyes badly. Despite blindness, Adrian spends months searching tirelessly for Rapunzel, calling her name through forests and fields.",
       "beats": [
-        "Beat 1: Rapunzel tends a garden and helps with chores.",
-        "Beat 2: She sings and shares stories with shepherd children.",
-        "Beat 3: The children admire her bravery as she adjusts to her new home."
+        "Beat 1: Adrian climbs the ladder expecting Rapunzel but finds Gothel instead.",
+        "Beat 2: He falls from the tower window into thorn bushes and is injured.",
+        "Beat 3: Blind and persistent, Adrian searches the countryside, calling for Rapunzel."
       ]
     },
     {
       "scene_id": "scene-9",
-      "summary": "Rapunzel hears a faint voice calling her name and finds the injured Prince Adrian nearby. They joyfully reunite, and his sight begins to return as their bond rekindles hope and love.",
+      "summary": "Rapunzel adapts to life in the cottage, learning to care for herself and befriending local shepherd children with stories and songs. One day she hears a distant call \u2014 it is the prince, weary but determined, who has found her. Their joyful reunion heals and restores hope.",
       "beats": [
-        "Beat 1: Rapunzel hears Adrian calling and runs to him.",
-        "Beat 2: They embrace and express relief and happiness at reunion.",
-        "Beat 3: Adrian\u2019s vision gradually returns as he sees Rapunzel clearly again."
+        "Beat 1: Rapunzel tends a small garden and plays with shepherd children.",
+        "Beat 2: She sings and tells stories as the children listen.",
+        "Beat 3: She hears Adrian calling her name, runs to him, and embraces him as his sight returns."
       ]
     },
     {
       "scene_id": "scene-10",
-      "summary": "Rapunzel and Adrian rest in the cottage with help from friends, then prepare to journey to the prince\u2019s kingdom for a new life filled with hope and safety beyond captivity.",
+      "summary": "After resting with the shepherd families, Rapunzel and Adrian prepare to journey toward the prince\u2019s kingdom. They travel slowly and carefully through villages, enjoying kindness and nature while strengthening their bond and hope for true safety.",
       "beats": [
-        "Beat 1: They recover with assistance from shepherd families.",
-        "Beat 2: Rapunzel and Adrian plan a careful journey to the kingdom.",
-        "Beat 3: They begin traveling together, enjoying the open countryside."
+        "Beat 1: Rapunzel and Adrian pack their belongings and prepare to leave the cottage.",
+        "Beat 2: They travel through villages, meeting farmers and staying in inns.",
+        "Beat 3: They cross green valleys together, savoring sunrises and freedom."
       ]
     },
     {
       "scene_id": "scene-11",
-      "summary": "They arrive at the king\u2019s palace where Rapunzel is warmly welcomed. The royal family celebrates her arrival and speaks about true safety beyond physical walls\u2014through love and trust.",
+      "summary": "Upon reaching the kingdom, Rapunzel is warmly welcomed by the king and queen alongside Adrian. She reflects on safety not as confinement but as love and freedom, sharing her wisdom with newfound community and embracing a joyful future.",
       "beats": [
-        "Beat 1: Rapunzel and Adrian meet the king and queen with joyful greetings.",
-        "Beat 2: The queen assures Rapunzel of her safety in the kingdom.",
-        "Beat 3: Rapunzel shares her insight about love and freedom."
+        "Beat 1: The king and queen greet Adrian and Rapunzel with open arms.",
+        "Beat 2: Rapunzel speaks about safety being love, truth, and growth.",
+        "Beat 3: Children listen as Rapunzel shares her story and message of kindness and bravery."
       ]
     },
     {
       "scene_id": "scene-12",
-      "summary": "Rapunzel and Adrian marry in a lively celebration filled with music and dancing. Rapunzel sings freely under the open sky, inspiring children with stories of kindness, courage, and true love.",
+      "summary": "Rapunzel and Adrian marry in a joyful celebration filled with music, flowers, and dancing children. Rapunzel sings freely beneath the open sky, symbolizing her liberation. They share a hopeful gaze, grateful for finding each other and their path to true freedom.",
       "beats": [
-        "Beat 1: The wedding is celebrated with flowers, music, and dancing children.",
-        "Beat 2: Rapunzel sings outside with joy and freedom.",
-        "Beat 3: She shares wise stories about bravery and love with children, smiling with Adrian."
+        "Beat 1: Rapunzel and Adrian exchange vows in a festive outdoor ceremony.",
+        "Beat 2: The town square fills with music, flowers, and children dancing.",
+        "Beat 3: Rapunzel sings openly, smiling with Adrian, embodying freedom and love."
       ]
     }
   ],
@@ -116,106 +116,110 @@
     {
       "name": "Rapunzel",
       "role": "main",
-      "description": "A brave girl with long golden hair raised in captivity by an enchantress.",
+      "description": "A brave girl with long golden hair, raised captive in a tower by Dame Gothel.",
       "visual_traits": [
         "long golden hair",
         "bright eyes",
-        "youthful",
-        "later with short hair"
+        "young girl",
+        "often in simple dress"
       ],
-      "speech_style": "curious, hopeful, gentle"
+      "speech_style": "curious and gentle"
     },
     {
       "name": "Prince Adrian",
       "role": "main",
-      "description": "A kind prince who seeks Rapunzel after hearing her sing in the forest.",
+      "description": "Young prince who finds Rapunzel and helps her seek freedom and safety.",
       "visual_traits": [
         "young man",
         "royal attire",
         "determined expression",
-        "sight impaired for a time"
+        "horse rider"
       ],
-      "speech_style": "polite, sincere, encouraging"
+      "speech_style": "gentle and sincere"
     },
     {
       "name": "Dame Gothel",
       "role": "supporting",
-      "description": "Powerful enchantress who raises Rapunzel in isolation after claiming her.",
+      "description": "Powerful enchantress who raises Rapunzel in captivity and opposes her freedom.",
       "visual_traits": [
         "stern face",
-        "dark clothes",
-        "hissing expression",
-        "stormy eyes"
+        "dark robes",
+        "sharp knife",
+        "harsh eyes"
       ],
-      "speech_style": "harsh, controlling, threatening"
+      "speech_style": "harsh and commanding"
     },
     {
       "name": "Rapunzel's Mother",
       "role": "background",
-      "description": "Kind woman who craved rapunzel leaves during pregnancy.",
+      "description": "Kind woman who longed for a child and craved rapunzel leaves.",
       "visual_traits": [
-        "gentle",
-        "wearing simple clothes",
-        "tender expression",
-        "rocking baby"
+        "gentle face",
+        "soft expression",
+        "often seen rocking baby",
+        "simple peasant clothing"
       ],
-      "speech_style": "soft, loving"
+      "speech_style": "soft and loving"
     },
     {
       "name": "Rapunzel's Father",
       "role": "background",
-      "description": "Loving father who stole rapunzel leaves and begged enchantress to spare child.",
+      "description": "Man who stole rapunzel leaves for his wife and begged for his daughter's freedom.",
       "visual_traits": [
-        "worried face",
-        "simple clothing",
-        "fatherly",
-        "climbing wall"
+        "concerned expression",
+        "simple peasant dress",
+        "strong build",
+        "worried eyes"
       ],
-      "speech_style": "pleading, concerned"
+      "speech_style": "pleading and fearful"
     },
     {
-      "name": "Shepherd children",
+      "name": "Shepherd Children",
       "role": "background",
-      "description": "Local kids who befriend Rapunzel at the desert-edge cottage.",
+      "description": "Local children who befriend Rapunzel during her exile in the cottage.",
       "visual_traits": [
-        "simple clothes",
-        "playful",
-        "friendly"
+        "young kids",
+        "simple rustic clothing",
+        "cheerful faces",
+        "playful demeanor"
       ],
-      "speech_style": "innocent, friendly"
+      "speech_style": "innocent and friendly"
     },
     {
       "name": "The King",
       "role": "background",
-      "description": "Ruler of the prince's kingdom who welcomes Rapunzel warmly.",
+      "description": "Adrian's father who warmly welcomes Rapunzel to the kingdom.",
       "visual_traits": [
-        "regal attire",
-        "bearded",
-        "kind face"
+        "older man",
+        "royal robes",
+        "kind eyes",
+        "distinguished beard"
       ],
-      "speech_style": "formal, joyful"
+      "speech_style": "formal and warm"
     },
     {
       "name": "The Queen",
       "role": "background",
-      "description": "Queen of the prince\u2019s kingdom who comforts Rapunzel about safety.",
+      "description": "Adrian's mother who embraces Rapunzel and offers safety in the kingdom.",
       "visual_traits": [
-        "elegant dress",
-        "warm smile",
-        "noble posture"
+        "regal woman",
+        "crown",
+        "gentle smile",
+        "elegant gown"
       ],
-      "speech_style": "gentle, reassuring"
+      "speech_style": "kind and reassuring"
     },
     {
-      "name": "Prince Adrian's Guard",
+      "name": "The Guard",
       "role": "background",
-      "description": "Attendant who notices and comments on Rapunzel\u2019s singing.",
+      "description": "A guard who accompanies the prince and notes the singing from the forest.",
       "visual_traits": [
         "armor",
-        "alert expression",
-        "young man"
+        "watchful eyes",
+        "stern expression",
+        "helmet"
       ],
-      "speech_style": "brief, respectful"
+      "speech_style": "concise and alert"
     }
   ],
   "panel_specs": [
@@ -225,8 +229,8 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-001-sub-01",
-          "description": "The kind couple joyfully cradle their newborn baby girl inside their cozy cottage.",
-          "prompt": "medium shot inside a warmly lit rustic cottage; a mother gently rocking a baby wrapped in soft cloth, a father smiling lovingly; warm highlights on their faces, cozy interior with wooden beams Dialogue context: Rapunzel's Mother: She's finally here, our precious gift..",
+          "description": "A joyful couple marvels at their newborn baby with bright eyes and a tiny laugh.",
+          "prompt": "medium shot of a couple holding a newborn baby, warm home interior, soft lighting illuminating baby's bright eyes and smile Dialogue context: Rapunzel's Mother: She's perfect, just as we dreamed!. Background context caption (bottom horizontal text, not a speech bubble): A loving couple welcomes their long-awaited infant with joy..",
           "characters_involved": [
             "Rapunzel's Mother",
             "Rapunzel's Father"
@@ -234,55 +238,55 @@
           "bubbles": [
             {
               "speaker": "Rapunzel's Mother",
-              "text": "She's finally here, our precious gift.",
-              "position": "bottom-left"
+              "text": "She's perfect, just as we dreamed!",
+              "position": "top-left"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "A loving couple welcomes their long-awaited infant with joy."
         },
         {
           "sub_panel_id": "panel-001-sub-02",
-          "description": "View of the mysterious forbidden garden with glowing rapunzel leaves guarded by Dame Gothel near the couple\u2019s home.",
-          "prompt": "wide medium shot of a dark, enchanted garden glowing with rapunzel leaves under moonlight; Dame Gothel in dark flowing robes watching fiercely; high contrast inks with warm leaf highlights Background context: Silent visual emphasizing magical glowing plants and a forbidding figure watching.. Do not render speech bubbles in this subpanel.",
+          "description": "Mother cradles the baby as father vows to protect her forever.",
+          "prompt": "medium close-up of mother gently cradling baby, father beside her holding her hand, warm intimate home setting Dialogue context: Rapunzel's Father: I promise, your safety is my life\u2019s mission.. Background context caption (bottom horizontal text, not a speech bubble): A father's solemn vow to keep his daughter safe..",
           "characters_involved": [
-            "Dame Gothel",
-            "Rapunzel"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "Silent visual emphasizing magical glowing plants and a forbidding figure watching."
-        },
-        {
-          "sub_panel_id": "panel-001-sub-03",
-          "description": "Dame Gothel confronts the worried father outside their cottage, claiming the baby as hers due to a past theft.",
-          "prompt": "dynamic medium shot at cottage door; stern Dame Gothel pointing finger, angry expression; father looking fearful and pleading, dark stormy eyes of Gothel dominate; high contrast lighting Dialogue context: Dame Gothel: The child belongs to me now; you stole what was mine. | Rapunzel's Father: Please, spare our daughter..",
-          "characters_involved": [
-            "Rapunzel's Father",
-            "Dame Gothel"
+            "Rapunzel's Mother",
+            "Rapunzel's Father"
           ],
           "bubbles": [
             {
-              "speaker": "Dame Gothel",
-              "text": "The child belongs to me now; you stole what was mine.",
-              "position": "top-right"
-            },
-            {
               "speaker": "Rapunzel's Father",
-              "text": "Please, spare our daughter.",
-              "position": "bottom-left"
+              "text": "I promise, your safety is my life\u2019s mission.",
+              "position": "bottom-right"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "A father's solemn vow to keep his daughter safe."
+        },
+        {
+          "sub_panel_id": "panel-001-sub-03",
+          "description": "View of a high stone wall enclosing a mysterious garden glowing with green rapunzel leaves.",
+          "prompt": "medium shot of towering stone wall in twilight, mysterious garden glowing green leaves visible over the top, shadowy and secretive atmosphere Background context caption (bottom horizontal text, not a speech bubble): The enchanted garden of rapunzel leaves glows nearby, hinting at looming danger.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Rapunzel"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "The enchanted garden of rapunzel leaves glows nearby, hinting at looming danger."
         },
         {
           "sub_panel_id": "panel-001-sub-04",
-          "description": "The father, desperate and climbing a wall near the garden, pleads once more as Gothel watches coldly.",
-          "prompt": "side close-up of worried father gripping climbing stone wall; enchantress silhouette behind under eerie garden glow; stark contrasts with warm highlights on father's face Background context: No bubbles; quiet moment capturing desperation and ominous magic.. Do not render speech bubbles in this subpanel.",
+          "description": "Couple looks toward the garden wall with subtle worry mixed with hope.",
+          "prompt": "side view of mother and father holding baby, looking toward the glowing garden wall from a distance, contrasted warm home light and cool garden glow Dialogue context: Rapunzel's Mother: Whatever comes, we\u2019ll protect her.. Background context caption (bottom horizontal text, not a speech bubble): Their joy blends with the shadow of an unknown threat nearby..",
           "characters_involved": [
-            "Rapunzel's Father",
-            "Dame Gothel"
+            "Rapunzel's Mother",
+            "Rapunzel's Father"
           ],
-          "bubbles": [],
-          "background_context_prompt": "No bubbles; quiet moment capturing desperation and ominous magic."
+          "bubbles": [
+            {
+              "speaker": "Rapunzel's Mother",
+              "text": "Whatever comes, we\u2019ll protect her.",
+              "position": "bottom-left"
+            }
+          ],
+          "background_context_prompt": "Their joy blends with the shadow of an unknown threat nearby."
         }
       ]
     },
@@ -292,18 +296,36 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-002-sub-01",
-          "description": "Rapunzel as a young girl inside a tall, isolated tower with no door, only a high window.",
-          "prompt": "medium shot inside a dark stone tower chamber; Rapunzel, youthful with very long golden hair, gazes out a high narrow window toward dense forest; warm highlights on hair contrast with dark stones Background context: Rapunzel as a young girl inside a tall, isolated tower with no door, only a high window.. Show environmental cues from: Dame Gothel raises Rapunzel in a secluded tower without a door, surrounded by forest. Rapunzel's hair grows long and golden, and she is taught and cared for by Gothel but remains trapped and curious about the outside world... Do not render speech bubbles in this subpanel.",
+          "description": "Father climbs the high garden wall at night stealthily to steal rapunzel leaves for his sick wife.",
+          "prompt": "dynamic medium shot of a worried man scaling an ancient stone wall at night, moonlit forest background, cautious expression Background context caption (bottom horizontal text, not a speech bubble): A desperate father's dangerous quest to save his wife.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
+            "Rapunzel's Father",
             "Rapunzel"
           ],
           "bubbles": [],
-          "background_context_prompt": "Rapunzel as a young girl inside a tall, isolated tower with no door, only a high window.. Show environmental cues from: Dame Gothel raises Rapunzel in a secluded tower without a door, surrounded by forest. Rapunzel's hair grows long and golden, and she is taught and cared for by Gothel but remains trapped and curious about the outside world.."
+          "background_context_prompt": "A desperate father's dangerous quest to save his wife."
         },
         {
           "sub_panel_id": "panel-002-sub-02",
-          "description": "Dame Gothel visits the tower daily, calling Rapunzel and climbing up by grabbing her lowered hair.",
-          "prompt": "dynamic vertical medium shot outside tower; Gothel in dark robes climbing golden hair descending from window; tension and movement captured with dramatic lighting Dialogue context: Dame Gothel: Rapunzel, lower your hair!.",
+          "description": "Dame Gothel confronts father, angrily curses the newborn will belong to her.",
+          "prompt": "medium shot of dark robed enchantress seizing man by arm, intense expression, glowing green garden behind her Dialogue context: Dame Gothel: Your child will repay my garden\u2019s theft!. Background context caption (bottom horizontal text, not a speech bubble): The enchantress claims her price for the stolen leaves..",
+          "characters_involved": [
+            "Dame Gothel",
+            "Rapunzel's Father"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Dame Gothel",
+              "text": "Your child will repay my garden\u2019s theft!",
+              "position": "top-right"
+            }
+          ],
+          "background_context_prompt": "The enchantress claims her price for the stolen leaves."
+        },
+        {
+          "sub_panel_id": "panel-002-sub-03",
+          "description": "Years later, Dame Gothel arrives to claim the young girl, holding her firmly and renaming her Rapunzel.",
+          "prompt": "medium close-up of dark cloaked woman clutching young girl with long golden hair reluctantly, forest tower background Dialogue context: Dame Gothel: From now on, you are Rapunzel.. Background context caption (bottom horizontal text, not a speech bubble): The child\u2019s fate is sealed by the enchantress\u2019s harsh grasp..",
           "characters_involved": [
             "Dame Gothel",
             "Rapunzel"
@@ -311,31 +333,23 @@
           "bubbles": [
             {
               "speaker": "Dame Gothel",
-              "text": "Rapunzel, lower your hair!",
-              "position": "top-left"
+              "text": "From now on, you are Rapunzel.",
+              "position": "bottom-left"
             }
           ],
-          "background_context_prompt": null
-        },
-        {
-          "sub_panel_id": "panel-002-sub-03",
-          "description": "Rapunzel sings a beautiful song inside the tower, looking wistfully toward the forest beyond.",
-          "prompt": "close-up of Rapunzel singing with eyes closed, golden hair glowing warmly; window behind framing tall trees in distance; high contrast ink style with warm highlights on face and hair Background context: Rapunzel sings a beautiful song inside the tower, looking wistfully toward the forest beyond.. Show environmental cues from: Dame Gothel raises Rapunzel in a secluded tower without a door, surrounded by forest. Rapunzel's hair grows long and golden, and she is taught and cared for by Gothel but remains trapped and curious about the outside world... Do not render speech bubbles in this subpanel.",
-          "characters_involved": [
-            "Rapunzel"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "Rapunzel sings a beautiful song inside the tower, looking wistfully toward the forest beyond.. Show environmental cues from: Dame Gothel raises Rapunzel in a secluded tower without a door, surrounded by forest. Rapunzel's hair grows long and golden, and she is taught and cared for by Gothel but remains trapped and curious about the outside world.."
+          "background_context_prompt": "The child\u2019s fate is sealed by the enchantress\u2019s harsh grasp."
         },
         {
           "sub_panel_id": "panel-002-sub-04",
-          "description": "Rapunzel gazes outward, her expression a mix of curiosity and longing for the world beyond her prison.",
-          "prompt": "medium shot looking out tower window over Rapunzel\u2019s shoulder; forest visible; wistful facial expression captured with warm highlights and deep shadows Background context: Rapunzel gazes outward, her expression a mix of curiosity and longing for the world beyond her prison.. Show environmental cues from: Dame Gothel raises Rapunzel in a secluded tower without a door, surrounded by forest. Rapunzel's hair grows long and golden, and she is taught and cared for by Gothel but remains trapped and curious about the outside world... Do not render speech bubbles in this subpanel.",
+          "description": "The couple watches helplessly from afar as their daughter is taken.",
+          "prompt": "side view of sorrowful couple in simple peasant clothes watching dark figure lead their daughter away in twilight, distant trees Background context caption (bottom horizontal text, not a speech bubble): A heartbreaking farewell to a stolen child.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel"
+            "Rapunzel's Mother",
+            "Rapunzel's Father",
+            "Dame Gothel"
           ],
           "bubbles": [],
-          "background_context_prompt": "Rapunzel gazes outward, her expression a mix of curiosity and longing for the world beyond her prison.. Show environmental cues from: Dame Gothel raises Rapunzel in a secluded tower without a door, surrounded by forest. Rapunzel's hair grows long and golden, and she is taught and cared for by Gothel but remains trapped and curious about the outside world.."
+          "background_context_prompt": "A heartbreaking farewell to a stolen child."
         }
       ]
     },
@@ -345,54 +359,62 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-003-sub-01",
-          "description": "Prince Adrian halts his horse in the forest, captivated by Rapunzel\u2019s enchanting singing.",
-          "prompt": "medium shot of young prince on horseback stopped in lush forest clearing; eyes attentive, listening upwards; warm highlights on prince\u2019s face and horse, contrasted with shadowy trees Background context: Prince Adrian halts his horse in the forest, captivated by Rapunzel\u2019s enchanting singing.. Show environmental cues from: Prince Adrian hears Rapunzel's enchanting song while riding through the forest and discovers the locked tower. He observes how Gothel climbs the tower using Rapunzel's hair and decides to contact Rapunzel himself by calling from below... Do not render speech bubbles in this subpanel.",
+          "description": "Rapunzel sits at the tower window braiding her very long golden hair, looking thoughtful.",
+          "prompt": "medium shot of girl with bright eyes braiding waist-long golden hair at a tall stone window inside tower, forest visible outside Background context caption (bottom horizontal text, not a speech bubble): A captive girl finds comfort in her shining hair.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Prince Adrian",
             "Rapunzel"
           ],
           "bubbles": [],
-          "background_context_prompt": "Prince Adrian halts his horse in the forest, captivated by Rapunzel\u2019s enchanting singing.. Show environmental cues from: Prince Adrian hears Rapunzel's enchanting song while riding through the forest and discovers the locked tower. He observes how Gothel climbs the tower using Rapunzel's hair and decides to contact Rapunzel himself by calling from below.."
+          "background_context_prompt": "A captive girl finds comfort in her shining hair."
         },
         {
           "sub_panel_id": "panel-003-sub-02",
-          "description": "Adrian watches Dame Gothel climb Rapunzel\u2019s hair into the tower window as the sun sets.",
-          "prompt": "medium vertical shot from below tower window; Gothel climbing golden hair dangling from window; Adrian hidden lightly behind tree watching; warm tones of sunset behind tower Background context: Adrian watches Dame Gothel climb Rapunzel\u2019s hair into the tower window as the sun sets.. Show environmental cues from: Prince Adrian hears Rapunzel's enchanting song while riding through the forest and discovers the locked tower. He observes how Gothel climbs the tower using Rapunzel's hair and decides to contact Rapunzel himself by calling from below... Do not render speech bubbles in this subpanel.",
+          "description": "Gothel calls from below, instructing Rapunzel to lower her hair for climbing.",
+          "prompt": "dynamic medium shot of enchantress at tower base calling up, gesturing, with Rapunzel casting hair over window ledge ready to be climbed Dialogue context: Dame Gothel: Let down your hair, child. I bring lessons.. Background context caption (bottom horizontal text, not a speech bubble): Gothel\u2019s daily ascent by golden rope enforces control..",
           "characters_involved": [
-            "Prince Adrian",
             "Dame Gothel",
-            "Rapunzel"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "Adrian watches Dame Gothel climb Rapunzel\u2019s hair into the tower window as the sun sets.. Show environmental cues from: Prince Adrian hears Rapunzel's enchanting song while riding through the forest and discovers the locked tower. He observes how Gothel climbs the tower using Rapunzel's hair and decides to contact Rapunzel himself by calling from below.."
-        },
-        {
-          "sub_panel_id": "panel-003-sub-03",
-          "description": "At night, Adrian calls to Rapunzel from below the tower as she lowers her hair for him.",
-          "prompt": "medium shot at base of tower at night; Adrian calls upward with arm raised, gentle hopeful expression; Rapunzel\u2019s golden hair descends from lit window; dramatic shadows and warm highlights Dialogue context: Prince Adrian: Rapunzel, may I climb up?.",
-          "characters_involved": [
-            "Prince Adrian",
             "Rapunzel"
           ],
           "bubbles": [
             {
-              "speaker": "Prince Adrian",
-              "text": "Rapunzel, may I climb up?",
+              "speaker": "Dame Gothel",
+              "text": "Let down your hair, child. I bring lessons.",
               "position": "bottom-right"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "Gothel\u2019s daily ascent by golden rope enforces control."
+        },
+        {
+          "sub_panel_id": "panel-003-sub-03",
+          "description": "Rapunzel questions her captivity; Gothel warns of the world's cruelty, insisting she is protector.",
+          "prompt": "medium close-up of Rapunzel looking up in doubt, and Gothel scowling with sharp eyes, shaded interior of tower Dialogue context: Rapunzel: Why can\u2019t I leave, Aunt Gothel? | Dame Gothel: The world outside is cruel. I am your only guardian.. Background context caption (bottom horizontal text, not a speech bubble): Isolation taught as protection, not punishment..",
+          "characters_involved": [
+            "Dame Gothel",
+            "Rapunzel"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Rapunzel",
+              "text": "Why can\u2019t I leave, Aunt Gothel?",
+              "position": "top-left"
+            },
+            {
+              "speaker": "Dame Gothel",
+              "text": "The world outside is cruel. I am your only guardian.",
+              "position": "bottom-left"
+            }
+          ],
+          "background_context_prompt": "Isolation taught as protection, not punishment."
         },
         {
           "sub_panel_id": "panel-003-sub-04",
-          "description": "Adrian climbs up Rapunzel's hair into the tower, face filled with mixture of excitement and nervousness.",
-          "prompt": "dynamic medium shot climbing up golden hair rope; Adrian\u2019s earnest face lit warmly from window above; dark forest background in contrast Background context: Adrian climbs up Rapunzel's hair into the tower, face filled with mixture of excitement and nervousness.. Show environmental cues from: Prince Adrian hears Rapunzel's enchanting song while riding through the forest and discovers the locked tower. He observes how Gothel climbs the tower using Rapunzel's hair and decides to contact Rapunzel himself by calling from below... Do not render speech bubbles in this subpanel.",
+          "description": "Rapunzel looks out the tower window wistfully, forest stretching below.",
+          "prompt": "wide shot from slightly inside looking over Rapunzel\u2019s shoulder out the window at sprawling forest, warm light highlighting golden hair Background context caption (bottom horizontal text, not a speech bubble): Dreams of freedom trapped behind high walls.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Prince Adrian",
             "Rapunzel"
           ],
           "bubbles": [],
-          "background_context_prompt": "Adrian climbs up Rapunzel's hair into the tower, face filled with mixture of excitement and nervousness.. Show environmental cues from: Prince Adrian hears Rapunzel's enchanting song while riding through the forest and discovers the locked tower. He observes how Gothel climbs the tower using Rapunzel's hair and decides to contact Rapunzel himself by calling from below.."
+          "background_context_prompt": "Dreams of freedom trapped behind high walls."
         }
       ]
     },
@@ -402,70 +424,51 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-004-sub-01",
-          "description": "Rapunzel gasps in surprise and awe as Adrian enters the tower and introduces himself.",
-          "prompt": "medium close-up inside tower; Rapunzel wide-eyed and covering mouth slightly in shock; Adrian bowing politely with a kind smile; warm lighting on faces against stone walls Dialogue context: Prince Adrian: I am Adrian, a friend..",
+          "description": "Prince Adrian rides through lush forest, halting to listen intently to a captivating singing voice.",
+          "prompt": "medium shot of young man on horseback, alert and enchanted, forest dappled with sunlight, distant singing suggested Background context caption (bottom horizontal text, not a speech bubble): An angelic voice draws the prince deeper into the woods.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
-            "Prince Adrian"
-          ],
-          "bubbles": [
-            {
-              "speaker": "Prince Adrian",
-              "text": "I am Adrian, a friend.",
-              "position": "top-right"
-            }
-          ],
-          "background_context_prompt": null
-        },
-        {
-          "sub_panel_id": "panel-004-sub-02",
-          "description": "They sit close in the dim tower room, sharing stories of Rapunzel\u2019s captivity and the cruel world outside.",
-          "prompt": "medium shot of Rapunzel and Adrian seated on stone floor; serious expressions, soft warm highlights on faces; Rapunzel\u2019s hair flowing, the small window casting soft light Dialogue context: Rapunzel: Why have I been kept locked away? | Prince Adrian: The world\u2019s cruel, but also full of light..",
-          "characters_involved": [
-            "Rapunzel",
-            "Prince Adrian"
-          ],
-          "bubbles": [
-            {
-              "speaker": "Rapunzel",
-              "text": "Why have I been kept locked away?",
-              "position": "bottom-left"
-            },
-            {
-              "speaker": "Prince Adrian",
-              "text": "The world\u2019s cruel, but also full of light.",
-              "position": "bottom-right"
-            }
-          ],
-          "background_context_prompt": null
-        },
-        {
-          "sub_panel_id": "panel-004-sub-03",
-          "description": "Adrian describes the vibrant, freely moving world outside and asks if he may return to visit her again.",
-          "prompt": "close-up on Adrian\u2019s hopeful face; warm glow highlighting future hope; Rapunzel listening intently with a gentle smile beginning to bloom Dialogue context: Prince Adrian: May I come again? To share the outside with you..",
-          "characters_involved": [
-            "Prince Adrian",
-            "Rapunzel"
-          ],
-          "bubbles": [
-            {
-              "speaker": "Prince Adrian",
-              "text": "May I come again? To share the outside with you.",
-              "position": "center"
-            }
-          ],
-          "background_context_prompt": null
-        },
-        {
-          "sub_panel_id": "panel-004-sub-04",
-          "description": "Rapunzel smiles softly, filled with new hope and trust as their secret friendship begins.",
-          "prompt": "medium close-up on Rapunzel smiling warmly at Adrian; golden hair softly glowing; stone window with daylight casting warm highlight Background context: Rapunzel smiles softly, filled with new hope and trust as their secret friendship begins.. Show environmental cues from: Rapunzel and Prince Adrian meet for the first time inside the tower. They share stories about the outside world and start a secret friendship, dreaming of freedom beyond the tower walls... Do not render speech bubbles in this subpanel.",
-          "characters_involved": [
-            "Rapunzel",
             "Prince Adrian"
           ],
           "bubbles": [],
-          "background_context_prompt": "Rapunzel smiles softly, filled with new hope and trust as their secret friendship begins.. Show environmental cues from: Rapunzel and Prince Adrian meet for the first time inside the tower. They share stories about the outside world and start a secret friendship, dreaming of freedom beyond the tower walls.."
+          "background_context_prompt": "An angelic voice draws the prince deeper into the woods."
+        },
+        {
+          "sub_panel_id": "panel-004-sub-02",
+          "description": "Adrian inspects the tower base, frowning at the absence of any door or entryway.",
+          "prompt": "dynamic medium shot of prince dismounting, crouching and inspecting tall stone tower wall, puzzled expression Dialogue context: Prince Adrian: No door at all... how does someone get inside?. Background context caption (bottom horizontal text, not a speech bubble): A mysterious fortress with no visible entrance..",
+          "characters_involved": [
+            "Prince Adrian"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Prince Adrian",
+              "text": "No door at all... how does someone get inside?",
+              "position": "top-left"
+            }
+          ],
+          "background_context_prompt": "A mysterious fortress with no visible entrance."
+        },
+        {
+          "sub_panel_id": "panel-004-sub-03",
+          "description": "Adrian watches Gothel climbing Rapunzel\u2019s hanging hair into the tower window swiftly.",
+          "prompt": "medium shot from below, enchantress climbing golden hair rope, prince hidden behind tree watching with wide eyes Background context caption (bottom horizontal text, not a speech bubble): He uncovers the secret entrance: Rapunzel\u2019s hair.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Dame Gothel",
+            "Prince Adrian",
+            "Rapunzel"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "He uncovers the secret entrance: Rapunzel\u2019s hair."
+        },
+        {
+          "sub_panel_id": "panel-004-sub-04",
+          "description": "Prince gazes upward thoughtfully, resolved to help the captive girl.",
+          "prompt": "close-up of prince looking up at tower window with determined expression, filtered sunlight through leaves Background context caption (bottom horizontal text, not a speech bubble): A brave resolve forms within the prince\u2019s heart.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Prince Adrian"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "A brave resolve forms within the prince\u2019s heart."
         }
       ]
     },
@@ -475,36 +478,25 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-005-sub-01",
-          "description": "Adrian and Rapunzel laugh together, sharing songs and joyful moments during his visits inside the tower.",
-          "prompt": "medium shot of both seated on stone floor, smiling and singing softly; Rapunzel\u2019s golden hair framing the scene; warm dynamic lighting creating a cozy atmosphere Dialogue context: Rapunzel: Sing with me, Adrian!.",
+          "description": "At night, Adrian calls to Rapunzel who lowers her hair eagerly to let him climb up.",
+          "prompt": "medium shot of tower window in moonlight, Rapunzel lowering golden hair rope, prince beginning climb Dialogue context: Prince Adrian: Rapunzel, I\u2019m here to help you!. Background context caption (bottom horizontal text, not a speech bubble): A secret meeting begins under starlit skies..",
           "characters_involved": [
             "Prince Adrian",
             "Rapunzel"
           ],
           "bubbles": [
             {
-              "speaker": "Rapunzel",
-              "text": "Sing with me, Adrian!",
+              "speaker": "Prince Adrian",
+              "text": "Rapunzel, I\u2019m here to help you!",
               "position": "bottom-left"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "A secret meeting begins under starlit skies."
         },
         {
           "sub_panel_id": "panel-005-sub-02",
-          "description": "They secretly weave a silk rope ladder from fine threads as part of their escape plan.",
-          "prompt": "close-up on hands intertwining delicate silk threads into a sturdy rope; warm highlight on golden strands and silk fibers, intimate focus on hope in action Background context: They secretly weave a silk rope ladder from fine threads as part of their escape plan.. Show environmental cues from: Prince Adrian visits regularly, growing closer with Rapunzel. Together, they weave a silk rope ladder to escape the tower. Their plan fills Rapunzel with hope for freedom and a new life... Do not render speech bubbles in this subpanel.",
-          "characters_involved": [
-            "Prince Adrian",
-            "Rapunzel"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "They secretly weave a silk rope ladder from fine threads as part of their escape plan.. Show environmental cues from: Prince Adrian visits regularly, growing closer with Rapunzel. Together, they weave a silk rope ladder to escape the tower. Their plan fills Rapunzel with hope for freedom and a new life.."
-        },
-        {
-          "sub_panel_id": "panel-005-sub-03",
-          "description": "Rapunzel, eyes shining with hope, says she desires freedom while Adrian promises to help her escape.",
-          "prompt": "medium close-up on Rapunzel looking determined; Adrian nodding earnestly; warm light on faces contrasted with shadowy tower walls Dialogue context: Rapunzel: I want to be free. | Prince Adrian: I will help you, I swear..",
+          "description": "They introduce themselves and smiling, share stories of the world beyond the tower.",
+          "prompt": "medium close-up inside tower, two faces illuminated by candlelight, exchanging hopeful smiles Dialogue context: Rapunzel: Tell me what the world outside is like. | Prince Adrian: Full of light and kindness \u2013 you will see soon.. Background context caption (bottom horizontal text, not a speech bubble): New friends share dreams of freedom and adventure..",
           "characters_involved": [
             "Prince Adrian",
             "Rapunzel"
@@ -512,27 +504,42 @@
           "bubbles": [
             {
               "speaker": "Rapunzel",
-              "text": "I want to be free.",
-              "position": "bottom-left"
+              "text": "Tell me what the world outside is like.",
+              "position": "top-left"
             },
             {
               "speaker": "Prince Adrian",
-              "text": "I will help you, I swear.",
+              "text": "Full of light and kindness \u2013 you will see soon.",
               "position": "bottom-right"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "New friends share dreams of freedom and adventure."
+        },
+        {
+          "sub_panel_id": "panel-005-sub-03",
+          "description": "Together they begin planning to weave a silk rope ladder for her escape.",
+          "prompt": "medium shot of their hands holding delicate threads, the tower\u2019s shadowy interior as backdrop Dialogue context: Prince Adrian: We\u2019ll weave a silk ladder, step by step.. Background context caption (bottom horizontal text, not a speech bubble): A hopeful plan to gain freedom takes shape..",
+          "characters_involved": [
+            "Prince Adrian"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Prince Adrian",
+              "text": "We\u2019ll weave a silk ladder, step by step.",
+              "position": "bottom-left"
+            }
+          ],
+          "background_context_prompt": "A hopeful plan to gain freedom takes shape."
         },
         {
           "sub_panel_id": "panel-005-sub-04",
-          "description": "They look toward the tower window, hopeful and ready for their escape plan.",
-          "prompt": "medium shot of both silhouetted by daylight from window; Rapunzel\u2019s short golden hair glowing warmly; hopeful expressions as they hold the completed silk ladder Background context: They look toward the tower window, hopeful and ready for their escape plan.. Show environmental cues from: Prince Adrian visits regularly, growing closer with Rapunzel. Together, they weave a silk rope ladder to escape the tower. Their plan fills Rapunzel with hope for freedom and a new life... Do not render speech bubbles in this subpanel.",
+          "description": "Rapunzel gazes out the window smiling with new hope as Adrian leaves climbing down.",
+          "prompt": "medium shot side profile of Rapunzel smiling at window, golden hair framing face, starry night outdoors Background context caption (bottom horizontal text, not a speech bubble): Dreams of freedom shine brighter than ever.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Prince Adrian",
             "Rapunzel"
           ],
           "bubbles": [],
-          "background_context_prompt": "They look toward the tower window, hopeful and ready for their escape plan.. Show environmental cues from: Prince Adrian visits regularly, growing closer with Rapunzel. Together, they weave a silk rope ladder to escape the tower. Their plan fills Rapunzel with hope for freedom and a new life.."
+          "background_context_prompt": "Dreams of freedom shine brighter than ever."
         }
       ]
     },
@@ -542,58 +549,65 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-006-sub-01",
-          "description": "Rapunzel accidentally says Adrian's name aloud while Dame Gothel is brushing her hair, triggering Gothel's fury.",
-          "prompt": "medium close-up inside tower; Rapunzel softly speaking while Gothel's eyes flash stormy with anger; dark room lit by a window with warm highlights on hair and faces Dialogue context: Rapunzel: Prince Adrian will help me....",
+          "description": "Rapunzel weaves silk threads into a rope ladder under her bed, laughing and talking to Adrian.",
+          "prompt": "medium shot inside dim tower room, girl twisting silk into thick rope, joyful expression, prince climbing hanging hair window Dialogue context: Rapunzel: Soon, I\u2019ll step out into the world with you.. Background context caption (bottom horizontal text, not a speech bubble): Hope grows with every woven strand..",
           "characters_involved": [
-            "Rapunzel",
-            "Dame Gothel"
+            "Prince Adrian",
+            "Rapunzel"
           ],
           "bubbles": [
             {
               "speaker": "Rapunzel",
-              "text": "Prince Adrian will help me...",
-              "position": "bottom-left"
+              "text": "Soon, I\u2019ll step out into the world with you.",
+              "position": "top-left"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "Hope grows with every woven strand."
         },
         {
           "sub_panel_id": "panel-006-sub-02",
-          "description": "Enraged Gothel cuts off Rapunzel's long golden hair with sharp scissors, her expression venomous.",
-          "prompt": "dramatic close-up of Gothel wielding scissors, golden hair falling to the floor; Rapunzel shocked and powerless; high-contrast shadows with warm light on falling hair strands Background context: Enraged Gothel cuts off Rapunzel's long golden hair with sharp scissors, her expression venomous.. Show environmental cues from: Rapunzel accidentally reveals Adrian's name while Gothel is brushing her hair. Enraged, Gothel cuts Rapunzel\u2019s hair short, destroys the rope ladder, and banishes her to a distant desert cottage, severing their escape plan... Do not render speech bubbles in this subpanel.",
+          "description": "Gothel brushes Rapunzel's hair; Rapunzel mentions Prince Adrian\u2019s name without thinking.",
+          "prompt": "medium close-up of dark clad woman brushing golden hair, Rapunzel speaking softly but unaware of danger nearby Dialogue context: Rapunzel: Adrian says brave things about freedom.. Background context caption (bottom horizontal text, not a speech bubble): A careless word sparks a perilous consequence..",
           "characters_involved": [
+            "Dame Gothel",
             "Rapunzel",
-            "Dame Gothel"
+            "Prince Adrian"
           ],
-          "bubbles": [],
-          "background_context_prompt": "Enraged Gothel cuts off Rapunzel's long golden hair with sharp scissors, her expression venomous.. Show environmental cues from: Rapunzel accidentally reveals Adrian's name while Gothel is brushing her hair. Enraged, Gothel cuts Rapunzel\u2019s hair short, destroys the rope ladder, and banishes her to a distant desert cottage, severing their escape plan.."
+          "bubbles": [
+            {
+              "speaker": "Rapunzel",
+              "text": "Adrian says brave things about freedom.",
+              "position": "bottom-right"
+            }
+          ],
+          "background_context_prompt": "A careless word sparks a perilous consequence."
         },
         {
           "sub_panel_id": "panel-006-sub-03",
-          "description": "Gothel tears apart the silk rope ladder, severing the escape route in anger.",
-          "prompt": "medium shot showing Gothel forcefully destroying the silk ladder; fragments falling; dark robes flaring; warm highlight on broken silk strands Background context: Gothel tears apart the silk rope ladder, severing the escape route in anger.. Show environmental cues from: Rapunzel accidentally reveals Adrian's name while Gothel is brushing her hair. Enraged, Gothel cuts Rapunzel\u2019s hair short, destroys the rope ladder, and banishes her to a distant desert cottage, severing their escape plan... Do not render speech bubbles in this subpanel.",
+          "description": "Gothel\u2019s eyes flash with fury; she snatches and tears the silk rope ladder violently.",
+          "prompt": "dynamic medium shot of furious enchantress seizing delicate silk rope and ripping it, harsh shadowed lighting emphasizing rage Dialogue context: Dame Gothel: You betray me with names!. Background context caption (bottom horizontal text, not a speech bubble): Gothel\u2019s wrath destroys their fragile hope..",
           "characters_involved": [
-            "Dame Gothel"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "Gothel tears apart the silk rope ladder, severing the escape route in anger.. Show environmental cues from: Rapunzel accidentally reveals Adrian's name while Gothel is brushing her hair. Enraged, Gothel cuts Rapunzel\u2019s hair short, destroys the rope ladder, and banishes her to a distant desert cottage, severing their escape plan.."
-        },
-        {
-          "sub_panel_id": "panel-006-sub-04",
-          "description": "Gothel banishes Rapunzel to a remote desert-edge cottage, leaving her isolated and hopeless.",
-          "prompt": "wide shot of Rapunzel standing small and alone near rustic desert cottage; barren landscape with distant sun; Gothel looming ominously in shadows; warm light turning harsh Dialogue context: Dame Gothel: You belong nowhere but this exile!.",
-          "characters_involved": [
-            "Rapunzel",
             "Dame Gothel"
           ],
           "bubbles": [
             {
               "speaker": "Dame Gothel",
-              "text": "You belong nowhere but this exile!",
+              "text": "You betray me with names!",
               "position": "top-right"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "Gothel\u2019s wrath destroys their fragile hope."
+        },
+        {
+          "sub_panel_id": "panel-006-sub-04",
+          "description": "Rapunzel looks shocked and frightened as Gothel glares at her threateningly.",
+          "prompt": "close-up of young girl\u2019s wide fearful eyes, shadows on face, dark ominous figure looming over Background context caption (bottom horizontal text, not a speech bubble): Fear settles deep within Rapunzel\u2019s heart.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Dame Gothel",
+            "Rapunzel"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Fear settles deep within Rapunzel\u2019s heart."
         }
       ]
     },
@@ -603,65 +617,57 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-007-sub-01",
-          "description": "Prince Adrian arrives at the tower, shouting for Rapunzel as he climbs the rope ladder expectantly.",
-          "prompt": "medium shot of Adrian climbing frayed silk ladder, intense determination on his face; tower wall looming; warm sunlight casting long shadows Dialogue context: Prince Adrian: Rapunzel! I'm here!.",
-          "characters_involved": [
-            "Prince Adrian",
-            "Rapunzel"
-          ],
-          "bubbles": [
-            {
-              "speaker": "Prince Adrian",
-              "text": "Rapunzel! I'm here!",
-              "position": "bottom-right"
-            }
-          ],
-          "background_context_prompt": null
-        },
-        {
-          "sub_panel_id": "panel-007-sub-02",
-          "description": "Gothel appears at the window instead, mocking Adrian with a cruel sneer.",
-          "prompt": "close-up on Gothel's hissing face leaning out tower window; dark stormy eyes glaring; Adrian below looking shocked and wary; high contrast ink style Dialogue context: Dame Gothel: Foolish prince, she\u2019s not here for you!.",
+          "description": "Gothel cuts Rapunzel\u2019s long golden hair abruptly, scolding her harshly.",
+          "prompt": "medium close-up of cold dark hands cutting glowing golden locks, shocked expression on girl, dramatic shadows Dialogue context: Dame Gothel: You shall have no power now!. Background context caption (bottom horizontal text, not a speech bubble): Long hair, symbol of freedom, is cruelly severed..",
           "characters_involved": [
             "Dame Gothel",
-            "Prince Adrian"
+            "Rapunzel"
           ],
           "bubbles": [
             {
               "speaker": "Dame Gothel",
-              "text": "Foolish prince, she\u2019s not here for you!",
-              "position": "top-left"
+              "text": "You shall have no power now!",
+              "position": "bottom-left"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "Long hair, symbol of freedom, is cruelly severed."
+        },
+        {
+          "sub_panel_id": "panel-007-sub-02",
+          "description": "Gothel carries Rapunzel away from the tower to a remote desert-side cottage, imposing and forbidding.",
+          "prompt": "wide shot of enchantress holding Rapunzel\u2019s arm firmly, walking through barren terrain toward a small isolated cottage, twilight sky Background context caption (bottom horizontal text, not a speech bubble): Exiled far from forest and prince.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Dame Gothel",
+            "Rapunzel"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Exiled far from forest and prince."
         },
         {
           "sub_panel_id": "panel-007-sub-03",
-          "description": "Adrian falls from the tower window ledge after Gothel pushes him, pain and fear evident as he hits the ground.",
-          "prompt": "dramatic medium shot, Adrian mid-fall against dark stone tower; face contorted in shock and pain; high contrast shadows with warm highlights on figure Background context: Adrian falls from the tower window ledge after Gothel pushes him, pain and fear evident as he hits the ground.. Show environmental cues from: Prince Adrian arrives at the tower, calling for Rapunzel. Instead, he confronts Gothel and is pushed off the window ledge, injuring his eyes. Despite his blindness, Adrian persists in searching for Rapunzel... Do not render speech bubbles in this subpanel.",
+          "description": "Rapunzel touches her short hair, gazing determined but scared, whispering her courage.",
+          "prompt": "close-up of girl\u2019s hand on freshly cut hair, reflective face with bright eyes despite tears, soft warm light Dialogue context: Rapunzel: I must stay strong... for him, for me.. Background context caption (bottom horizontal text, not a speech bubble): Bravery kindles despite loss and fear..",
           "characters_involved": [
-            "Prince Adrian",
-            "Dame Gothel"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "Adrian falls from the tower window ledge after Gothel pushes him, pain and fear evident as he hits the ground.. Show environmental cues from: Prince Adrian arrives at the tower, calling for Rapunzel. Instead, he confronts Gothel and is pushed off the window ledge, injuring his eyes. Despite his blindness, Adrian persists in searching for Rapunzel.."
-        },
-        {
-          "sub_panel_id": "panel-007-sub-04",
-          "description": "Despite his injured eyes and blindness, Adrian sits determined in pain, vowing to keep searching for Rapunzel.",
-          "prompt": "close-up on Adrian sitting bruised, bandaged eyes covered, fists clenched in determination; warm golden highlights contrasting deep shadows Dialogue context: Prince Adrian: I will find you, Rapunzel, no matter what..",
-          "characters_involved": [
-            "Prince Adrian",
             "Rapunzel"
           ],
           "bubbles": [
             {
-              "speaker": "Prince Adrian",
-              "text": "I will find you, Rapunzel, no matter what.",
+              "speaker": "Rapunzel",
+              "text": "I must stay strong... for him, for me.",
               "position": "center"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "Bravery kindles despite loss and fear."
+        },
+        {
+          "sub_panel_id": "panel-007-sub-04",
+          "description": "The lonely cottage under dusky sky, nearly swallowed by desert shadows.",
+          "prompt": "wide atmospheric shot of small humble cottage at dusk surrounded by barren plains, starry sky emerging Background context caption (bottom horizontal text, not a speech bubble): A new prison in desolation awaits her.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Rapunzel"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "A new prison in desolation awaits her."
         }
       ]
     },
@@ -671,51 +677,58 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-008-sub-01",
-          "description": "Rapunzel works diligently tending a small garden and completing chores around the distant desert cottage.",
-          "prompt": "medium shot of Rapunzel kneeling by a patch of earth planting seeds; sun-drenched dusty environment; warm natural lighting highlighting determination Background context: Rapunzel works diligently tending a small garden and completing chores around the distant desert cottage.. Show environmental cues from: In the distant cottage, Rapunzel adapts to her new life, learning self-reliance and forming friendships with local shepherd children. She continues to sing and grows courageous despite her situation... Do not render speech bubbles in this subpanel.",
+          "description": "Adrian climbs the tower ladder expecting Rapunzel, but finds Gothel disguised and waiting.",
+          "prompt": "medium shot of prince ascending ladder cautiously, shocked by dark robed figure with hood at window Dialogue context: Dame Gothel: You won\u2019t take her from me!. Background context caption (bottom horizontal text, not a speech bubble): The prince faces deception at the tower..",
           "characters_involved": [
+            "Prince Adrian",
+            "Dame Gothel",
             "Rapunzel"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "Rapunzel works diligently tending a small garden and completing chores around the distant desert cottage.. Show environmental cues from: In the distant cottage, Rapunzel adapts to her new life, learning self-reliance and forming friendships with local shepherd children. She continues to sing and grows courageous despite her situation.."
-        },
-        {
-          "sub_panel_id": "panel-008-sub-02",
-          "description": "She sings softly while sharing stories with a group of cheerful shepherd children gathered nearby.",
-          "prompt": "medium shot, Rapunzel seated on a stone step surrounded by playful shepherd children; warm sunlight bathing the scene; children attentive and smiling Background context: She sings softly while sharing stories with a group of cheerful shepherd children gathered nearby.. Show environmental cues from: In the distant cottage, Rapunzel adapts to her new life, learning self-reliance and forming friendships with local shepherd children. She continues to sing and grows courageous despite her situation... Do not render speech bubbles in this subpanel.",
-          "characters_involved": [
-            "Rapunzel",
-            "Shepherd children"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "She sings softly while sharing stories with a group of cheerful shepherd children gathered nearby.. Show environmental cues from: In the distant cottage, Rapunzel adapts to her new life, learning self-reliance and forming friendships with local shepherd children. She continues to sing and grows courageous despite her situation.."
-        },
-        {
-          "sub_panel_id": "panel-008-sub-03",
-          "description": "The children express admiration and friendship as Rapunzel grows braver and more resilient in her new home.",
-          "prompt": "close-up on children looking inspired and smiling with Rapunzel gently encouraging them; warm earthy tones and sunlight Dialogue context: Shepherd child: You're so brave, Rapunzel!.",
-          "characters_involved": [
-            "Rapunzel",
-            "Shepherd children"
           ],
           "bubbles": [
             {
-              "speaker": "Shepherd child",
-              "text": "You're so brave, Rapunzel!",
+              "speaker": "Dame Gothel",
+              "text": "You won\u2019t take her from me!",
+              "position": "top-right"
+            }
+          ],
+          "background_context_prompt": "The prince faces deception at the tower."
+        },
+        {
+          "sub_panel_id": "panel-008-sub-02",
+          "description": "Adrian falls from the tower window into thorn bushes below, clutching his eyes in pain.",
+          "prompt": "dynamic angled shot showing prince tumbling in midair against tower, bushes below, grimacing in agony Background context caption (bottom horizontal text, not a speech bubble): A harsh fall shatters the prince\u2019s sight.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Prince Adrian"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "A harsh fall shatters the prince\u2019s sight."
+        },
+        {
+          "sub_panel_id": "panel-008-sub-03",
+          "description": "Blind and resolute, Adrian searches through forests and fields, calling Rapunzel\u2019s name.",
+          "prompt": "wide shot of blindfolded prince stumbling through sunlit meadow, calling out, determined expression Dialogue context: Prince Adrian: Rapunzel! Can you hear me?. Background context caption (bottom horizontal text, not a speech bubble): Blindness does not diminish his relentless hope..",
+          "characters_involved": [
+            "Prince Adrian",
+            "Rapunzel"
+          ],
+          "bubbles": [
+            {
+              "speaker": "Prince Adrian",
+              "text": "Rapunzel! Can you hear me?",
               "position": "bottom-left"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "Blindness does not diminish his relentless hope."
         },
         {
           "sub_panel_id": "panel-008-sub-04",
-          "description": "Rapunzel gazes into the distance confidently, her short golden hair glowing in the warm desert light.",
-          "prompt": "medium shot profile of Rapunzel looking out over a vast sunlit landscape; determined expression; warm golden highlight on her short hair Background context: Rapunzel gazes into the distance confidently, her short golden hair glowing in the warm desert light.. Show environmental cues from: In the distant cottage, Rapunzel adapts to her new life, learning self-reliance and forming friendships with local shepherd children. She continues to sing and grows courageous despite her situation... Do not render speech bubbles in this subpanel.",
+          "description": "A concerned forest guard nearby quietly notes the distant calls, watching attentively.",
+          "prompt": "medium shot of armored guard in forest edge, alert and listening, subtle tension in expression Background context caption (bottom horizontal text, not a speech bubble): Silent witness to the prince\u2019s desperate search.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel"
+            "The Guard"
           ],
           "bubbles": [],
-          "background_context_prompt": "Rapunzel gazes into the distance confidently, her short golden hair glowing in the warm desert light.. Show environmental cues from: In the distant cottage, Rapunzel adapts to her new life, learning self-reliance and forming friendships with local shepherd children. She continues to sing and grows courageous despite her situation.."
+          "background_context_prompt": "Silent witness to the prince\u2019s desperate search."
         }
       ]
     },
@@ -725,64 +738,58 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-009-sub-01",
-          "description": "Rapunzel hears a faint voice calling her name and breaks into a joyful run toward the source.",
-          "prompt": "medium shot of Rapunzel dashing across desert grass toward off-panel voice call; sun low on horizon with warm golden light; hopeful urgent expression Dialogue context: Prince Adrian: Rapunzel!.",
+          "description": "Rapunzel cultivating a small garden near the isolated cottage, playing cheerfully with shepherd children.",
+          "prompt": "medium shot of girl lovingly tending plants, surrounded by happy children in rustic clothes, sunny afternoon Background context caption (bottom horizontal text, not a speech bubble): New friendships bloom in exile\u2019s fragile sunlight.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
-            "Prince Adrian"
+            "Shepherd Children",
+            "Rapunzel"
           ],
-          "bubbles": [
-            {
-              "speaker": "Prince Adrian",
-              "text": "Rapunzel!",
-              "position": "top-right"
-            }
-          ],
-          "background_context_prompt": null
+          "bubbles": [],
+          "background_context_prompt": "New friendships bloom in exile\u2019s fragile sunlight."
         },
         {
           "sub_panel_id": "panel-009-sub-02",
-          "description": "They embrace warmly, both relieved and overjoyed to be reunited after hardship.",
-          "prompt": "close-up of their hug; Rapunzel smiling with eyes closed, Adrian holding her gently; warm, soft glow enveloping them Dialogue context: Rapunzel: You're here! I knew you'd find me. | Prince Adrian: Never again will I leave your side..",
+          "description": "Rapunzel sings and tells stories, children listening enraptured in a circle outside the cottage.",
+          "prompt": "medium wide shot of girl animatedly singing and telling tales, children captivated sitting on grass, warm dusk light Background context caption (bottom horizontal text, not a speech bubble): Her voice brings light and joy despite hardship.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
-            "Prince Adrian"
+            "Shepherd Children",
+            "Rapunzel"
           ],
-          "bubbles": [
-            {
-              "speaker": "Rapunzel",
-              "text": "You're here! I knew you'd find me.",
-              "position": "bottom-left"
-            },
-            {
-              "speaker": "Prince Adrian",
-              "text": "Never again will I leave your side.",
-              "position": "bottom-right"
-            }
-          ],
-          "background_context_prompt": null
+          "bubbles": [],
+          "background_context_prompt": "Her voice brings light and joy despite hardship."
         },
         {
           "sub_panel_id": "panel-009-sub-03",
-          "description": "Adrian\u2019s sight slowly returns as he sees Rapunzel clearly again; hope shines in their eyes.",
-          "prompt": "medium close-up on Adrian\u2019s eyes opening, golden light reflecting; Rapunzel\u2019s joyful face close; gentle warm palette highlighting tender moment Background context: Adrian\u2019s sight slowly returns as he sees Rapunzel clearly again; hope shines in their eyes.. Show environmental cues from: Rapunzel hears a faint voice calling her name and finds the injured Prince Adrian nearby. They joyfully reunite, and his sight begins to return as their bond rekindles hope and love... Do not render speech bubbles in this subpanel.",
+          "description": "Rapunzel hears Adrian calling her name from afar and runs to embrace him, his eyes beginning to heal.",
+          "prompt": "dynamic medium shot of joyful reunion, girl running toward blindfold cast aside prince, warm sunrise behind Dialogue context: Prince Adrian: Rapunzel! I\u2019ve found you! | Rapunzel: Adrian, I never gave up!. Background context caption (bottom horizontal text, not a speech bubble): Hope returns with their heartfelt embrace..",
           "characters_involved": [
-            "Rapunzel",
-            "Prince Adrian"
+            "Prince Adrian",
+            "Rapunzel"
           ],
-          "bubbles": [],
-          "background_context_prompt": "Adrian\u2019s sight slowly returns as he sees Rapunzel clearly again; hope shines in their eyes.. Show environmental cues from: Rapunzel hears a faint voice calling her name and finds the injured Prince Adrian nearby. They joyfully reunite, and his sight begins to return as their bond rekindles hope and love.."
+          "bubbles": [
+            {
+              "speaker": "Prince Adrian",
+              "text": "Rapunzel! I\u2019ve found you!",
+              "position": "top-right"
+            },
+            {
+              "speaker": "Rapunzel",
+              "text": "Adrian, I never gave up!",
+              "position": "bottom-left"
+            }
+          ],
+          "background_context_prompt": "Hope returns with their heartfelt embrace."
         },
         {
           "sub_panel_id": "panel-009-sub-04",
-          "description": "They look into each other's eyes, renewed hope and love shining strongly between them.",
-          "prompt": "close-up of both faces close, soft smiles with warm golden lighting enveloping them; tender connection emphasized Background context: They look into each other's eyes, renewed hope and love shining strongly between them.. Show environmental cues from: Rapunzel hears a faint voice calling her name and finds the injured Prince Adrian nearby. They joyfully reunite, and his sight begins to return as their bond rekindles hope and love... Do not render speech bubbles in this subpanel.",
+          "description": "Shepherd children cheer happily around their reunion under a rising sun.",
+          "prompt": "wide shot of children running and clapping, prince and Rapunzel smiling holding each other, radiant morning light Background context caption (bottom horizontal text, not a speech bubble): A new dawn brightens their path to freedom.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
-            "Prince Adrian"
+            "Prince Adrian",
+            "Shepherd Children"
           ],
           "bubbles": [],
-          "background_context_prompt": "They look into each other's eyes, renewed hope and love shining strongly between them.. Show environmental cues from: Rapunzel hears a faint voice calling her name and finds the injured Prince Adrian nearby. They joyfully reunite, and his sight begins to return as their bond rekindles hope and love.."
+          "background_context_prompt": "A new dawn brightens their path to freedom."
         }
       ]
     },
@@ -792,48 +799,44 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-010-sub-01",
-          "description": "Shepherd families assist Rapunzel and Adrian as they recover together in the cottage, offering food and comfort.",
-          "prompt": "medium shot inside rustic cottage; Rapunzel and Adrian seated together, shepherds bringing baskets and blankets; warm homely atmosphere with golden highlights Background context: Shepherd families assist Rapunzel and Adrian as they recover together in the cottage, offering food and comfort.. Show environmental cues from: Rapunzel and Adrian rest in the cottage with help from friends, then prepare to journey to the prince\u2019s kingdom for a new life filled with hope and safety beyond captivity... Do not render speech bubbles in this subpanel.",
+          "description": "Rapunzel and Adrian pack belongings carefully inside cozy cottage preparing to leave.",
+          "prompt": "medium shot of couple packing cloth bags, tender glance between them, warm morning light filtering through window Background context caption (bottom horizontal text, not a speech bubble): A hopeful journey begins with careful preparation.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
             "Prince Adrian",
-            "Shepherd children"
+            "Rapunzel"
           ],
           "bubbles": [],
-          "background_context_prompt": "Shepherd families assist Rapunzel and Adrian as they recover together in the cottage, offering food and comfort.. Show environmental cues from: Rapunzel and Adrian rest in the cottage with help from friends, then prepare to journey to the prince\u2019s kingdom for a new life filled with hope and safety beyond captivity.."
+          "background_context_prompt": "A hopeful journey begins with careful preparation."
         },
         {
           "sub_panel_id": "panel-010-sub-02",
-          "description": "Rapunzel and Adrian pore over a simple map, carefully planning their journey to the prince\u2019s kingdom.",
-          "prompt": "close-up on hands pointing at rustic map on wooden table; folded letters, herbs scattered; soft warm light illuminating serious but hopeful faces Background context: Rapunzel and Adrian pore over a simple map, carefully planning their journey to the prince\u2019s kingdom.. Show environmental cues from: Rapunzel and Adrian rest in the cottage with help from friends, then prepare to journey to the prince\u2019s kingdom for a new life filled with hope and safety beyond captivity... Do not render speech bubbles in this subpanel.",
+          "description": "They travel slowly through small villages, kindly greeted by farmers and staying at inns.",
+          "prompt": "medium shot of couple walking along village path, villagers waving and smiling, rustic houses with soft sunlight Background context caption (bottom horizontal text, not a speech bubble): Kindness and warmth surround their journey.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
             "Prince Adrian"
           ],
           "bubbles": [],
-          "background_context_prompt": "Rapunzel and Adrian pore over a simple map, carefully planning their journey to the prince\u2019s kingdom.. Show environmental cues from: Rapunzel and Adrian rest in the cottage with help from friends, then prepare to journey to the prince\u2019s kingdom for a new life filled with hope and safety beyond captivity.."
+          "background_context_prompt": "Kindness and warmth surround their journey."
         },
         {
           "sub_panel_id": "panel-010-sub-03",
-          "description": "They set out together across an open country road, smiling peacefully at the freedom ahead.",
-          "prompt": "medium shot of the pair walking side by side down sunlit path; Rapunzel in simple dress, Adrian in travel attire; vast warm glowing landscape stretching forward Background context: They set out together across an open country road, smiling peacefully at the freedom ahead.. Show environmental cues from: Rapunzel and Adrian rest in the cottage with help from friends, then prepare to journey to the prince\u2019s kingdom for a new life filled with hope and safety beyond captivity... Do not render speech bubbles in this subpanel.",
+          "description": "Passing through lush green valleys together, sharing a serene sunrise moment.",
+          "prompt": "wide shot of two figures walking hand in hand across rolling green hills, glowing sunrise horizon, mist rising Background context caption (bottom horizontal text, not a speech bubble): Freedom\u2019s light guides their hopeful path.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
             "Prince Adrian"
           ],
           "bubbles": [],
-          "background_context_prompt": "They set out together across an open country road, smiling peacefully at the freedom ahead.. Show environmental cues from: Rapunzel and Adrian rest in the cottage with help from friends, then prepare to journey to the prince\u2019s kingdom for a new life filled with hope and safety beyond captivity.."
+          "background_context_prompt": "Freedom\u2019s light guides their hopeful path."
         },
         {
           "sub_panel_id": "panel-010-sub-04",
-          "description": "They pause briefly, gazing at the horizon full of hope and possibility.",
-          "prompt": "wide medium shot from behind looking at golden sunset horizon; Rapunzel and Adrian silhouettes hand in hand; dynamic warm hues fill the sky Background context: They pause briefly, gazing at the horizon full of hope and possibility.. Show environmental cues from: Rapunzel and Adrian rest in the cottage with help from friends, then prepare to journey to the prince\u2019s kingdom for a new life filled with hope and safety beyond captivity... Do not render speech bubbles in this subpanel.",
+          "description": "Close-up on their intertwined hands, showing bond and steady determination.",
+          "prompt": "close-up of clasped hands, golden light emphasizing connection and strength Background context caption (bottom horizontal text, not a speech bubble): Together they find courage for the future.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
             "Prince Adrian"
           ],
           "bubbles": [],
-          "background_context_prompt": "They pause briefly, gazing at the horizon full of hope and possibility.. Show environmental cues from: Rapunzel and Adrian rest in the cottage with help from friends, then prepare to journey to the prince\u2019s kingdom for a new life filled with hope and safety beyond captivity.."
+          "background_context_prompt": "Together they find courage for the future."
         }
       ]
     },
@@ -843,73 +846,60 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-011-sub-01",
-          "description": "Rapunzel and Adrian arrive at the king\u2019s palace and warmly greet the regal King and Queen.",
-          "prompt": "medium shot at palace entrance; grand stone steps with golden banners; King bearded, smiling; Queen elegant and welcoming; Rapunzel and Adrian joyful and respectful Dialogue context: The King: Welcome home, Rapunzel! | The Queen: You are safe with us..",
+          "description": "The king and queen warmly greet Rapunzel and Adrian at grand castle entrance with open arms.",
+          "prompt": "medium shot of regal couple in royal robes embracing prince and young woman smiling, grand castle backdrop, bright day Dialogue context: The King: Welcome to your true home, Rapunzel.. Background context caption (bottom horizontal text, not a speech bubble): Homecoming filled with warmth and acceptance..",
           "characters_involved": [
-            "Rapunzel",
-            "Prince Adrian",
             "The King",
-            "The Queen"
+            "The Queen",
+            "Prince Adrian",
+            "Rapunzel"
           ],
           "bubbles": [
             {
               "speaker": "The King",
-              "text": "Welcome home, Rapunzel!",
+              "text": "Welcome to your true home, Rapunzel.",
               "position": "top-left"
-            },
-            {
-              "speaker": "The Queen",
-              "text": "You are safe with us.",
-              "position": "top-right"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "Homecoming filled with warmth and acceptance."
         },
         {
           "sub_panel_id": "panel-011-sub-02",
-          "description": "The Queen gently assures Rapunzel of safety and belonging within the royal kingdom.",
-          "prompt": "close-up on Queen speaking warmly while clasping Rapunzel\u2019s hand; golden regal dress and gentle smile with strong warm highlights; Rapunzel listening intently Dialogue context: The Queen: Here, you will always be protected..",
-          "characters_involved": [
-            "Rapunzel",
-            "The Queen"
-          ],
-          "bubbles": [
-            {
-              "speaker": "The Queen",
-              "text": "Here, you will always be protected.",
-              "position": "bottom-right"
-            }
-          ],
-          "background_context_prompt": null
-        },
-        {
-          "sub_panel_id": "panel-011-sub-03",
-          "description": "Rapunzel shares her belief about true freedom found in love and trust, smiling confidently.",
-          "prompt": "medium close-up on Rapunzel smiling brightly; warm, vibrant light emphasizing hope; soft palace interior background with banners Dialogue context: Rapunzel: True safety is in love, not walls..",
+          "description": "Rapunzel speaks thoughtfully about safety as love, truth, and growth to attentive court members.",
+          "prompt": "medium shot of Rapunzel addressing gathered noble women and men with kind expression, elegant throne room, golden rays Dialogue context: Rapunzel: Safety lives in love, honesty, and courage.. Background context caption (bottom horizontal text, not a speech bubble): She shares hard-earned wisdom on freedom and safety..",
           "characters_involved": [
             "Rapunzel"
           ],
           "bubbles": [
             {
               "speaker": "Rapunzel",
-              "text": "True safety is in love, not walls.",
+              "text": "Safety lives in love, honesty, and courage.",
               "position": "center"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "She shares hard-earned wisdom on freedom and safety."
+        },
+        {
+          "sub_panel_id": "panel-011-sub-03",
+          "description": "Children gather around Rapunzel listening eagerly as she tells her story, glowing warmth and hope in their faces.",
+          "prompt": "wide shot with group of children seated on floor around Rapunzel, cozy castle chamber, expressions of wonder and joy Background context caption (bottom horizontal text, not a speech bubble): A new legacy of kindness and bravery begins.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Shepherd Children",
+            "Rapunzel"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "A new legacy of kindness and bravery begins."
         },
         {
           "sub_panel_id": "panel-011-sub-04",
-          "description": "The royal family and Rapunzel stand together in unity, hopeful for the future.",
-          "prompt": "wide medium shot of all characters in palace hall; smiling warmly; golden light flooding room with banners and throne background Background context: The royal family and Rapunzel stand together in unity, hopeful for the future.. Show environmental cues from: They arrive at the king\u2019s palace where Rapunzel is warmly welcomed. The royal family celebrates her arrival and speaks about true safety beyond physical walls\u2014through love and trust... Do not render speech bubbles in this subpanel.",
+          "description": "The queen smiles gently beside Rapunzel, offering quiet reassurance of belonging.",
+          "prompt": "medium close-up of regal woman with soft smile and crown placing hand on Rapunzel\u2019s shoulder, warm ambient light Background context caption (bottom horizontal text, not a speech bubble): Acceptance blooms into true safety and family.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
-            "Prince Adrian",
-            "The King",
-            "The Queen"
+            "The Queen",
+            "Rapunzel"
           ],
           "bubbles": [],
-          "background_context_prompt": "The royal family and Rapunzel stand together in unity, hopeful for the future.. Show environmental cues from: They arrive at the king\u2019s palace where Rapunzel is warmly welcomed. The royal family celebrates her arrival and speaks about true safety beyond physical walls\u2014through love and trust.."
+          "background_context_prompt": "Acceptance blooms into true safety and family."
         }
       ]
     },
@@ -919,73 +909,75 @@
       "subpanels": [
         {
           "sub_panel_id": "panel-012-sub-01",
-          "description": "The wedding celebration bursts with flowers, music, and dancing children under a bright open sky.",
-          "prompt": "wide medium shot of outdoor royal garden; Rapunzel and Adrian dressed for wedding surrounded by joyful children dancing and colorful flower petals; dynamic warm lighting Background context: The wedding celebration bursts with flowers, music, and dancing children under a bright open sky.. Show environmental cues from: Rapunzel and Adrian marry in a lively celebration filled with music and dancing. Rapunzel sings freely under the open sky, inspiring children with stories of kindness, courage, and true love... Do not render speech bubbles in this subpanel.",
+          "description": "Rapunzel and Adrian exchange wedding vows in a vibrant outdoor ceremony bright with flowers and banners.",
+          "prompt": "medium wide shot of young couple in elegant attire holding hands before crowd, festive floral decorations, sunny day Dialogue context: Prince Adrian: Forever, in freedom and love. | Rapunzel: Together, we are truly free.. Background context caption (bottom horizontal text, not a speech bubble): A joyful union celebrated beneath open skies..",
           "characters_involved": [
-            "Rapunzel",
             "Prince Adrian",
-            "Shepherd children"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "The wedding celebration bursts with flowers, music, and dancing children under a bright open sky.. Show environmental cues from: Rapunzel and Adrian marry in a lively celebration filled with music and dancing. Rapunzel sings freely under the open sky, inspiring children with stories of kindness, courage, and true love.."
-        },
-        {
-          "sub_panel_id": "panel-012-sub-02",
-          "description": "Rapunzel sings freely outside, her voice joyous and powerful, reflecting newfound freedom.",
-          "prompt": "medium close-up of Rapunzel standing on grassy knoll singing with eyes closed, radiant smile, golden hair catching sunlight; joyful ambient background Background context: Rapunzel sings freely outside, her voice joyous and powerful, reflecting newfound freedom.. Show environmental cues from: Rapunzel and Adrian marry in a lively celebration filled with music and dancing. Rapunzel sings freely under the open sky, inspiring children with stories of kindness, courage, and true love... Do not render speech bubbles in this subpanel.",
-          "characters_involved": [
             "Rapunzel"
-          ],
-          "bubbles": [],
-          "background_context_prompt": "Rapunzel sings freely outside, her voice joyous and powerful, reflecting newfound freedom.. Show environmental cues from: Rapunzel and Adrian marry in a lively celebration filled with music and dancing. Rapunzel sings freely under the open sky, inspiring children with stories of kindness, courage, and true love.."
-        },
-        {
-          "sub_panel_id": "panel-012-sub-03",
-          "description": "Rapunzel shares wise stories about courage and love with attentive children, smiling warmly beside Adrian.",
-          "prompt": "medium shot of Rapunzel seated among children who listen intently; Adrian standing gently watching; warm golden light with open blue sky Dialogue context: Rapunzel: Kindness and courage light the true path..",
-          "characters_involved": [
-            "Rapunzel",
-            "Prince Adrian",
-            "Shepherd children"
           ],
           "bubbles": [
             {
+              "speaker": "Prince Adrian",
+              "text": "Forever, in freedom and love.",
+              "position": "top-left"
+            },
+            {
               "speaker": "Rapunzel",
-              "text": "Kindness and courage light the true path.",
-              "position": "bottom-left"
+              "text": "Together, we are truly free.",
+              "position": "bottom-right"
             }
           ],
-          "background_context_prompt": null
+          "background_context_prompt": "A joyful union celebrated beneath open skies."
+        },
+        {
+          "sub_panel_id": "panel-012-sub-02",
+          "description": "Town square fills with music, dancing children, and colorful flower petals swirling in the warm breeze.",
+          "prompt": "wide festive scene of children dancing joyfully, musicians playing, flower petals drifting, lively town square crowd Background context caption (bottom horizontal text, not a speech bubble): Celebration overflows with laughter and blossoms.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Shepherd Children"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Celebration overflows with laughter and blossoms."
+        },
+        {
+          "sub_panel_id": "panel-012-sub-03",
+          "description": "Rapunzel sings freely under open blue sky, Adrian smiling proudly beside her.",
+          "prompt": "medium close-up of young woman singing with radiant smile, open sky above, young man beside her beaming Background context caption (bottom horizontal text, not a speech bubble): Her voice now a symbol of liberation and joy.. Do not render speech bubbles in this subpanel.",
+          "characters_involved": [
+            "Prince Adrian",
+            "Rapunzel"
+          ],
+          "bubbles": [],
+          "background_context_prompt": "Her voice now a symbol of liberation and joy."
         },
         {
           "sub_panel_id": "panel-012-sub-04",
-          "description": "Rapunzel and Adrian look at each other lovingly, surrounded by celebration and hope in the open air.",
-          "prompt": "close-up on Rapunzel and Adrian smiling at each other as children and guests celebrate in blurred background; warm high contrast ink with golden highlights Background context: Rapunzel and Adrian look at each other lovingly, surrounded by celebration and hope in the open air.. Show environmental cues from: Rapunzel and Adrian marry in a lively celebration filled with music and dancing. Rapunzel sings freely under the open sky, inspiring children with stories of kindness, courage, and true love... Do not render speech bubbles in this subpanel.",
+          "description": "Couple shares a hopeful gaze, hands entwined, surrounded by loving community and sunny warmth.",
+          "prompt": "medium shot of Adrian and Rapunzel looking into each other\u2019s eyes, holding hands, blurred festive crowd behind Background context caption (bottom horizontal text, not a speech bubble): Grateful hearts embrace a future filled with freedom.. Do not render speech bubbles in this subpanel.",
           "characters_involved": [
-            "Rapunzel",
             "Prince Adrian"
           ],
           "bubbles": [],
-          "background_context_prompt": "Rapunzel and Adrian look at each other lovingly, surrounded by celebration and hope in the open air.. Show environmental cues from: Rapunzel and Adrian marry in a lively celebration filled with music and dancing. Rapunzel sings freely under the open sky, inspiring children with stories of kindness, courage, and true love.."
+          "background_context_prompt": "Grateful hearts embrace a future filled with freedom."
         }
       ]
     }
   ],
   "panel_images": [
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-001.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-002.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-003.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-004.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-005.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-006.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-007.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-008.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-009.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-010.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-011.png",
-    "/tmp/comic_agent_mn/rapunzel/panels/panel-012.png"
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-001.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-002.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-003.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-004.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-005.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-006.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-007.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-008.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-009.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-010.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-011.png",
+    "/tmp/comic_agent_mn/rapunzel_2/panels/panel-012.png"
   ],
-  "panel_pdf": "/tmp/comic_agent_mn/rapunzel/panels.pdf",
+  "panel_pdf": "/tmp/comic_agent_mn/rapunzel_2/panels.pdf",
   "continuity_issues": [],
   "validation": {
     "passed": true,

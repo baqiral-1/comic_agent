@@ -134,3 +134,22 @@ def test_character_agent_falls_back_when_llm_fails(monkeypatch) -> None:  # noqa
     assert len(profiles) >= 1
     assert profiles[0].name in {"Nasruddin", "Omar"}
     assert all(profile.description for profile in profiles)
+
+
+def test_character_timeout_default_and_env_override(monkeypatch) -> None:  # noqa: ANN001
+    """Character API timeout should support env override with sane default."""
+
+    agent = CharacterAgent()
+
+    monkeypatch.delenv("COMIC_AGENT_CHARACTER_TIMEOUT_SECONDS", raising=False)
+    assert agent._character_timeout_seconds() == 60.0
+
+    monkeypatch.setenv("COMIC_AGENT_CHARACTER_TIMEOUT_SECONDS", "90")
+    assert agent._character_timeout_seconds() == 90.0
+
+
+def test_character_timeout_invalid_env_falls_back(monkeypatch) -> None:  # noqa: ANN001
+    """Invalid timeout env should fallback to default timeout value."""
+
+    monkeypatch.setenv("COMIC_AGENT_CHARACTER_TIMEOUT_SECONDS", "invalid")
+    assert CharacterAgent()._character_timeout_seconds() == 60.0

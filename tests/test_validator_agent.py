@@ -85,3 +85,30 @@ def test_validator_flags_placeholder_panel_images(tmp_path: Path) -> None:
     )
     codes = {issue.code for issue in result.issues}
     assert "PANEL_IMAGE_MISSING_OR_PLACEHOLDER" in codes
+
+
+def test_validator_flags_background_context_over_word_limit() -> None:
+    """Validator should report overlong background context captions."""
+
+    panel = PanelSpec(
+        panel_id="panel-001",
+        scene_id="scene-1",
+        subpanels=[
+            SubPanelSpec(
+                sub_panel_id="panel-001-sub-01",
+                description="desc",
+                prompt="prompt",
+                characters_involved=["Alice"],
+                bubbles=[],
+                background_context_prompt=(
+                    "one two three four five six seven eight nine ten "
+                    "eleven twelve thirteen fourteen fifteen sixteen seventeen "
+                    "eighteen nineteen twenty twentyone"
+                ),
+            )
+        ],
+    )
+
+    result = ValidatorAgent().run([panel], continuity_issues=[])
+    codes = {issue.code for issue in result.issues}
+    assert "BACKGROUND_CONTEXT_TOO_LONG" in codes
