@@ -1,30 +1,46 @@
 # comic-agent
 
-`comic-agent` is a Python multi-agent pipeline that converts a plain text storyline into:
+`comic-agent` is a Python multi-agent pipeline that turns a text story into comic planning data and panel images.
 
-- structured panel metadata (`manifest.json`)
-- generated panel images (`panels/panel-*.png`, one image per panel)
+- structured run manifest (`manifest.json`)
+- panel images (`panels/panel-*.png`, one image per panel)
+- optional panel PDF (`panels.pdf`)
 - run logs (`run.log`)
+
+[Live Gallery (GitHub Pages)](https://baqiral-1.github.io/comic_agent/)
 
 ## Summary
 
-`comic-agent` takes a text story and runs it through a sequence of specialized agents that:
+The pipeline ingests a story, infers scenes and characters, plans 4-subpanel comic panels, validates output quality, and exports artifacts for viewing or publishing.
 
-- infer scenes and beats from narrative text
-- extract characters and style direction
-- generate comic panel prompts/images (4 subpanels per panel image)
-- attach panel speech-bubble or silent background-context metadata
-- validate continuity and rule compliance
-- export run outputs (`manifest.json`, panel images, and `panels.pdf`)
+## Agent Pipeline
 
-[Live Gallery (GitHub Pages)](https://baqiral-1.github.io/comic_agent/)
+1. `IngestAgent`: Reads the input file and normalizes story text.
+2. `SceneAgent`: Uses an LLM to infer scene boundaries/beats with deterministic sentence-chunk fallback.
+3. `CharacterAgent`: Uses an LLM to infer character profiles (name, role, description, traits, speech style) with heuristic fallback.
+4. `StyleAgent`: Builds a global style guide (tone, palette, camera language) from scene mood.
+5. `PanelAgent`: Generates one panel per scene, each panel containing exactly 4 subpanels with either dialogue bubbles or background context.
+6. `ContinuityAgent`: Flags simple continuity risks between adjacent panels.
+7. `ValidatorAgent`: Enforces structure/content/image checks and feeds one manager revision attempt for non-image issues.
 
 ## Requirements
 
 - Python `3.11+`
-- `OPENAI_API_KEY` environment variable for real image generation
+- `OPENAI_API_KEY` for real LLM/image generation
 
-If the OpenAI image API is unavailable, the panel agent falls back to deterministic placeholder PNGs.
+Without `OPENAI_API_KEY`, the pipeline still runs using deterministic fallbacks and placeholder panel images.
+
+## Run Modes
+
+1. Full generation mode
+   `OPENAI_API_KEY` set and no `--skip-image-generation`.
+   Produces `manifest.json`, `run.log`, panel PNGs, and `panels.pdf`.
+2. Planning-only mode
+   Use `--skip-image-generation`.
+   Produces `manifest.json` and `run.log` only.
+3. Fallback image mode
+   No `OPENAI_API_KEY` and no `--skip-image-generation`.
+   Produces `manifest.json`, `run.log`, placeholder panel PNGs, and `panels.pdf`.
 
 ## Quick Start
 
@@ -34,7 +50,7 @@ source .venv/bin/activate
 pip install -e .[dev]
 ```
 
-Create an input story file:
+Create input:
 
 ```bash
 cat > story.txt <<'EOF'
@@ -48,6 +64,12 @@ Run:
 comic-agent run --input story.txt --output ./out --verbose
 ```
 
+Module form:
+
+```bash
+python -m comic_agent.cli run --input story.txt --output ./out --verbose
+```
+
 ## CLI
 
 ```bash
@@ -55,23 +77,25 @@ comic-agent run \
   --input /path/to/story.txt \
   --output /path/to/output_dir \
   [--max-panels N] \
-  [--seed 123] \
   [--skip-image-generation] \
   [--verbose]
 ```
 
-You can also run via module:
+- `--max-panels` caps panel count at planning/render time.
+- For scene inference, `--max-panels` is treated as a pacing target (soft guidance).
+- `--skip-image-generation` skips image/PDF creation entirely.
 
-```bash
-python -m comic_agent.cli run --input story.txt --output ./out --verbose
-```
+## Environment Variables
 
-`--skip-image-generation` generates planning/manifest outputs only (no panel PNGs or PDF).
-If `--max-panels` is omitted, scene/panel count is inferred automatically.
+- `OPENAI_API_KEY`: Enables OpenAI-backed scene/character/panel inference and real image generation.
+- `COMIC_AGENT_IMAGE_WORKERS`: Parallel panel image generation worker count (default `1`).
+- `COMIC_AGENT_IMAGE_SIZE`: Image API size string for generated panel images (default `1024x1024`).
+- `COMIC_AGENT_PANEL_PLANNER_MODEL`: Override LLM model used by panel planning (default `gpt-4.1-mini`).
+- `COMIC_AGENT_CHARACTER_TIMEOUT_SECONDS`: Timeout for character LLM inference in seconds (default `60`).
 
 ## Output Structure
 
-Example output directory:
+Typical output directory:
 
 ```text
 out/
@@ -84,47 +108,26 @@ out/
     ...
 ```
 
-If `--skip-image-generation` is used, output includes only `manifest.json` and `run.log`.
+When `--skip-image-generation` is enabled:
 
-`manifest.json` includes scenes, characters, nested panel specs (4 subpanels per panel),
-bubble metadata, optional `background_context_prompt` for silent subpanels, continuity
-results, and validation status.
+```text
+out/
+  manifest.json
+  run.log
+```
 
-## Agent Pipeline
+`manifest.json` contains:
 
-1. `IngestAgent`: Loads the input story file and normalizes whitespace.
-   Produces a clean `StoryDocument` used by all downstream agents.
-2. `SceneAgent`: Infers scene boundaries and beat-level actions from narrative text.
-   Uses an LLM for scene segmentation with a deterministic fallback path.
-3. `CharacterAgent`: Identifies primary story participants and basic profile traits.
-   Provides character metadata used for panel planning and bubble speaker defaults.
-4. `StyleAgent`: Derives a global comic style profile (tone, palette, camera language).
-   Keeps visual direction consistent across all generated panels.
-5. `PanelAgent`: Converts scenes/beats into nested `PanelSpec` entries (4 subpanels each)
-   and generates one composite panel image per `panel_id`.
-   Also creates speech-bubble metadata and optional `background_context_prompt` for
-   no-dialogue subpanels.
-6. `ContinuityAgent`: Applies lightweight continuity checks between adjacent panels.
-   Flags potential scene-transition inconsistencies for validation.
-7. `ValidatorAgent`: Enforces structural and content rules on generated panel specs.
-   If validation fails, the manager applies one revision pass and revalidates.
+- `scenes[]`: `scene_id`, `summary`, `beats[]`
+- `characters[]`: `name`, `role`, `description`, `visual_traits[]`, `speech_style`
+- `panel_specs[]`: `panel_id`, `scene_id`, `subpanels[]`
+- `subpanels[]`: `sub_panel_id`, `description`, `prompt`, `characters_involved[]`, `bubbles[]`, optional `background_context_prompt`
+- run outcomes: `panel_images[]`, `panel_pdf`, `continuity_issues[]`, `validation`, `revisions_attempted`
 
 ## Development
 
-Run tests:
-
 ```bash
 pytest
-```
-
-Lint:
-
-```bash
 ruff check .
-```
-
-Type check:
-
-```bash
 mypy src
 ```
